@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on Adrien Gruson</title>
-    <link>http://graphics.ci.i.u-tokyo.ac.jp/agruson/home/index.xml</link>
+    <link>https://beltegeuse.github.io/research/home/index.xml</link>
     <description>Recent content in Homes on Adrien Gruson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Adrien Gruson</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/agruson/home/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/research/home/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
