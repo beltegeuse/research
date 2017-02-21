@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adrien Gruson on Adrien Gruson</title>
+    <link>http://graphics.ci.i.u-tokyo.ac.jp/agruson/index.xml</link>
+    <description>Recent content in Adrien Gruson on Adrien Gruson</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Adrien Gruson</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/agruson/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Spatial Target Function for Metropolis Photon Tracing</title>
+      <link>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/spatialIF/</link>
+      <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/spatialIF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shape and Reflectance from RGB-D Images using Time Sequential Illumination</title>
+      <link>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/shape_RGB/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/shape_RGB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automatic Aesthetics-based Lighting Design with Global Illumination</title>
+      <link>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/aesthetics/</link>
+      <pubDate>Wed, 08 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/aesthetics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eye-Centred Color Adaptation in Global Illumination</title>
+      <link>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/white_balancing/</link>
+      <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/white_balancing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visibility-driven progressive volume photon tracing</title>
+      <link>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/vdpt/</link>
+      <pubDate>Fri, 01 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/vdpt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Temporal Coherency for Video Tone Mapping</title>
+      <link>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/temporal_video/</link>
+      <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/temporal_video/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Light Propagation Maps on Parallel Graphics Architectures</title>
+      <link>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/lpm/</link>
+      <pubDate>Wed, 01 Feb 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://graphics.ci.i.u-tokyo.ac.jp/agruson/publication/lpm/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
