@@ -4,6 +4,38 @@
     
     
     <url>
+      <loc>https://beltegeuse.github.io/research/tags/academic/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://beltegeuse.github.io/research/post/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://beltegeuse.github.io/research/publication/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://beltegeuse.github.io/research/talk/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://beltegeuse.github.io/research/publication/spatialIF/</loc>
       <lastmod>2016-08-01T00:00:00+00:00</lastmod>
     </url>
@@ -60,6 +92,15 @@
     
     
     <url>
+      <loc>https://beltegeuse.github.io/research/publication_types/2/</loc>
+      <lastmod>2016-08-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://beltegeuse.github.io/research/</loc>
       <lastmod>2016-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -78,8 +119,7 @@
     
     
     <url>
-      <loc>https://beltegeuse.github.io/research/publication/</loc>
-      <lastmod>2016-08-01T00:00:00+00:00</lastmod>
+      <loc>https://beltegeuse.github.io/research/publication_types/</loc>
       <priority>0</priority>
     </url>
     

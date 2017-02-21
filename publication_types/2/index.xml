@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Adrien Gruson</title>
-    <link>https://beltegeuse.github.io/research/publication/index.xml</link>
-    <description>Recent content in Publications on Adrien Gruson</description>
+    <title>2 on Adrien Gruson</title>
+    <link>https://beltegeuse.github.io/research/publication_types/2/index.xml</link>
+    <description>Recent content in 2 on Adrien Gruson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Adrien Gruson</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/research/publication/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/research/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Spatial Target Function for Metropolis Photon Tracing</title>
