@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/research/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/research/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/temporal_video/">
+  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/2013_VDPT/">
 
   
 
-  <title>Temporal Coherency for Video Tone Mapping | Adrien Gruson</title>
+  <title>Visibility-driven progressive volume photon tracing | Adrien Gruson</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -92,30 +92,6 @@
         
 
         <li class="nav-item">
-          <a href="/research/#posts">
-            
-            <span>Posts</span>
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        <li class="nav-item">
-          <a href="/research/#projects">
-            
-            <span>Projects</span>
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        <li class="nav-item">
           <a href="/research/#teaching">
             
             <span>Teaching</span>
@@ -147,10 +123,10 @@
   
 
   <div class="container pub-title">
-    <h1 itemprop="name">Temporal Coherency for Video Tone Mapping</h1>
+    <h1 itemprop="name">Visibility-driven progressive volume photon tracing</h1>
     <span class="pub-authors" itemprop="author">
       
-      R Boitard, K Bouatouch, R Cozot, D Thoreau, A Gruson
+      C Collin, R Ribardiere, A Gruson, R Cozot, S Pattanaik, K Bouatouch
       
     </span>
     <span class="pull-right">
@@ -159,35 +135,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2ftemporal_video%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2013_VDPT%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Temporal%20Coherency%20for%20Video%20Tone%20Mapping&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2ftemporal_video%2f"
+         href="https://twitter.com/intent/tweet?text=Visibility-driven%20progressive%20volume%20photon%20tracing&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2013_VDPT%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2ftemporal_video%2f&amp;title=Temporal%20Coherency%20for%20Video%20Tone%20Mapping"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2013_VDPT%2f&amp;title=Visibility-driven%20progressive%20volume%20photon%20tracing"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2ftemporal_video%2f&amp;title=Temporal%20Coherency%20for%20Video%20Tone%20Mapping"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2013_VDPT%2f&amp;title=Visibility-driven%20progressive%20volume%20photon%20tracing"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Temporal%20Coherency%20for%20Video%20Tone%20Mapping&amp;body=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2ftemporal_video%2f">
+         href="mailto:?subject=Visibility-driven%20progressive%20volume%20photon%20tracing&amp;body=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2013_VDPT%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -202,11 +178,11 @@
 <div class="article-container">
 
   
-  <img src="/research/img/publications/temporal_video.png" class="pub-banner" itemprop="image">
+  <img src="/research/img/publications/vdpt.png" class="pub-banner" itemprop="image">
   
 
   <h3>Abstract</h3>
-  <p class="pub-abstract" itemprop="text">Tone Mapping Operators (TMOs) aim at converting real world high dynamic range (HDR) images captured with HDR cameras, into low dynamic range (LDR) images that can be displayed on LDR displays.  Several TMOs have been proposed over the last decade, from the simple global mapping to the more complex one simulating the human vision system.  While these solutions work generally well for still pictures, they are usually less effcient for video sequences as they are source of visual artifacts.  Only few of them can be adapted to cope with a sequence of images.  In this paper we present a major problem that a static TMO usually encounters while dealing with video sequences, namely the temporal coherency.  Indeed, as each tone mapper deals with each frame separately, no  temporal  coherency  is  taken  into  account  and  hence  the  results  can  be  quite  disturbing  for  high  varying dynamics in a video.  We propose a temporal coherency algorithm that is designed to analyze a video as a whole, and  from  its  characteristics  adapts  each  tone  mapped  frame  of  a  sequence  in  order  to  preserve  the  temporal coherency.  This temporal coherency algorithm has been tested on a set of real as well as Computer Graphics Image (CGI) content and put in competition with several algorithms that are designed to be time-dependent. Results show that temporal coherency preserves the overall contrast in a sequence of images.  Furthermore, this technique is applicable to any TMO as it is a post-processing that only depends on the used TMO.</p>
+  <p class="pub-abstract" itemprop="text">In this paper, we present a novel approach to progressive photon-based volume rendering techniques. By making use of two Kd-trees (built in a preprocessing step) to store view beams (primary rays intersecting the medium) and visible points, our method allows to handle scenes with specular and refractive objects as well as homogeneous and heterogeneous participating media and does not require the storage of photon maps, which solves the memory management issue. These data structures are used to drive the photon shooting process by considering the photon visibility as an importance function (similarly to Hachisuka and Jensen) for scenes containing participating media. Finally, we demonstrate that our method can be easily combined with the most recent particle tracing approaches such as the one presented in Jarosz et al.</p>
 
   
   <div class="row">
@@ -233,7 +209,7 @@
     <div class="col-sm-10">
       <div class="row">
         <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-        <div class="col-xs-12 col-sm-9">In <em>SPIE</em>, 2012.</div>
+        <div class="col-xs-12 col-sm-9">In <em>Computer Graphics International</em> 2013 / <em>The Visual Computer</em>, Vol. 29, page 849 - 859</div>
       </div>
     </div>
     <div class="col-sm-1"></div>
@@ -246,7 +222,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
         <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-          October, 2012
+          February, 2013
         </div>
       </div>
     </div>
@@ -266,11 +242,15 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="http://www.ece.ubc.ca/~rboitard/articles/2012/Boitard%20et%20al.-2012-Temporal%20Coherency%20for%20Video%20Tone%20Mapping.pdf">
+<a class="btn btn-primary btn-outline" href="https://dl.dropboxusercontent.com/u/37606091/research/2013_Volume-Photon-Tracing_Collin.pdf">
   PDF
 </a>
 
 
+
+<a class="btn btn-primary btn-outline" href="https://youtu.be/kd6fKV87tIc">
+  Video
+</a>
 
 
 
@@ -295,12 +275,12 @@
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://beltegeuse.github.io/research/publication/lpm/"><span
-      aria-hidden="true">&larr;</span> Light Propagation Maps on Parallel Graphics Architectures</a></li>
+    <li class="previous"><a href="https://beltegeuse.github.io/research/publication/2012_TemporalTMO/"><span
+      aria-hidden="true">&larr;</span> Temporal Coherency for Video Tone Mapping</a></li>
     
 
     
-    <li class="next"><a href="https://beltegeuse.github.io/research/publication/vdpt/">Visibility-driven progressive volume photon tracing <span
+    <li class="next"><a href="https://beltegeuse.github.io/research/publication/2013_whiteBalancing/">Eye-Centred Color Adaptation in Global Illumination <span
       aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
