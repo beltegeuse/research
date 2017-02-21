@@ -4,8 +4,9 @@ abstract_short = "In this paper, we propose a new color adaptation method well s
 authors = ["A Gruson", "R Ribardiere", "R Cozot"]
 date = "2013-10-01"
 image = "publications/eyecenter.png"
-image_preview = ""
+image_preview = "publications/eyecenter.png"
 math = true
+publication_types = ["2"]
 publication = "In *Pacific Graphics*, 2013."
 publication_short = "In *PG 2013*"
 selected = true
@@ -20,5 +21,9 @@ url_video = "projects/whitebalancing/video.mp4"
 #[[url_custom]]
 #name = "Additional Mat."
 #url = "projects/aesthetics/aesthetics_add.pdf"
+
+#[header]
+#image = "headers/bubbles-wide.jpg"
+#caption = "My caption :smile:"
 
 +++

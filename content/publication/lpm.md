@@ -5,6 +5,7 @@ date = "2012-02-01"
 image = "publications/lpm.png"
 image_preview = ""
 math = true
+publication_types = ["2"]
 publication = "In *Eurographics Symposium on Parallel Graphics and Visualization*, 2012."
 publication_short = "In *EGPVG 2012*"
 selected = false

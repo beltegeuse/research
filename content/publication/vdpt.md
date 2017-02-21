@@ -5,6 +5,7 @@ date = "2013-02-01"
 image = "publications/vdpt.png"
 image_preview = ""
 math = true
+publication_types = ["2"]
 publication = "In *Computer Graphics International* 2013 / *The Visual Computer*, Vol. 29, page 849 - 859 "
 publication_short = "In *CGI 2013* / *The Visual Computer*, Vol. 29"
 selected = false

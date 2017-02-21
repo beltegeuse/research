@@ -5,6 +5,7 @@ date = "2012-10-01"
 image = "publications/temporal_video.png"
 image_preview = ""
 math = true
+publication_types = ["2"]
 publication = "In *SPIE*, 2012."
 publication_short = "In *SPIE 2012*"
 selected = false

@@ -5,6 +5,7 @@ date = "2016-02-01"
 image = "publications/RGBD.png"
 image_preview = ""
 math = true
+publication_types = ["2"]
 publication = "In *International Conference on Computer Vision Theory and Applications*, 2016."
 publication_short = "In *VISAPP 2016*"
 selected = false
