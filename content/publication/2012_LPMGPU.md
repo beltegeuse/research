@@ -12,7 +12,7 @@ selected = false
 title = "Light Propagation Maps on Parallel Graphics Architectures"
 #url_code = "#"
 #url_dataset = "#"
-url_pdf = "projects/lpm_EGPVG2012.pdf"
+url_pdf = "https://dl.dropboxusercontent.com/u/37606091/research/2012-LPM-GPU_Gruson.pdf"
 #url_project = "http://people.irisa.fr/Matis.Hudon/Shape.html"
 #url_slides = "#"
 url_video = "https://youtu.be/ZuEvoZXgOik?list=UUb_VXTBD3haz-P7P0f_Bi8A"

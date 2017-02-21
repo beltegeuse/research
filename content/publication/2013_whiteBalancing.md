@@ -16,7 +16,7 @@ title = "Eye-Centred Color Adaptation in Global Illumination"
 url_pdf = "http://onlinelibrary.wiley.com/doi/10.1111/cgf.12218/abstract"
 #url_project = "http://people.irisa.fr/Matis.Hudon/Shape.html"
 #url_slides = "#"
-url_video = "projects/whitebalancing/video.mp4"
+url_video = "https://dl.dropboxusercontent.com/u/37606091/research/2013_whitebalancing/video.mp4"
 
 #[[url_custom]]
 #name = "Additional Mat."
