@@ -22,4 +22,8 @@ url_pdf = "https://dl.dropboxusercontent.com/u/37606091/research/2016_Spatial-Ta
 name = "Additional Mat."
 url = "https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/supplemental.pdf"
 
+[[url_custom]]
+name = "HTML Res. + Code"
+url = "https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/comparison/index.html"
+
 +++
