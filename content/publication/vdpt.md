@@ -1,0 +1,23 @@
++++
+abstract = "In this paper, we present a novel approach to progressive photon-based volume rendering techniques. By making use of two Kd-trees (built in a preprocessing step) to store view beams (primary rays intersecting the medium) and visible points, our method allows to handle scenes with specular and refractive objects as well as homogeneous and heterogeneous participating media and does not require the storage of photon maps, which solves the memory management issue. These data structures are used to drive the photon shooting process by considering the photon visibility as an importance function (similarly to Hachisuka and Jensen) for scenes containing participating media. Finally, we demonstrate that our method can be easily combined with the most recent particle tracing approaches such as the one presented in Jarosz et al."
+authors = ["C Collin", "R Ribardiere", "A Gruson", "R Cozot", "S Pattanaik", "K Bouatouch"]
+date = "2013-02-01"
+image = "publications/vdpt.png"
+image_preview = ""
+math = true
+publication = "In *Computer Graphics International* 2013 / *The Visual Computer*, Vol. 29, page 849 - 859 "
+publication_short = "In *CGI 2013* / *The Visual Computer*, Vol. 29"
+selected = false
+title = "Visibility-driven progressive volume photon tracing"
+#url_code = "#"
+#url_dataset = "#"
+url_pdf = "projects/vdpvpt_cgi2013.pdf"
+#url_project = "http://people.irisa.fr/Matis.Hudon/Shape.html"
+#url_slides = "#"
+url_video = "https://youtu.be/kd6fKV87tIc"
+
+#[[url_custom]]
+#name = "Additional Mat."
+#url = "projects/aesthetics/aesthetics_add.pdf"
+
++++

@@ -1,0 +1,128 @@
+baseurl = "http://graphics.ci.i.u-tokyo.ac.jp/agruson/"
+title = "Adrien Gruson"
+copyright = "&copy; 2017 Adrien Gruson"
+languageCode = "en-us"
+theme = "academic"
+
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = ""
+
+
+[params]
+  name = "Adrien Gruson"
+  role = "Post-doc researcher of Computer Graphics"
+  organization = "Dept. of Creative Informatics, The University of Tokyo"
+  avatar = "me.jpg"
+  email = "adrien.gruson@gmail.com"
+  address = "Dept. of Creative Informatics, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656 JAPAN"
+  phone = "070-4915-7344"
+
+  # Date format (refer to Go's date format: http://flippinggodateformat.com )
+  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+  date_format = "Mon, Jan 2, 2006"
+
+  # Enable global LaTeX math rendering? If false, you can enable it locally on a per page basis.
+  math = false
+
+  # Enable native social sharing buttons?
+  sharing = false
+
+  # Link custom CSS and JS assets (relative to /static/css and /static/js respectively)
+  custom_css = []
+  custom_js  = []
+
+  # Biography section.
+  # Section will only be displayed if `content/home/about.md` exists.
+  [params.about]
+    interests = ["Computer Graphics", "Global Illumination", "Markov Chain Monte Carlo", "Machine Learning"]
+    str_interests = "Interests"
+    str_education = "Education"
+
+    [[params.about.education]]
+      course = "PhD in Computer Graphics"
+      institution = "Rennes 1 University"
+      year = 2015
+
+    [[params.about.education]]
+      course = "Master 2 in Computer Research, Major Computer Research"
+      institution = "Rennes 1 University"
+      year = 2011
+
+   [[params.about.education]]
+      course = "Eng. Rennes 1 University certificate (option Computer Graphics)"
+      institution = "ESIR, Rennes 1 University"
+      year = 2011
+
+  # Collaborator list
+  [[params.collaborator]]
+    name = "A Gruson"
+    change = "**A Gruson**"
+
+  # Selected Publications section.
+  # Section will only be displayed if there are publications with `selected = true` in their `+++` preamble.
+  [params.publications_selected]
+    detailed_list = true
+    title = "Selected Publications"
+    subtitle = ""
+
+  # Publications section.
+  # Section will only be displayed if there are publications in `content/publication/`.
+  [params.publications]
+    count = 10
+    detailed_list = false
+    title = "Recent Publications"
+    subtitle = ""
+    str_all = "More Publications"
+
+  # Posts section.
+  # Section will only be displayed if there are posts in `content/post/`.
+  [params.posts]
+    count = 5
+    title = "Recent Posts"
+    subtitle = ""
+    str_all = "More Posts"
+    str_read_more = "Read more"
+
+  # Projects section.
+  # Section will only be displayed if there are projects in `content/project/`.
+  [params.projects]
+    title = "Projects"
+    subtitle = ""
+
+  # Contact section.
+  [params.contact]
+    enable = true
+    title = "Contact"
+    subtitle = ""
+    autolink = true  # Automatically link email and phone?
+
+  # Social/Academic Networking
+  #
+  # Icon pack "fa" includes the following social network icons:
+  #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus, youtube, instagram, soundcloud
+  #   For email icon, use "fa" icon pack, "envelope" icon, and "mailto:your@email.com" as the link.
+  #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
+  #
+  # Icon pack "ai" includes the following academic network icons:
+  #   google-scholar, arxiv, orcid, researchgate, mendeley
+  #   Full list: https://jpswalsh.github.io/academicons/
+
+  [[params.social]]
+    icon = "envelope"
+    icon_pack = "fa"
+    link = "mailto:adrien.gruson@gmail.com"
+
+  #[[params.social]]
+  #  icon = "twitter"
+  #  icon_pack = "fa"
+  #  link = "//twitter.com/GeorgeCushen"
+
+  [[params.social]]
+    icon = "google-scholar"
+    icon_pack = "ai"
+    link = "https://scholar.google.co.uk/citations?user=s_FseDAAAAAJ"
+
+  [[params.social]]
+    icon = "github"
+    icon_pack = "fa"
+    link = "//github.com/beltegeuse"
