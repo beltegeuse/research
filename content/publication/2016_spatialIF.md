@@ -18,8 +18,8 @@ url_pdf = "https://dl.dropboxusercontent.com/u/37606091/research/2016_Spatial-Ta
 #url_slides = "#"
 #url_video = "#"
 
-#[[url_custom]]
-#name = "Additional Mat."
-#url = "projects/aesthetics/aesthetics_add.pdf"
+[[url_custom]]
+name = "Additional Mat."
+url = "https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/supplemental.pdf"
 
 +++
