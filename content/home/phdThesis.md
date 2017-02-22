@@ -2,7 +2,7 @@
 # An example of using the custom widget to create your own homepage section.
 # To create more sections, duplicate this file and edit the values below as desired.
 
-date = "2016-04-20T00:00:00"
+date = "2015-08-20T00:00:00"
 draft = false
 
 title = "PhD Thesis"
@@ -24,7 +24,7 @@ weight = 59
 </div>
 <div class="col-md-12">
     <div class="pub-publication">
-        July, 2016. Rennes 1 University.
+        July, 2015. Rennes 1 University.
     </div>
 </div>
 <div class="col-md-12">
