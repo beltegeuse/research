@@ -143,6 +143,37 @@ defaultContentLanguageInSubdir = false
   #  icon_pack = "fa"
   #  link = "//github.com/beltegeuse"
 
+  # The authors lists
+  [[params.authors]]
+	name = "A Gruson"
+	website = "https://beltegeuse.github.io/research/"
+  [[params.authors]]
+	name = "K Bouatouch"
+	website = "https://www.irisa.fr/frvsense/Kadi.Bouatouch/"
+  [[params.authors]]
+	name = "M Ribardiere"
+	website = "https://bv.univ-poitiers.fr/access/content/user/mribar03/website/index.html"
+  [[params.authors]]
+	name = "M Sik"
+	website = "http://cgg.mff.cuni.cz/~sik/"
+  [[params.authors]]
+	name = "J Vorba"
+	website = "http://cgg.mff.cuni.cz/~jirka/"
+  [[params.authors]]
+	name = "R Cozot"
+	website = "http://cozot.free.fr/"
+  [[params.authors]]
+	name = "J Krivanek"
+	website = "http://cgg.mff.cuni.cz/~jaroslav/"
+  [[params.authors]]
+	name = "C Collin"
+	website = "https://www.bobbyblues.com/"
+  [[params.authors]]
+	name = "S Pattanaik"
+	website = "http://cs.ucf.edu/~sumant/"
+  [[params.authors]]
+	name = "M Hudon"
+	website = "http://people.irisa.fr/Matis.Hudon/"
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
