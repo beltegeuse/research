@@ -30,3 +30,4 @@ I was an ATER for the following courses at Rennes 1 University (2014 - 2015):
 - [hugo-academic](https://github.com/beltegeuse/hugo-academic): an modified version of academic theme for hugo (used to generate this page)
 - [rgbe](https://github.com/beltegeuse/rgbe): python library to read/save and compute metric on HDR images (RGBE and PFM format supported)
 - [mitsuba-prodTools](https://github.com/beltegeuse/mitsuba-prodTools): a *usefull* collection of python script that I use for my research with [Mitsuba](http://mitsuba-renderer.org/) (dependency: rgbe). More details on github page.
+- [mitsuba-blender](https://github.com/beltegeuse/mitsuba-blender): *another* mitsuba blender exporter (based on the official one). Main feature: cycles material conversion and participating media exporter.
