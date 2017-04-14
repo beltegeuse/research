@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.19" />
+  <meta name="generator" content="Hugo 0.20" />
   <meta name="author" content="Adrien Gruson">
   <meta name="description" content="Post-doc researcher of Computer Graphics">
 
@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/research/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/research/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/2012_TemporalTMO/">
+  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/2017_gradientpm/">
 
   
 
-  <title>Temporal Coherency for Video Tone Mapping | Adrien Gruson</title>
+  <title>Gradient-Domain Photon Density Estimation | Adrien Gruson</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -123,10 +123,10 @@
   
 
   <div class="container pub-title">
-    <h1 itemprop="name">Temporal Coherency for Video Tone Mapping</h1>
+    <h1 itemprop="name">Gradient-Domain Photon Density Estimation</h1>
     <span class="pub-authors" itemprop="author">
       
-      R Boitard, K Bouatouch, R Cozot, D Thoreau, A Gruson
+      B.-S Hua, A Gruson, D Nowrouzezahrai, T Hachisuka
       
     </span>
     <span class="pull-right">
@@ -135,35 +135,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2012_TemporalTMO%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2017_gradientpm%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Temporal%20Coherency%20for%20Video%20Tone%20Mapping&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2012_TemporalTMO%2f"
+         href="https://twitter.com/intent/tweet?text=Gradient-Domain%20Photon%20Density%20Estimation&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2017_gradientpm%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2012_TemporalTMO%2f&amp;title=Temporal%20Coherency%20for%20Video%20Tone%20Mapping"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2017_gradientpm%2f&amp;title=Gradient-Domain%20Photon%20Density%20Estimation"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2012_TemporalTMO%2f&amp;title=Temporal%20Coherency%20for%20Video%20Tone%20Mapping"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2017_gradientpm%2f&amp;title=Gradient-Domain%20Photon%20Density%20Estimation"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Temporal%20Coherency%20for%20Video%20Tone%20Mapping&amp;body=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2012_TemporalTMO%2f">
+         href="mailto:?subject=Gradient-Domain%20Photon%20Density%20Estimation&amp;body=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2017_gradientpm%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -178,11 +178,11 @@
 <div class="article-container">
 
   
-  <img src="/research/img/publications/temporal_video.png" class="pub-banner" itemprop="image">
+  <img src="/research/img/publications/GradientPM.png" class="pub-banner" itemprop="image">
   
 
   <h3>Abstract</h3>
-  <p class="pub-abstract" itemprop="text">Tone Mapping Operators (TMOs) aim at converting real world high dynamic range (HDR) images captured with HDR cameras, into low dynamic range (LDR) images that can be displayed on LDR displays.  Several TMOs have been proposed over the last decade, from the simple global mapping to the more complex one simulating the human vision system.  While these solutions work generally well for still pictures, they are usually less effcient for video sequences as they are source of visual artifacts.  Only few of them can be adapted to cope with a sequence of images.  In this paper we present a major problem that a static TMO usually encounters while dealing with video sequences, namely the temporal coherency.  Indeed, as each tone mapper deals with each frame separately, no  temporal  coherency  is  taken  into  account  and  hence  the  results  can  be  quite  disturbing  for  high  varying dynamics in a video.  We propose a temporal coherency algorithm that is designed to analyze a video as a whole, and  from  its  characteristics  adapts  each  tone  mapped  frame  of  a  sequence  in  order  to  preserve  the  temporal coherency.  This temporal coherency algorithm has been tested on a set of real as well as Computer Graphics Image (CGI) content and put in competition with several algorithms that are designed to be time-dependent. Results show that temporal coherency preserves the overall contrast in a sequence of images.  Furthermore, this technique is applicable to any TMO as it is a post-processing that only depends on the used TMO.</p>
+  <p class="pub-abstract" itemprop="text">The most common solutions to the light transport problem rely on either Monte Carlo (MC) integration or density estimation methods, such as uni- &amp; bi-directional path tracing or photon mapping. Recent gradient-domain extensions of MC approaches show great promise; here, gradients of the final image are estimated numerically (instead of the image intensities themselves) with coherent paths generated from a deterministic shift mapping. We extend gradient-domain approaches to light transport simulation based on density estimation. As with previous gradient-domain methods, we detail important considerations that arise when moving from a primal- to gradient-domain estimator. We provide an efficient and straightforward solution to these problems. Our solution supports stochastic progressive density estimation, so it is robust to complex transport effects. We show that gradient-domain photon density estimation converges faster than its primal-domain counterpart, as well as being generally more robust than gradient-domain uni- &amp; bi-directional path tracing for scenes dominated by complex transport.</p>
 
   
   <div class="row">
@@ -209,7 +209,7 @@
     <div class="col-sm-10">
       <div class="row">
         <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-        <div class="col-xs-12 col-sm-9">In <em>SPIE</em>, 2012.</div>
+        <div class="col-xs-12 col-sm-9">In <em>Eurographics</em>, 2017.</div>
       </div>
     </div>
     <div class="col-sm-1"></div>
@@ -222,7 +222,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
         <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-          October, 2012
+          April, 2017
         </div>
       </div>
     </div>
@@ -242,7 +242,7 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="http://www.ece.ubc.ca/~rboitard/articles/2012/Boitard%20et%20al.-2012-Temporal%20Coherency%20for%20Video%20Tone%20Mapping.pdf">
+<a class="btn btn-primary btn-outline" href="https://dl.dropboxusercontent.com/u/37606091/research/2017_GradientPM_Hua.pdf">
   PDF
 </a>
 
@@ -251,6 +251,10 @@
 
 
 
+
+<a class="btn btn-primary btn-outline" href="https://dl.dropboxusercontent.com/u/37606091/research/2017_gpm/comparison/index.html">
+  HTML Res. &#43; Code
+</a>
 
 
 
@@ -271,13 +275,10 @@
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://beltegeuse.github.io/research/publication/2012_LPMGPU/"><span
-      aria-hidden="true">&larr;</span> Light Propagation Maps on Parallel Graphics Architectures</a></li>
+    <li class="previous"><a href="https://beltegeuse.github.io/research/publication/2016_spatialif/"><span
+      aria-hidden="true">&larr;</span> A Spatial Target Function for Metropolis Photon Tracing</a></li>
     
 
-    
-    <li class="next"><a href="https://beltegeuse.github.io/research/publication/2013_VDPT/">Visibility-driven progressive volume photon tracing <span
-      aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
 </nav>

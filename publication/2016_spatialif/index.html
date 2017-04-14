@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.19" />
+  <meta name="generator" content="Hugo 0.20" />
   <meta name="author" content="Adrien Gruson">
   <meta name="description" content="Post-doc researcher of Computer Graphics">
 
@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/research/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/research/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/2015_RGBDSequential/">
+  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/2016_spatialif/">
 
   
 
-  <title>Shape and Reflectance from RGB-D Images using Time Sequential Illumination | Adrien Gruson</title>
+  <title>A Spatial Target Function for Metropolis Photon Tracing | Adrien Gruson</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -123,10 +123,10 @@
   
 
   <div class="container pub-title">
-    <h1 itemprop="name">Shape and Reflectance from RGB-D Images using Time Sequential Illumination</h1>
+    <h1 itemprop="name">A Spatial Target Function for Metropolis Photon Tracing</h1>
     <span class="pub-authors" itemprop="author">
       
-      M Hudon, A Gruson, P Kerbiriou, R Cozot, K Bouatouch
+      A Gruson, M Ribardiere, M Sik, J Vorba, R Cozot, K Bouatouch, J Krivanek
       
     </span>
     <span class="pull-right">
@@ -135,35 +135,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2015_RGBDSequential%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2016_spatialif%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Shape%20and%20Reflectance%20from%20RGB-D%20Images%20using%20Time%20Sequential%20Illumination&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2015_RGBDSequential%2f"
+         href="https://twitter.com/intent/tweet?text=A%20Spatial%20Target%20Function%20for%20Metropolis%20Photon%20Tracing&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2016_spatialif%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2015_RGBDSequential%2f&amp;title=Shape%20and%20Reflectance%20from%20RGB-D%20Images%20using%20Time%20Sequential%20Illumination"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2016_spatialif%2f&amp;title=A%20Spatial%20Target%20Function%20for%20Metropolis%20Photon%20Tracing"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2015_RGBDSequential%2f&amp;title=Shape%20and%20Reflectance%20from%20RGB-D%20Images%20using%20Time%20Sequential%20Illumination"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2016_spatialif%2f&amp;title=A%20Spatial%20Target%20Function%20for%20Metropolis%20Photon%20Tracing"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Shape%20and%20Reflectance%20from%20RGB-D%20Images%20using%20Time%20Sequential%20Illumination&amp;body=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2015_RGBDSequential%2f">
+         href="mailto:?subject=A%20Spatial%20Target%20Function%20for%20Metropolis%20Photon%20Tracing&amp;body=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2016_spatialif%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -178,11 +178,11 @@
 <div class="article-container">
 
   
-  <img src="/research/img/publications/RGBD.png" class="pub-banner" itemprop="image">
+  <img src="/research/img/publications/spatialTF.png" class="pub-banner" itemprop="image">
   
 
   <h3>Abstract</h3>
-  <p class="pub-abstract" itemprop="text">In this paper we propose a method for recovering the shape (geometry) and the diffuse reflectance from an image (or video) using a hybrid setup consisting of a depth sensor (Kinect), a consumer camera and a partially controlled illumination (using a flash). The objective is to show how combining RGB-D acquisition with a sequential illumination is useful for shape and reflectance recovery. A pair of two images are captured: one non flashed (image under ambient illumination) and a flashed one. A pure flash image is computed by subtracting the non flashed image from the flashed image. We propose an novel and near real-time algorithm, based on a local illumination model of our flash and the pure flash image, to enhance geometry (from the noisy depth map) and recover reflectance information.</p>
+  <p class="pub-abstract" itemprop="text">The human visual system is sensitive to relative differences in luminance but light transport simulation algorithms based on Metropolis sampling often result in a highly non-uniform relative error distribution over the rendered image. While this issue has previously been addressed in the context of the Metropolis light transport algorithm, our work focuses on Metropolis photon tracing. We present a new target function for Metropolis photon tracing that ensures good stratification of photons leading to pixel estimates with equalized relative error. We develop a hierarchical scheme for progressive construction of the target function from paths sampled during rendering. In addition to the approach taken in previous work, where the target function is defined in the image plane, ours can be associated with compact spatial regions. This allows us to take advantage of illumination coherence to more robustly estimate the target function while adapting to geometry discontinuities. To sample from this target function, we design a new replica exchange Metropolis scheme. We apply our algorithm in progressive photon mapping and show that it often outperforms alternative approaches in terms of image quality by a large margin.</p>
 
   
   <div class="row">
@@ -209,7 +209,7 @@
     <div class="col-sm-10">
       <div class="row">
         <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-        <div class="col-xs-12 col-sm-9">In <em>International Conference on Computer Vision Theory and Applications</em>, 2016.</div>
+        <div class="col-xs-12 col-sm-9">In <em>ACM Transaction on Graphics</em>, 2016.</div>
       </div>
     </div>
     <div class="col-sm-1"></div>
@@ -222,7 +222,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
         <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-          February, 2016
+          August, 2016
         </div>
       </div>
     </div>
@@ -242,7 +242,7 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://dl.dropboxusercontent.com/u/37606091/research/2016_RGBD-Sequential_Hudon.pdf">
+<a class="btn btn-primary btn-outline" href="https://dl.acm.org/authorize?N23812">
   PDF
 </a>
 
@@ -251,10 +251,14 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="http://people.irisa.fr/Matis.Hudon/Shape.html">
-  Project
+
+<a class="btn btn-primary btn-outline" href="https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/supplemental.pdf">
+  Additional Mat.
 </a>
 
+<a class="btn btn-primary btn-outline" href="https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/comparison/index.html">
+  HTML Res. &#43; Code
+</a>
 
 
 
@@ -275,12 +279,12 @@
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://beltegeuse.github.io/research/publication/2015_aesthetics/"><span
-      aria-hidden="true">&larr;</span> Automatic Aesthetics-based Lighting Design with Global Illumination</a></li>
+    <li class="previous"><a href="https://beltegeuse.github.io/research/publication/2015_rgbdsequential/"><span
+      aria-hidden="true">&larr;</span> Shape and Reflectance from RGB-D Images using Time Sequential Illumination</a></li>
     
 
     
-    <li class="next"><a href="https://beltegeuse.github.io/research/publication/2016_spatialIF/">A Spatial Target Function for Metropolis Photon Tracing <span
+    <li class="next"><a href="https://beltegeuse.github.io/research/publication/2017_gradientpm/">Gradient-Domain Photon Density Estimation <span
       aria-hidden="true">&rarr;</span></a></li>
     
   </ul>

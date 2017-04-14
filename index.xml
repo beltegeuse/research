@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Adrien Gruson on Adrien Gruson</title>
-    <link>https://beltegeuse.github.io/research/index.xml</link>
+    <link>https://beltegeuse.github.io/research/</link>
     <description>Recent content in Adrien Gruson on Adrien Gruson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Adrien Gruson</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/research/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/research/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Gradient-Domain Photon Density Estimation</title>
-      <link>https://beltegeuse.github.io/research/publication/2017_GradientPM/</link>
+      <link>https://beltegeuse.github.io/research/publication/2017_gradientpm/</link>
       <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://beltegeuse.github.io/research/publication/2017_GradientPM/</guid>
+      <guid>https://beltegeuse.github.io/research/publication/2017_gradientpm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>A Spatial Target Function for Metropolis Photon Tracing</title>
-      <link>https://beltegeuse.github.io/research/publication/2016_spatialIF/</link>
+      <link>https://beltegeuse.github.io/research/publication/2016_spatialif/</link>
       <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://beltegeuse.github.io/research/publication/2016_spatialIF/</guid>
+      <guid>https://beltegeuse.github.io/research/publication/2016_spatialif/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shape and Reflectance from RGB-D Images using Time Sequential Illumination</title>
-      <link>https://beltegeuse.github.io/research/publication/2015_RGBDSequential/</link>
+      <link>https://beltegeuse.github.io/research/publication/2015_rgbdsequential/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://beltegeuse.github.io/research/publication/2015_RGBDSequential/</guid>
+      <guid>https://beltegeuse.github.io/research/publication/2015_rgbdsequential/</guid>
       <description></description>
     </item>
     
@@ -48,37 +48,37 @@
     
     <item>
       <title>Eye-Centred Color Adaptation in Global Illumination</title>
-      <link>https://beltegeuse.github.io/research/publication/2013_whiteBalancing/</link>
+      <link>https://beltegeuse.github.io/research/publication/2013_whitebalancing/</link>
       <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://beltegeuse.github.io/research/publication/2013_whiteBalancing/</guid>
+      <guid>https://beltegeuse.github.io/research/publication/2013_whitebalancing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Visibility-driven progressive volume photon tracing</title>
-      <link>https://beltegeuse.github.io/research/publication/2013_VDPT/</link>
+      <link>https://beltegeuse.github.io/research/publication/2013_vdpt/</link>
       <pubDate>Fri, 01 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://beltegeuse.github.io/research/publication/2013_VDPT/</guid>
+      <guid>https://beltegeuse.github.io/research/publication/2013_vdpt/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Temporal Coherency for Video Tone Mapping</title>
-      <link>https://beltegeuse.github.io/research/publication/2012_TemporalTMO/</link>
+      <link>https://beltegeuse.github.io/research/publication/2012_temporaltmo/</link>
       <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://beltegeuse.github.io/research/publication/2012_TemporalTMO/</guid>
+      <guid>https://beltegeuse.github.io/research/publication/2012_temporaltmo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Light Propagation Maps on Parallel Graphics Architectures</title>
-      <link>https://beltegeuse.github.io/research/publication/2012_LPMGPU/</link>
+      <link>https://beltegeuse.github.io/research/publication/2012_lpmgpu/</link>
       <pubDate>Wed, 01 Feb 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://beltegeuse.github.io/research/publication/2012_LPMGPU/</guid>
+      <guid>https://beltegeuse.github.io/research/publication/2012_lpmgpu/</guid>
       <description></description>
     </item>
     

@@ -4,7 +4,7 @@
     
     
     <url>
-      <loc>https://beltegeuse.github.io/research/publication/2017_GradientPM/</loc>
+      <loc>https://beltegeuse.github.io/research/publication/2017_gradientpm/</loc>
       <lastmod>2017-04-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -44,7 +44,7 @@
     
     
     <url>
-      <loc>https://beltegeuse.github.io/research/publication/2016_spatialIF/</loc>
+      <loc>https://beltegeuse.github.io/research/publication/2016_spatialif/</loc>
       <lastmod>2016-08-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -52,7 +52,7 @@
     
     
     <url>
-      <loc>https://beltegeuse.github.io/research/publication/2015_RGBDSequential/</loc>
+      <loc>https://beltegeuse.github.io/research/publication/2015_rgbdsequential/</loc>
       <lastmod>2016-02-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -68,7 +68,7 @@
     
     
     <url>
-      <loc>https://beltegeuse.github.io/research/publication/2013_whiteBalancing/</loc>
+      <loc>https://beltegeuse.github.io/research/publication/2013_whitebalancing/</loc>
       <lastmod>2013-10-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -76,7 +76,7 @@
     
     
     <url>
-      <loc>https://beltegeuse.github.io/research/publication/2013_VDPT/</loc>
+      <loc>https://beltegeuse.github.io/research/publication/2013_vdpt/</loc>
       <lastmod>2013-02-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -84,7 +84,7 @@
     
     
     <url>
-      <loc>https://beltegeuse.github.io/research/publication/2012_TemporalTMO/</loc>
+      <loc>https://beltegeuse.github.io/research/publication/2012_temporaltmo/</loc>
       <lastmod>2012-10-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -92,7 +92,7 @@
     
     
     <url>
-      <loc>https://beltegeuse.github.io/research/publication/2012_LPMGPU/</loc>
+      <loc>https://beltegeuse.github.io/research/publication/2012_lpmgpu/</loc>
       <lastmod>2012-02-01T00:00:00+00:00</lastmod>
     </url>
     
@@ -118,7 +118,25 @@
     
     
     <url>
+      <loc>https://beltegeuse.github.io/research/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
       <loc>https://beltegeuse.github.io/research/publication_types/</loc>
+      <lastmod>2017-04-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+      <loc>https://beltegeuse.github.io/research/tags/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

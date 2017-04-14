@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.19" />
+  <meta name="generator" content="Hugo 0.20" />
   <meta name="author" content="Adrien Gruson">
   <meta name="description" content="Post-doc researcher of Computer Graphics">
 
@@ -34,11 +34,11 @@
   <link rel="icon" type="image/png" href="/research/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/research/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/2016_spatialIF/">
+  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/2013_vdpt/">
 
   
 
-  <title>A Spatial Target Function for Metropolis Photon Tracing | Adrien Gruson</title>
+  <title>Visibility-driven progressive volume photon tracing | Adrien Gruson</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -123,10 +123,10 @@
   
 
   <div class="container pub-title">
-    <h1 itemprop="name">A Spatial Target Function for Metropolis Photon Tracing</h1>
+    <h1 itemprop="name">Visibility-driven progressive volume photon tracing</h1>
     <span class="pub-authors" itemprop="author">
       
-      A Gruson, M Ribardiere, M Sik, J Vorba, R Cozot, K Bouatouch, J Krivanek
+      C Collin, M Ribardiere, A Gruson, R Cozot, S Pattanaik, K Bouatouch
       
     </span>
     <span class="pull-right">
@@ -135,35 +135,35 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2016_spatialIF%2f"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2013_vdpt%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=A%20Spatial%20Target%20Function%20for%20Metropolis%20Photon%20Tracing&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2016_spatialIF%2f"
+         href="https://twitter.com/intent/tweet?text=Visibility-driven%20progressive%20volume%20photon%20tracing&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2013_vdpt%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2016_spatialIF%2f&amp;title=A%20Spatial%20Target%20Function%20for%20Metropolis%20Photon%20Tracing"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2013_vdpt%2f&amp;title=Visibility-driven%20progressive%20volume%20photon%20tracing"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2016_spatialIF%2f&amp;title=A%20Spatial%20Target%20Function%20for%20Metropolis%20Photon%20Tracing"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2013_vdpt%2f&amp;title=Visibility-driven%20progressive%20volume%20photon%20tracing"
          target="_blank">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=A%20Spatial%20Target%20Function%20for%20Metropolis%20Photon%20Tracing&amp;body=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2016_spatialIF%2f">
+         href="mailto:?subject=Visibility-driven%20progressive%20volume%20photon%20tracing&amp;body=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2013_vdpt%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -178,11 +178,11 @@
 <div class="article-container">
 
   
-  <img src="/research/img/publications/spatialTF.png" class="pub-banner" itemprop="image">
+  <img src="/research/img/publications/vdpt.png" class="pub-banner" itemprop="image">
   
 
   <h3>Abstract</h3>
-  <p class="pub-abstract" itemprop="text">The human visual system is sensitive to relative differences in luminance but light transport simulation algorithms based on Metropolis sampling often result in a highly non-uniform relative error distribution over the rendered image. While this issue has previously been addressed in the context of the Metropolis light transport algorithm, our work focuses on Metropolis photon tracing. We present a new target function for Metropolis photon tracing that ensures good stratification of photons leading to pixel estimates with equalized relative error. We develop a hierarchical scheme for progressive construction of the target function from paths sampled during rendering. In addition to the approach taken in previous work, where the target function is defined in the image plane, ours can be associated with compact spatial regions. This allows us to take advantage of illumination coherence to more robustly estimate the target function while adapting to geometry discontinuities. To sample from this target function, we design a new replica exchange Metropolis scheme. We apply our algorithm in progressive photon mapping and show that it often outperforms alternative approaches in terms of image quality by a large margin.</p>
+  <p class="pub-abstract" itemprop="text">In this paper, we present a novel approach to progressive photon-based volume rendering techniques. By making use of two Kd-trees (built in a preprocessing step) to store view beams (primary rays intersecting the medium) and visible points, our method allows to handle scenes with specular and refractive objects as well as homogeneous and heterogeneous participating media and does not require the storage of photon maps, which solves the memory management issue. These data structures are used to drive the photon shooting process by considering the photon visibility as an importance function (similarly to Hachisuka and Jensen) for scenes containing participating media. Finally, we demonstrate that our method can be easily combined with the most recent particle tracing approaches such as the one presented in Jarosz et al.</p>
 
   
   <div class="row">
@@ -209,7 +209,7 @@
     <div class="col-sm-10">
       <div class="row">
         <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-        <div class="col-xs-12 col-sm-9">In <em>ACM Transaction on Graphics</em>, 2016.</div>
+        <div class="col-xs-12 col-sm-9">In <em>Computer Graphics International</em> 2013 / <em>The Visual Computer</em>, Vol. 29, page 849 - 859</div>
       </div>
     </div>
     <div class="col-sm-1"></div>
@@ -222,7 +222,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
         <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-          August, 2016
+          February, 2013
         </div>
       </div>
     </div>
@@ -242,23 +242,19 @@
 
 
 
-<a class="btn btn-primary btn-outline" href="https://dl.acm.org/authorize?N23812">
+<a class="btn btn-primary btn-outline" href="https://dl.dropboxusercontent.com/u/37606091/research/2013_Volume-Photon-Tracing_Collin.pdf">
   PDF
 </a>
 
 
 
-
-
-
-
-<a class="btn btn-primary btn-outline" href="https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/supplemental.pdf">
-  Additional Mat.
+<a class="btn btn-primary btn-outline" href="https://youtu.be/kd6fKV87tIc">
+  Video
 </a>
 
-<a class="btn btn-primary btn-outline" href="https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/comparison/index.html">
-  HTML Res. &#43; Code
-</a>
+
+
+
 
 
 
@@ -279,12 +275,12 @@
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="https://beltegeuse.github.io/research/publication/2015_RGBDSequential/"><span
-      aria-hidden="true">&larr;</span> Shape and Reflectance from RGB-D Images using Time Sequential Illumination</a></li>
+    <li class="previous"><a href="https://beltegeuse.github.io/research/publication/2012_temporaltmo/"><span
+      aria-hidden="true">&larr;</span> Temporal Coherency for Video Tone Mapping</a></li>
     
 
     
-    <li class="next"><a href="https://beltegeuse.github.io/research/publication/2017_GradientPM/">Gradient-Domain Photon Density Estimation <span
+    <li class="next"><a href="https://beltegeuse.github.io/research/publication/2013_whitebalancing/">Eye-Centred Color Adaptation in Global Illumination <span
       aria-hidden="true">&rarr;</span></a></li>
     
   </ul>
