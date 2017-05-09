@@ -14,7 +14,7 @@ title = "Gradient-Domain Photon Density Estimation"
 #url_dataset = "#"
 url_pdf = "https://dl.dropboxusercontent.com/u/37606091/research/2017_GradientPM_Hua.pdf"
 #url_project = "http://people.irisa.fr/Matis.Hudon/Shape.html"
-#url_slides = "#"
+url_slides = "https://dl.dropboxusercontent.com/u/37606091/research/2017_GPM/presentation_GPM.pptx"
 #url_video = "#"
 
 [[url_custom]]
