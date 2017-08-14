@@ -16,7 +16,7 @@ title = "A Spatial Target Function for Metropolis Photon Tracing"
 #url_pdf = "https://dl.dropboxusercontent.com/u/37606091/research/2016_Spatial-Target-Function_Gruson.pdf"
 url_pdf = "https://dl.acm.org/authorize?N23812"
 #url_project = "http://people.irisa.fr/Matis.Hudon/Shape.html"
-#url_slides = "#"
+url_slides = "https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/SpatialIF.pptx"
 #url_video = "#"
 
 [[url_custom]]
