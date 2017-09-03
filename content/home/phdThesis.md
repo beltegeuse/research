@@ -19,7 +19,7 @@ weight = 59
 </div>
 <div class="col-md-12">
     <h3 class="article-title" itemprop="name">
-        Toward more Realism and Robustness in Global Illumination  <a class="btn btn-primary btn-outline btn-xs" href="https://dl.dropboxusercontent.com/u/37606091/research/2015_PhD_Gruson.pdf">PDF</a>
+        Toward more Realism and Robustness in Global Illumination  <a class="btn btn-primary btn-outline btn-xs" href=http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2015_PhD_Gruson.pdf">PDF</a>
     </h3>
 </div>
 <div class="col-md-12">

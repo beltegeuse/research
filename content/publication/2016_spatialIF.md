@@ -13,18 +13,18 @@ selected = true
 title = "A Spatial Target Function for Metropolis Photon Tracing"
 #url_code = "#"
 #url_dataset = "#"
-#url_pdf = "https://dl.dropboxusercontent.com/u/37606091/research/2016_Spatial-Target-Function_Gruson.pdf"
+#url_pdf = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_Spatial-Target-Function_Gruson.pdf"
 url_pdf = "https://dl.acm.org/authorize?N23812"
 #url_project = "http://people.irisa.fr/Matis.Hudon/Shape.html"
-url_slides = "https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/SpatialIF.pptx"
+url_slides = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_SpatialTF/SpatialIF.pptx"
 #url_video = "#"
 
 [[url_custom]]
 name = "Additional Mat."
-url = "https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/supplemental.pdf"
+url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_SpatialTF/supplemental.pdf"
 
 [[url_custom]]
 name = "HTML Res. + Code"
-url = "https://dl.dropboxusercontent.com/u/37606091/research/2016_SpatialTF/comparison/index.html"
+url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_SpatialTF/comparison/index.html"
 
 +++

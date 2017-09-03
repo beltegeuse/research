@@ -12,13 +12,13 @@ selected = true
 title = "Gradient-Domain Photon Density Estimation"
 #url_code = "#"
 #url_dataset = "#"
-url_pdf = "https://dl.dropboxusercontent.com/u/37606091/research/2017_GradientPM_Hua.pdf"
+url_pdf = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GradientPM_Hua.pdf"
 #url_project = "http://people.irisa.fr/Matis.Hudon/Shape.html"
-url_slides = "https://dl.dropboxusercontent.com/u/37606091/research/2017_GPM/presentation_GPM.pptx"
+url_slides = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/presentation_GPM.pptx"
 #url_video = "#"
 
 [[url_custom]]
 name = "HTML Res. + Code"
-url = "https://dl.dropboxusercontent.com/u/37606091/research/2017_gpm/comparison/index.html"
+url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/comparison/index.html"
 
 +++

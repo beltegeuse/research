@@ -13,17 +13,17 @@ selected = true
 title = "Automatic Aesthetics-based Lighting Design with Global Illumination"
 #url_code = "#"
 #url_dataset = "#"
-url_pdf = "https://dl.dropboxusercontent.com/u/37606091/research/2014_Aesthetics-Ligthing-Design_Leon.pdf"
+url_pdf = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2014_Aesthetics-Ligthing-Design_Leon.pdf"
 #url_project = "http://people.irisa.fr/Matis.Hudon/Shape.html"
 #url_slides = "#"
 #url_video = "#"
 
 [[url_custom]]
 name = "Additional Mat."
-url = "https://dl.dropboxusercontent.com/u/37606091/research/2014_Aesthetics/additional.pdf"
+url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2014_Aesthetics/additional.pdf"
 
 [[url_custom]]
 name = "Poster"
-url = "https://dl.dropboxusercontent.com/u/37606091/research/2014_Aesthetics/poster.pdf"
+url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2014_Aesthetics/poster.pdf"
 
 +++
