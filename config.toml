@@ -34,6 +34,9 @@ defaultContentLanguageInSubdir = false
   skype = ""
   telegram = ""
 
+  # Enable year splitting for publication list (main page)
+  year_splitting = false
+
   # Enable Keybase in Contact section by entering your keybase.io username.
   keybase = ""
 
@@ -43,7 +46,7 @@ defaultContentLanguageInSubdir = false
 
   # Enable global LaTeX math rendering?
   #   If false, you can enable it locally on a per page basis.
-  math = false
+  math = true
 
   # Highlight.js options
   #   highlight
