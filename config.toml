@@ -188,7 +188,9 @@ defaultContentLanguageInSubdir = false
   [[params.authors]]
 	name= "T Hachisuka"
 	website = "http://www.ci.i.u-tokyo.ac.jp/~hachisuka/"
-
+  [[params.authors]]
+	name= "J. Sriwasansak"
+	website = "http://jamorn.me/"
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
