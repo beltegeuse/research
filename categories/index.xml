@@ -7,7 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Adrien Gruson</copyright>
-    <atom:link href="/research/categories/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://beltegeuse.github.io/research/categories/index.xml" rel="self" type="application/rss+xml" />
+    
     
   </channel>
 </rss>

@@ -52,11 +52,11 @@
   <link rel="icon" type="image/png" href="/research/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/research/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="">
+  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/2018_efficientvpl/">
 
   
 
-  <title>404 Page not found | Adrien Gruson</title>
+  <title>Efficient Energy-Compensated VPLs using Photon Splatting | Adrien Gruson</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -138,62 +138,148 @@
   </div>
 </nav>
 
-<div class="container">
+<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
 
-  <h1>Page not found</h1>
-  <p>Maybe you were looking for one of these?</p>
-
-  <h2>Recent Posts</h2>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/post/">Posts</a></li>
-  </ul>
   
 
-  <h2>Recent Publications</h2>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/publication/2018_efficientvpl/">Efficient Energy-Compensated VPLs using Photon Splatting</a></li>
+
+  <div class="container pub-title">
+    <h1 itemprop="name">Efficient Energy-Compensated VPLs using Photon Splatting</h1>
+    <span class="pub-authors" itemprop="author">
+      
+      J. Sriwasansak, A Gruson, T Hachisuka
+      
+    </span>
+    <span class="pull-right">
+      
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2018_efficientvpl%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Efficient%20Energy-Compensated%20VPLs%20using%20Photon%20Splatting&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2018_efficientvpl%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2018_efficientvpl%2f&amp;title=Efficient%20Energy-Compensated%20VPLs%20using%20Photon%20Splatting"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2018_efficientvpl%2f&amp;title=Efficient%20Energy-Compensated%20VPLs%20using%20Photon%20Splatting"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Efficient%20Energy-Compensated%20VPLs%20using%20Photon%20Splatting&amp;body=https%3a%2f%2fbeltegeuse.github.io%2fresearch%2fpublication%2f2018_efficientvpl%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
   </ul>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/publication/2017_gradientpm/">Gradient-Domain Photon Density Estimation</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/publication/">Publications</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/publication/2016_spatialif/">A Spatial Target Function for Metropolis Photon Tracing</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/publication/2015_rgbdsequential/">Shape and Reflectance from RGB-D Images using Time Sequential Illumination</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/publication/2015_aesthetics/">Automatic Aesthetics-based Lighting Design with Global Illumination</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/publication/2013_whitebalancing/">Eye-Centred Color Adaptation in Global Illumination</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/publication/2013_vdpt/">Visibility-driven progressive volume photon tracing</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/publication/2012_temporaltmo/">Temporal Coherency for Video Tone Mapping</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="https://beltegeuse.github.io/research/publication/2012_lpmgpu/">Light Propagation Maps on Parallel Graphics Architectures</a></li>
-  </ul>
-  
+</div>
+
+
+    </span>
+  </div>
 
 </div>
+<div class="article-container">
+
+  
+  <img src="/research/img/publications/efficientVPL.png" class="pub-banner" itemprop="image">
+  
+
+  <h3>Abstract</h3>
+  <p class="pub-abstract" itemprop="text">Efficient light transport simulation is important for many applications in computer graphics. Many-light methods based on virtual point lights (VPLs) especially work well for scenes consist mainly of diffuse materials. Rendered images with VPLs, however, are known to suffer from energy loss due to clamping of the VPL contributions. Removing this clamping unfortunately introduces significant variance in images due to the singularities of VPLs. We propose an efficient and practical algorithm which compensates energy loss of VPLs using yet another efficient rendering method &ndash; photon splatting. Recent unified path sampling frameworks shows that VPLs are in fact photons. Based on this unified formulation, we propose to reuse VPLs as photons to compensate missing energy of clamped VPLs. This combination is very natural: the singularities of VPLs happen if a shading point is too close to VPLs, but such VPLs can also be seen as neighboring photons that are indeed useful for photon density estimation. We formulate this energy compensation process using multiple importance sampling to optimally combine rendering with VPLs and photon splatting. Our algorithm can be efficiently implemented on GPUs since rendering with VPLs and photon splatting are both suitable for GPUs. The results demonstrate that our method produces more accurate images in the same rendering time than the existing methods. For common use cases of rendering mostly diffuse scenes, our work leads to an efficient, accurate, and practical rendering algorithm based on VPLs.</p>
+
+  
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
+        <div class="col-xs-12 col-sm-9">In <em>I3D</em>, 2018.</div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
+        <div class="col-xs-12 col-sm-9" itemprop="datePublished">
+          March, 2018
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="row" style="padding-top: 10px">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
+        <div class="col-xs-12 col-sm-9">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="space-below"></div>
+
+  <div class="article-style"></div>
+
+</div>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://beltegeuse.github.io/research/publication/2017_gradientpm/"><span
+      aria-hidden="true">&larr;</span> Gradient-Domain Photon Density Estimation</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">

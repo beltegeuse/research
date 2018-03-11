@@ -11,6 +11,15 @@
     <atom:link href="/research/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Efficient Energy-Compensated VPLs using Photon Splatting</title>
+      <link>https://beltegeuse.github.io/research/publication/2018_efficientvpl/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://beltegeuse.github.io/research/publication/2018_efficientvpl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Gradient-Domain Photon Density Estimation</title>
       <link>https://beltegeuse.github.io/research/publication/2017_gradientpm/</link>
       <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
