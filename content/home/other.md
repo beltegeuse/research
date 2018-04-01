@@ -27,6 +27,7 @@ I was an ATER for the following courses at Rennes 1 University (2014 - 2015):
 - PS1: Python introduction programming.
 
 ## Public projects
+- [rustlight](https://github.com/beltegeuse/rustlight): physically-based rendering engine implemented in Rust.
 - [hugo-academic](https://github.com/beltegeuse/hugo-academic): an modified version of academic theme for hugo (used to generate this page)
 - [rgbe](https://github.com/beltegeuse/rgbe): python library to read/save and compute metric on HDR images (RGBE and PFM format supported)
 - [mitsuba-prodTools](https://github.com/beltegeuse/mitsuba-prodTools): a *usefull* collection of python script that I use for my research with [Mitsuba](http://mitsuba-renderer.org/) (dependency: rgbe). More details on github page.

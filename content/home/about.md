@@ -12,9 +12,9 @@ weight = 1
 # List your academic interests.
 [interests]
   interests = [
-    "Computer Graphics", 
-    "Global Illumination", 
+    "Light transport simulation", 
     "Markov Chain Monte Carlo", 
+    "Gradient-domain rendering",
     "Machine Learning"
   ]
 
@@ -38,4 +38,4 @@ weight = 1
 
 # Biography
 
-Adrien Gruson is a post-doc researcher in Computer Graphics at the University of Tokyo. His research interests include physically based rendering (global illumination) with robust rendering techniques. He is currently in [Prof. Toshiya Hachisuka](http://www.ci.i.u-tokyo.ac.jp/~hachisuka/)'s lab. He is also a member of [Japanese French Laboratory of Informatics (JFLI)](http://jfli.cnrs.fr/).
+Adrien Gruson is a post-doc researcher in Computer Graphics Group at the University of Tokyo ([Prof. Toshiya Hachisuka](http://www.ci.i.u-tokyo.ac.jp/~hachisuka/)'s lab). His research interests include physically-based rendering based on MCMC or gradient-domain approaches. He is also a member of [Japanese French Laboratory of Informatics (JFLI)](http://jfli.cnrs.fr/).

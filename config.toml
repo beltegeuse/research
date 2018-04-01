@@ -34,7 +34,7 @@ defaultContentLanguageInSubdir = false
   font = "default"
   
   name = "Adrien Gruson"
-  role = "Post-doc researcher of Computer Graphics"
+  role = "Post-doc researcher in Computer Graphics Group"
   
   organizations = [ { name = "Dept. of Creative Informatics, The University of Tokyo", url = "http://www.ci.i.u-tokyo.ac.jp/site/index.php" }, { name = "Japanese French Laboratory of Informatics (JFLI)", url = "http://jfli.cnrs.fr/" } ]
 
@@ -131,7 +131,7 @@ defaultContentLanguageInSubdir = false
   #   For more info on the highlighting options, see:
   #   https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/#highlighting-options
   highlight = true
-  highlight_languages = ["c++", "python", "rust"]
+  highlight_languages = ["cpp", "python", "rust"]
   # highlight_style = "github"
   # highlight_version = "9.9.0"
 
@@ -249,7 +249,7 @@ defaultContentLanguageInSubdir = false
 	website = "http://cs.ucf.edu/~sumant/"
   [[params.authors]]
 	name = "M Hudon"
-	website = "http://people.irisa.fr/Matis.Hudon/"
+	website = "https://www.scss.tcd.ie/~hudonm/"
   [[params.authors]]
 	name= "B.-S Hua"
 	website = "http://sonhua.me/"
