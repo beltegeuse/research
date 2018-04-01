@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Adrien Gruson</title>
+    <link>https://beltegeuse.github.io/research/home/</link>
+    <description>Recent content in Homes on Adrien Gruson</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Adrien Gruson</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://beltegeuse.github.io/research/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://beltegeuse.github.io/research/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://beltegeuse.github.io/research/home/about/</guid>
+      <description>Biography Adrien Gruson is a post-doc researcher in Computer Graphics at the University of Tokyo. His research interests include physically based rendering (global illumination) with robust rendering techniques. He is currently in Prof. Toshiya Hachisuka&amp;rsquo;s lab. He is also a member of Japanese French Laboratory of Informatics (JFLI).</description>
+    </item>
+    
+    <item>
+      <title>News</title>
+      <link>https://beltegeuse.github.io/research/home/news/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://beltegeuse.github.io/research/home/news/</guid>
+      <description> Mar/11/2018: We got a paper accepted on I3D conference! Apr/5/2017: I have joined JFLI! I have also put my public repository at the page bottom. 😃 Mar/19/2017: &amp;ldquo;A Spatial Target Function for Metropolis Photon Tracing&amp;rdquo; The code and scenes added! Be sure to check it out! 😄  </description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://beltegeuse.github.io/research/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://beltegeuse.github.io/research/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PhD Thesis</title>
+      <link>https://beltegeuse.github.io/research/home/phdthesis/</link>
+      <pubDate>Thu, 20 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://beltegeuse.github.io/research/home/phdthesis/</guid>
+      <description> Toward more Realism and Robustness in Global Illumination PDF   July, 2015. Rennes 1 University.     Chair: &amp;nbsp;&amp;nbsp;  Luce Morin, INSA Rennes, France    Reviewers: &amp;nbsp;&amp;nbsp;  Tamy Boubekeur, Telecom ParisTech, France     Elmar Eisemann, TU Delft, Netherlands    Examiner: &amp;nbsp;&amp;nbsp;  Jaroslav Krivanek, Charles University, Czech Republic    Supervisors: &amp;nbsp;&amp;nbsp;  Kadi Bouatouch, Rennes 1 University, France     Remi Cozot, Rennes 1 University, France      </description>
+    </item>
+    
+    <item>
+      <title>Other</title>
+      <link>https://beltegeuse.github.io/research/home/other/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://beltegeuse.github.io/research/home/other/</guid>
+      <description>Other publications  &amp;ldquo;Comment simuler efficacement les interactions lumière/matière en synthèse d’image&amp;rdquo;, A. Gruson and K. Bouatouch, SIF 2015 volume 7. &amp;ldquo;Rendu Progressif basé Metropolis-Hasting dans des scènes à contextes topologiques multiples&amp;rdquo;, A. Gruson, M. Ribardière, R. Cozot and K. Bouatouch, REFIG 2014 volume 8.  Teaching I was an ATER for the following courses at Rennes 1 University (2014 - 2015):
+ PI1 &amp;amp; PI2: Object programming introduction (JAVA).</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://beltegeuse.github.io/research/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://beltegeuse.github.io/research/home/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
