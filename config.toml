@@ -260,8 +260,22 @@ defaultContentLanguageInSubdir = false
 	name= "T Hachisuka"
 	website = "http://www.ci.i.u-tokyo.ac.jp/~hachisuka/"
   [[params.authors]]
-	name= "J. Sriwasansak"
+	name= "J Sriwasansak"
 	website = "http://jamorn.me/"
+  [[params.authors]]
+ 	name="N Vibert"
+	website = "http://neodyme.net/"
+  [[params.authors]]
+	name="P Kerbiriou"
+	website="www.technicolor.com/paul-kerbiriou"
+  [[params.authors]]
+	name="R Boitard"
+	website="http://www.ece.ubc.ca/~rboitard/"
+  [[params.authors]]
+	name="D Thoreau"
+	website="https://www.technicolor.com/dominique-thoreau"
+
+
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
