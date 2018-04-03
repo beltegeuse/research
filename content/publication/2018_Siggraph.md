@@ -1,6 +1,6 @@
 +++
 abstract = "TBA"
-authors = ["A Gruson", "TBA", "TBA", "TBA", "TBA"]
+authors = ["A Gruson", "B.-S Hua", "N Vibert", "D Nowrouzezahrai", "T Hachisuka"]
 date = "2018-04-01"
 image = ""
 image_preview = "publications/tba.png"
