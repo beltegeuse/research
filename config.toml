@@ -252,7 +252,7 @@ defaultContentLanguageInSubdir = false
 	website = "https://www.scss.tcd.ie/~hudonm/"
   [[params.authors]]
 	name= "B.-S Hua"
-	website = "http://sonhua.me/"
+	website = "http://sonhua.github.io/"
   [[params.authors]]
 	name= "D Nowrouzezahrai"
 	website = "http://www.cim.mcgill.ca/~derek/"
