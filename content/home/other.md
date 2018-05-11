@@ -14,6 +14,10 @@ weight = 60
 
 +++
 
+## Other presentation
+- ["Recent Advances in Gradient-domain Rendering"](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/JFLI_Handai_gradient.pptx) at Handai IDS-JFLI, May 11 2018.
+- ["Recent Research on Photon Density Estimation methods for LT"](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/JFLI_mcmc.pptx) at JFLI Seminar, May 15 2017.
+
 ## Other publications
 
 - ["Comment simuler efficacement les interactions lumière/matière en synthèse d’image"](http://www.societe-informatique-de-france.fr/wp-content/uploads/2015/12/1024-no7-Gruson-Bouatouch.pdf), A. Gruson and K. Bouatouch, SIF 2015 volume 7.

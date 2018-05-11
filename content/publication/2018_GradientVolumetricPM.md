@@ -6,8 +6,8 @@ image = "publications/GradientVolumetricPM.png"
 image_preview = "publications/GradientVolumetricPM_prev.png"
 math = true
 publication_types = [2]
-publication = "In *Siggraph*, 2018. (conditionally accepted)"
-publication_short = "In *Siggraph*, 2018 (conditionally accepted)"
+publication = "In *ACM Trans. Graph. (SIGGRAPH)*, 2018."
+publication_short = "In *ACM Trans. Graph. (SIGGRAPH)*, 2018"
 selected = true
 title = "Gradient-domain Volumetric Photon Density Estimation"
 
