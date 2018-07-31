@@ -17,8 +17,8 @@ url_pdf = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/20
 #url_slides = "#"
 #url_video = "#"
 
-#[[url_custom]]
-#name = "HTML Res. + Code"
-#url = "#"
+[[url_custom]]
+name = "HTML Res. + Code"
+url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/comparison/index.html"
 
 +++
