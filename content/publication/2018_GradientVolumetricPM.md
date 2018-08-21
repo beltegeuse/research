@@ -14,7 +14,7 @@ title = "Gradient-domain Volumetric Photon Density Estimation"
 #url_code = "#"
 url_pdf = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM.pdf"
 #url_project = "#"
-#url_slides = "#"
+url_slides = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/GVPM_Presentation.pptx"
 #url_video = "#"
 
 [[url_custom]]
