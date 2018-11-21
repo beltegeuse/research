@@ -156,7 +156,8 @@ defaultContentLanguageInSubdir = false
     'Manuscript',  # 3
     'Report',  # 4
     'Book',  # 5
-    'Book section'  # 6
+    'Book section',  # 6
+    'Course' #7
   ]
 
   # Configuration of talk pages.
@@ -274,6 +275,9 @@ defaultContentLanguageInSubdir = false
   [[params.authors]]
 	name="D Thoreau"
 	website="https://www.technicolor.com/dominique-thoreau"
+  [[params.authors]]
+	name="M Zwicker"
+	website="https://www.cs.umd.edu/~zwicker/"
 
 
 
