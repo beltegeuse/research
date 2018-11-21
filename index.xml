@@ -11,6 +11,15 @@
     <atom:link href="/research/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Light Transport Simulation in the Gradient Domain</title>
+      <link>https://beltegeuse.github.io/research/publication/2018_gradientcourse/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://beltegeuse.github.io/research/publication/2018_gradientcourse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Gradient-domain Volumetric Photon Density Estimation</title>
       <link>https://beltegeuse.github.io/research/publication/2018_gradientvolumetricpm/</link>
       <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
