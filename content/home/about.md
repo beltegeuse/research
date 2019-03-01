@@ -38,4 +38,4 @@ weight = 1
 
 # Biography
 
-Adrien Gruson is a post-doc researcher in Computer Graphics Group at the University of Tokyo ([Prof. Toshiya Hachisuka](http://www.ci.i.u-tokyo.ac.jp/~hachisuka/)'s lab). His research interests include physically-based rendering based on MCMC or gradient-domain approaches. He is also a member of [Japanese French Laboratory of Informatics (JFLI)](http://jfli.cnrs.fr/).
+Adrien Gruson is a post-doc researcher at McGill University under the supervision of [Prof. Nowrouzezahrai](http://www.cim.mcgill.ca/~derek/). Previously he was a post-doc at the University of Tokyo with [Prof. Toshiya Hachisuka](http://www.ci.i.u-tokyo.ac.jp/~hachisuka/) and was a member of [Japanese French Laboratory of Informatics (JFLI)](http://jfli.cnrs.fr/). His research interests include physically-based rendering based on MCMC or gradient-domain approaches.

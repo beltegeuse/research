@@ -34,15 +34,15 @@ defaultContentLanguageInSubdir = false
   font = "default"
   
   name = "Adrien Gruson"
-  role = "Post-doc researcher in Computer Graphics Group"
+  role = "Post-doc researcher at McGill"
   
-  organizations = [ { name = "Dept. of Creative Informatics, The University of Tokyo", url = "http://www.ci.i.u-tokyo.ac.jp/site/index.php" }, { name = "Japanese French Laboratory of Informatics (JFLI)", url = "http://jfli.cnrs.fr/" } ]
+  organizations = [ { name = "Dept. of Electrical and Computer Engineering", url = "https://www.mcgill.ca/ece/" }]
 
   gravatar = false
   avatar = "me.jpg"
   email = "adrien.gruson@gmail.com"
-  address = "Dept. of Creative Informatics, The University of Tokyo, 7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656 JAPAN"
-  phone = "070-4915-7344"
+  address = "Dept. of Electrical and Computer Engineering, McGill University, McConnell Eng. Building, 3480 University Street, Montreal, Quebec, H3A 0E9,Canada"
+  phone = ""
 
   skype = ""
   telegram = ""
