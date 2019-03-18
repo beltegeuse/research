@@ -278,6 +278,12 @@ defaultContentLanguageInSubdir = false
   [[params.authors]]
 	name="M Zwicker"
 	website="https://www.cs.umd.edu/~zwicker/"
+  [[params.authors]]
+	name="V Petitjean"
+	website="https://graphics.tudelft.nl/victor-petitjean/"
+  [[params.authors]]
+	name="E Eisemann"
+	website="http://graphics.tudelft.nl/~eisemann/"
 
 
 
