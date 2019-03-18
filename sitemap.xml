@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://beltegeuse.github.io/research/publication/2019_gradientstar/</loc>
+      <lastmod>2019-03-12T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://beltegeuse.github.io/research/publication/2018_gradientcourse/</loc>
       <lastmod>2018-11-01T00:00:00+00:00</lastmod>
     </url>
@@ -142,6 +151,16 @@
     
       <loc>https://beltegeuse.github.io/research/publication_types/2/</loc>
       <lastmod>2018-04-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://beltegeuse.github.io/research/publication_types/4/</loc>
+      <lastmod>2019-03-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
