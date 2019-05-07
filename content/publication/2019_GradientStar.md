@@ -13,7 +13,7 @@ title = "A Survey on Gradient-Domain Rendering"
 
 #url_code = "#"
 #url_pdf = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM.pdf"
-#url_project = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GradientCourse/"
+url_project = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2019_GradientSTAR/"
 #url_slides = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/GVPM_Presentation.pptx"
 #url_video = "#"
 
