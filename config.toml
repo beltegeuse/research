@@ -284,6 +284,9 @@ defaultContentLanguageInSubdir = false
   [[params.authors]]
 	name="E Eisemann"
 	website="http://graphics.tudelft.nl/~eisemann/"
+  [[params.authors]]
+  name="W Jarosz"
+  website="https://cs.dartmouth.edu/~wjarosz/"
 
 
 
