@@ -17,10 +17,10 @@
       
     
   
-  <meta name="description" content="Despite the wide adoption in film production and animation industry nowadays, Monte Carlo light transport simulation is still prone to producing noisy images within short rendering time. Accelerating the convergence of Monte Carlo rendering without sacrificing its accuracy is by far a challenging task. In this course, we will learn about gradient-domain light transport simulation, a recent family of techniques in physically based rendering introduced in the past five years that can accelerate traditional Monte Carlo rendering up to approximately an order of magnitude based on gradient estimation and image reconstruction. Particularly, we will introduce the fundamentals of gradient-domain rendering with gradient-domain path tracing, and then extend the discussion to gradient-domain bidirectional path tracing and photon density estimation. We also discuss volume rendering in the gradient domain before diving into advanced topics in recent state-of-the-art papers in this direction. We further discuss tips and tricks in open-source implementations of such algorithms, and provide ideas for future research directions.">
+  <meta name="description" content="Virtual ray lights (VRL) are a powerful representation for multiple-scattered light transport in volumetric participating media. While efficient Monte Carlo estimators can importance sample the contribution of a VRL along an entire sensor subpath, render time still scales linearly in the number of VRLs. We present a new scalable hierarchial VRL method that preferentially samples VRLs according to their image contribution. Similar to Lightcuts-based approaches, we derive a tight upper bound on the potential contribution of a VRL that is efficient to compute. Our bound takes into account the sampling probability densities used when estimating VRL contribution. Ours is the first such upper bound formulation, leading to an efficient and scalable rendering technique with only a few intuitive user parameters. We benchmark our approach in scenes with many VRLs, demonstrating improved scalability compared to existing state-of-the-art techniques.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://beltegeuse.github.io/research/publication/2018_gradientcourse/">
+  <link rel="alternate" hreflang="en-us" href="https://beltegeuse.github.io/research/publication/2019_vrllc/">
 
   
 
@@ -82,24 +82,24 @@
   <link rel="icon" type="image/png" href="/research/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/research/img/icon-192.png">
 
-  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/2018_gradientcourse/">
+  <link rel="canonical" href="https://beltegeuse.github.io/research/publication/2019_vrllc/">
 
   <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Adrien Gruson">
-  <meta property="og:url" content="https://beltegeuse.github.io/research/publication/2018_gradientcourse/">
-  <meta property="og:title" content="Light Transport Simulation in the Gradient Domain | Adrien Gruson">
-  <meta property="og:description" content="Despite the wide adoption in film production and animation industry nowadays, Monte Carlo light transport simulation is still prone to producing noisy images within short rendering time. Accelerating the convergence of Monte Carlo rendering without sacrificing its accuracy is by far a challenging task. In this course, we will learn about gradient-domain light transport simulation, a recent family of techniques in physically based rendering introduced in the past five years that can accelerate traditional Monte Carlo rendering up to approximately an order of magnitude based on gradient estimation and image reconstruction. Particularly, we will introduce the fundamentals of gradient-domain rendering with gradient-domain path tracing, and then extend the discussion to gradient-domain bidirectional path tracing and photon density estimation. We also discuss volume rendering in the gradient domain before diving into advanced topics in recent state-of-the-art papers in this direction. We further discuss tips and tricks in open-source implementations of such algorithms, and provide ideas for future research directions.">
+  <meta property="og:url" content="https://beltegeuse.github.io/research/publication/2019_vrllc/">
+  <meta property="og:title" content="Scalable Virtual Ray Lights Rendering for Participating Media | Adrien Gruson">
+  <meta property="og:description" content="Virtual ray lights (VRL) are a powerful representation for multiple-scattered light transport in volumetric participating media. While efficient Monte Carlo estimators can importance sample the contribution of a VRL along an entire sensor subpath, render time still scales linearly in the number of VRLs. We present a new scalable hierarchial VRL method that preferentially samples VRLs according to their image contribution. Similar to Lightcuts-based approaches, we derive a tight upper bound on the potential contribution of a VRL that is efficient to compute. Our bound takes into account the sampling probability densities used when estimating VRL contribution. Ours is the first such upper bound formulation, leading to an efficient and scalable rendering technique with only a few intuitive user parameters. We benchmark our approach in scenes with many VRLs, demonstrating improved scalability compared to existing state-of-the-art techniques.">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2018-11-01T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2019-06-12T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2018-11-01T00:00:00&#43;00:00">
-  
-
+  <meta property="article:modified_time" content="2019-06-12T00:00:00&#43;00:00">
   
 
-  <title>Light Transport Simulation in the Gradient Domain | Adrien Gruson</title>
+  
+
+  <title>Scalable Virtual Ray Lights Rendering for Participating Media | Adrien Gruson</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
@@ -219,10 +219,10 @@
 
 
   <div class="article-container">
-    <h1 itemprop="name">Light Transport Simulation in the Gradient Domain</h1>
+    <h1 itemprop="name">Scalable Virtual Ray Lights Rendering for Participating Media</h1>
     <span class="pub-authors" itemprop="author">
       
-      B.-S Hua, A Gruson, M Zwicker, T Hachisuka
+      N Vibert, A Gruson, H Stokholm, T Mortensen, W Jarosz, T Hachisuka, D Nowrouzezahrai
       
     </span>
     <span class="pull-right">
@@ -231,12 +231,12 @@
     </span>
 
     
-    <img src="/research/img/publications/GradientCourse.png" class="pub-banner" itemprop="image">
+    <img src="/research/img/publications/VRLLC.jpg" class="pub-banner" itemprop="image">
     
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract" itemprop="text">Despite the wide adoption in film production and animation industry nowadays, Monte Carlo light transport simulation is still prone to producing noisy images within short rendering time. Accelerating the convergence of Monte Carlo rendering without sacrificing its accuracy is by far a challenging task. In this course, we will learn about gradient-domain light transport simulation, a recent family of techniques in physically based rendering introduced in the past five years that can accelerate traditional Monte Carlo rendering up to approximately an order of magnitude based on gradient estimation and image reconstruction. Particularly, we will introduce the fundamentals of gradient-domain rendering with gradient-domain path tracing, and then extend the discussion to gradient-domain bidirectional path tracing and photon density estimation. We also discuss volume rendering in the gradient domain before diving into advanced topics in recent state-of-the-art papers in this direction. We further discuss tips and tricks in open-source implementations of such algorithms, and provide ideas for future research directions.</p>
+    <p class="pub-abstract" itemprop="text">Virtual ray lights (VRL) are a powerful representation for multiple-scattered light transport in volumetric participating media. While efficient Monte Carlo estimators can importance sample the contribution of a VRL along an entire sensor subpath, render time still scales linearly in the number of VRLs. We present a new scalable hierarchial VRL method that preferentially samples VRLs according to their image contribution. Similar to Lightcuts-based approaches, we derive a tight upper bound on the potential contribution of a VRL that is efficient to compute. Our bound takes into account the sampling probability densities used when estimating VRL contribution. Ours is the first such upper bound formulation, leading to an efficient and scalable rendering technique with only a few intuitive user parameters. We benchmark our approach in scenes with many VRLs, demonstrating improved scalability compared to existing state-of-the-art techniques.</p>
     
 
     
@@ -247,8 +247,8 @@
           <div class="col-xs-12 col-sm-3 pub-row-heading">Type</div>
           <div class="col-xs-12 col-sm-9">
             
-            <a href="/research/publication/#7">
-              Course
+            <a href="/research/publication/#2">
+              Journal article
             </a>
             
           </div>
@@ -265,7 +265,7 @@
       <div class="col-sm-10">
         <div class="row">
           <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
-          <div class="col-xs-12 col-sm-9"><em>SIGGRAPH Asia</em> 2018 Course</div>
+          <div class="col-xs-12 col-sm-9"><em>EGSR</em> 2019</div>
         </div>
       </div>
       <div class="col-sm-1"></div>
@@ -279,7 +279,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
           <div class="col-xs-12 col-sm-9" itemprop="datePublished">
-            November, 2018
+            June, 2019
           </div>
         </div>
       </div>
@@ -305,10 +305,6 @@
 
 
 
-
-<a class="btn btn-primary btn-outline" href="http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GradientCourse/" target="_blank" rel="noopener">
-  Project
-</a>
 
 
 

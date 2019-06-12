@@ -6,8 +6,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Adrien Gruson</copyright>
-    <lastBuildDate>Tue, 12 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/research/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Scalable Virtual Ray Lights Rendering for Participating Media</title>
+      <link>https://beltegeuse.github.io/research/publication/2019_vrllc/</link>
+      <pubDate>Wed, 12 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://beltegeuse.github.io/research/publication/2019_vrllc/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>A Survey on Gradient-Domain Rendering</title>
