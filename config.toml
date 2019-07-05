@@ -265,7 +265,7 @@ defaultContentLanguageInSubdir = false
 	website = "http://jamorn.me/"
   [[params.authors]]
  	name="N Vibert"
-	website = "http://neodyme.net/"
+	website = "http://nicolas-vibert.me/"
   [[params.authors]]
 	name="P Kerbiriou"
 	website="www.technicolor.com/paul-kerbiriou"
