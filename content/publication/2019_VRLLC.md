@@ -11,14 +11,8 @@ publication_short = "*EGSR* 2019"
 selected = true
 title = "Scalable Virtual Ray Lights Rendering for Participating Media"
 
-#url_code = "#"
-#url_pdf = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM.pdf"
-#url_project = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2019_GradientSTAR/"
-#url_slides = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/GVPM_Presentation.pptx"
-#url_video = "#"
-
-#[[url_custom]]
-#name = "HTML Res. + Code"
-#url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/comparison/index.html"
+url_code = "#"
+url_pdf = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2019_vrlcuts.pdf"
+url_slides = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2019_vrlcuts_slides.pdf"
 
 +++
