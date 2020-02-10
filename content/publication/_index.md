@@ -1,12 +1,10 @@
 +++
 title = "Publications"
-date = "2017-01-01T00:00:00Z"
-math = false
-highlight = false
+sort_by = "date" 
+slug = ""
 
-# Optional featured image (relative to `static/img/` folder).
-[header]
-image = ""
-caption = ""
-
+template = "publications.html"
+page_template = "publication.html"
 +++
+
+# Publications

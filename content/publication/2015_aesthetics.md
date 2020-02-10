@@ -1,29 +1,24 @@
 +++
-abstract = "In computer graphics, lighting plays an important role in the appearance of a scene. A change in the configuration of light sources can lead to different aesthetics in the final rendered image. Lighting design becomes increasingly complex when using sophisticated global illumination techniques. In this paper, we present a new approach to automatically design the lighting configuration according to the aesthetic goal specified by the user as a set of target parameters. Target parameters are used to set up an objective function which is minimized using an optimization method.  The results show that our method can be used to automatically design a lighting configuration that will give to the final image a classic photographic look."
+date = 2014-10-08
+title = "Automatic Aesthetics-based Lighting Design with Global Illumination"
+
+[extra]
 abstract_short = "In this paper, we present a new approach to automatically design the lighting configuration according to the aesthetic goal specified by the user as a set of target parameters. Target parameters are used to set up an objective function which is minimized using an optimization method."
 authors = ["V Leon", "A Gruson", "R Cozot", "K Bouatouch"]
-date = "2014-10-08"
-image = "publications/aesthetics.png"
-image_preview = "publications/aesthetics_prev.png"
+
+image = "aesthetics.png"
+image_preview = "aesthetics_prev.png"
 math = true
 publication_types = ["2"]
-publication = "In *Pacific Graphics*, 2014. (short paper)."
-publication_short = "In *PG*, 2014. (short paper)"
+publication = "*Pacific Graphics (Short)*, 2014"
 selected = true
-title = "Automatic Aesthetics-based Lighting Design with Global Illumination"
-#url_code = "#"
-#url_dataset = "#"
-url_pdf = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2014_Aesthetics-Ligthing-Design_Leon.pdf"
-#url_project = "http://people.irisa.fr/Matis.Hudon/Shape.html"
-#url_slides = "#"
-#url_video = "#"
 
-[[url_custom]]
-name = "Additional Mat."
-url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2014_Aesthetics/additional.pdf"
-
-[[url_custom]]
-name = "Poster"
-url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2014_Aesthetics/poster.pdf"
+url = [["PDF", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2014_Aesthetics-Ligthing-Design_Leon.pdf"],
+    ["Additional","http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2014_Aesthetics/additional.pdf"],
+    ["Poster","http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2014_Aesthetics/poster.pdf"]]
 
 +++
+
+### Abstract
+
+In computer graphics, lighting plays an important role in the appearance of a scene. A change in the configuration of light sources can lead to different aesthetics in the final rendered image. Lighting design becomes increasingly complex when using sophisticated global illumination techniques. In this paper, we present a new approach to automatically design the lighting configuration according to the aesthetic goal specified by the user as a set of target parameters. Target parameters are used to set up an objective function which is minimized using an optimization method.  The results show that our method can be used to automatically design a lighting configuration that will give to the final image a classic photographic look.
