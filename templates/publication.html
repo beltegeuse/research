@@ -8,7 +8,7 @@
 				<span class="pub-authors">
 						{{ page.extra.authors | join(sep=", ") | markdown | safe }}
 				</div>
-				<img src="{{ "/publication/" ~ page.extra.image }}" class="pub-banner" itemprop="image">
+				<img src="{{ get_url(path="/publication/" ~ page.extra.image) }}" class="pub-banner" itemprop="image">
 				<p class="pub-abstract" itemprop="text">
 					{{ page.content | markdown(inline=true) | safe }}
 				</p>
