@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://beltegeuse.github.io/research/sitemap.xml
