@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adrien Gruson</title>
+	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1581949791">
+
+</head>
+
+<body>
+	<main class="content">
+		<div class="container">
+			
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-main">
+				<a class="navbar-brand" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research">Adrien Gruson</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar-content">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research"
+								data-target="#hero"><span>Home</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication"
+								data-target="#publications"><span>Publications</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;others"
+								data-target="#others"><span>Others</span></a></li>
+					</ul>
+				</div>
+		</nav>
+	</div>
+
+		
+<section id="publications">
+		<div class="container">
+			<div class="article-container">
+				<h1>Stratified Markov Chain Monte Carlo Light Transport</h1>
+				<span class="pub-authors">
+						<p>A Gruson, R West, T Hachisuka</p>
+
+				</div>
+				<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;smcmc.jpg" class="pub-banner" itemprop="image">
+				<p class="pub-abstract" itemprop="text">
+					<h3 id="abstract">Abstract</h3>
+<p>Markov chain Monte Carlo (MCMC) sampling is a powerful approach to generate samples from an arbitrary distribution. The application to light transport simulation allows us to efficiently handle complex light transport such as highly occluded scenes. Since light transport paths in MCMC methods are sampled according to the path contributions over the sampling domain covering the whole image, bright pixels receive more samples than dark pixels to represent differences in the brightness. This variation in the number of samples per pixel is a fundamental property of MCMC methods. This property often leads to uneven convergence over the image, which is a notorious and fundamental issue of any MCMC method to date. We present a novel stratification method of MCMC light transport methods. Our stratification method, for the first time, breaks the fundamental limitation that the number of samples per pixel is uncontrollable. Our method guarantees that every pixel receives a specified number of samples by running a single Markov chain per pixel. We rely on the fact that different MCMC processes should converge to the same result when the sampling domain and the integrand are the same. We thus subdivide an image into multiple overlapping tiles associated with each pixel, run an independent MCMC process in each of them, and then align all of the tiles such that overlapping regions match. This can be formulated as an optimization problem similar to the reconstruction step for gradient-domain rendering. Further, our method can exploit the coherency of integrands among neighboring pixels via coherent Markov chains and replica exchange. Images rendered with our method exhibit much more predictable convergence compared to existing MCMC methods.
+				</p>
+			</div>
+		</div>
+</section>
+
+	</main>
+</body>
+
+</html>

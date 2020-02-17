@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adrien Gruson</title>
+	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1581949791">
+
+</head>
+
+<body>
+	<main class="content">
+		<div class="container">
+			
+		<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar-main">
+				<a class="navbar-brand" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research">Adrien Gruson</a>
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar-content">
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research"
+								data-target="#hero"><span>Home</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication"
+								data-target="#publications"><span>Publications</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;others"
+								data-target="#others"><span>Others</span></a></li>
+					</ul>
+				</div>
+		</nav>
+	</div>
+
+		
+<section id="publications">
+		<div class="container">
+			<div class="article-container">
+				<h1>An Efficient Transport Estimator for Complex Layered Materials</h1>
+				<span class="pub-authors">
+						<p>L Gamboa, A Gruson, D Nowrouzezahrai</p>
+
+				</div>
+				<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;layered.jpg" class="pub-banner" itemprop="image">
+				<p class="pub-abstract" itemprop="text">
+					<h3 id="abstract">Abstract</h3>
+<p>Layered materials capture subtle, realistic reflection behaviors that traditional single-layer models lack. Much of this is due to the complex subsurface light transport at the interfaces of -- and in the media between -- layers. Rendering with these materials can be costly, since we must simulate these transport effects <em>at every evaluation</em> of the underlying reflectance model. Rendering an image requires thousands of such evaluations, <em>per pixel</em>. Recent work treats this complexity by introducing significant approximations, requiring large precomputed datasets per material, or simplifying the light transport simulations within the materials. Even the most effective of these methods struggle with the complexity induced by high-frequency variation in reflectance parameters and micro-surface normal variation, as well as anisotropic volumetric scattering between the layer interfaces. We present a more efficient, unbiased estimator for light transport in such general, complex layered appearance models. By conducting an analysis of the types of transport paths that contribute most to the aggregate reflectance dynamics, we propose an effective and unbiased path sampling method that reduces variance in the reflectance evaluations. Our method additionally supports reflectance importance sampling, does not rely on any precomputation, and so integrates readily into existing renderers. We consistently outperform the state-of-the-art by ~2-6x in equal-quality (i.e.,\ equal error) comparisons.
+				</p>
+			</div>
+		</div>
+</section>
+
+	</main>
+</body>
+
+</html>
