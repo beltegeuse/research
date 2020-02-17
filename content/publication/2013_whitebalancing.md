@@ -9,7 +9,7 @@ image = "eyecenter.png"
 image_preview = "eyecenter_prev.png"
 math = true
 publication_types = ["2"]
-publication = "*Pacific Graphics*, 2013"
+publication = "*Pacific Graphics*, 2013."
 selected = true
 
 url = [["PDF","http://onlinelibrary.wiley.com/doi/10.1111/cgf.12218/abstract"]]

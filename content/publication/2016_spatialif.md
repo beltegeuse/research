@@ -10,7 +10,7 @@ image = "spatialTF.png"
 image_preview = "spatialTF_prev.png"
 math = true
 publication_types = ["2"]
-publication = "*ACM Trans. Graph,* 2016 (Presented at Siggraph 2017)"
+publication = "*ACM Trans. Graph,* 2016 (Presented at Siggraph 2017)."
 selected = true
 
 url = [["PDF", "https://dl.acm.org/authorize?N23812"],

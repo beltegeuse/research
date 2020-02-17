@@ -8,7 +8,7 @@ authors = ["B.-S Hua", "A Gruson", "V Petitjean", "M Zwicker", "D Nowrouzezahrai
 image = "gradientdomain_star.jpg"
 image_preview = "gradientdomain_star_prev.png"
 
-publication = "*Eurographics (STAR)*, 2019"
+publication = "*Eurographics (STAR)*, 2019."
 
 url = [["Project page", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2019_GradientSTAR/"]]
 +++

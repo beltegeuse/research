@@ -9,7 +9,7 @@ image = "temporal_video.png"
 image_preview = "temporal_video_prev.png"
 math = true
 publication_types = ["2"]
-publication = "*SPIE*, 2012"
+publication = "*SPIE*, 2012."
 url = [["PDF", "http://www.ece.ubc.ca/~rboitard/articles/2012/Boitard%20et%20al.-2012-Temporal%20Coherency%20for%20Video%20Tone%20Mapping.pdf"]]
 
 +++

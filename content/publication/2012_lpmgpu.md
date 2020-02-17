@@ -8,7 +8,7 @@ image = "lpm.png"
 image_preview = "lpm_repr.png"
 math = true
 publication_types = ["2"]
-publication = "*EGPVG*, 2012"
+publication = "*EGPVG*, 2012."
 selected = false
 url = [["PDF", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2012-LPM-GPU_Gruson.pdf"]]
 

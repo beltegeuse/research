@@ -4,7 +4,7 @@ date = 2019-06-12
 
 [extra]
 authors = ["N Vibert", "A Gruson", "H Stokholm", "T Mortensen", "W Jarosz", "T Hachisuka", "D Nowrouzezahrai"]
-publication = "*EGSR*, 2019"
+publication = "*EGSR*, 2019."
 
 image = "VRLLC.jpg"
 image_preview = "VRLLC_prev.jpg"

@@ -10,7 +10,7 @@ image = "aesthetics.png"
 image_preview = "aesthetics_prev.png"
 math = true
 publication_types = ["2"]
-publication = "*Pacific Graphics (Short)*, 2014"
+publication = "*Pacific Graphics (Short)*, 2014."
 selected = true
 
 url = [["PDF", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2014_Aesthetics-Ligthing-Design_Leon.pdf"],

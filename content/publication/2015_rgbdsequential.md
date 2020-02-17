@@ -9,7 +9,7 @@ image = "RGBD.png"
 image_preview = "RGBD_prev.png"
 math = true
 publication_types = ["2"]
-publication = "*VISAPP*, 2016"
+publication = "*VISAPP*, 2016."
 selected = false
 
 url = [["PDF", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_RGBD-Sequential_Hudon.pdf"],
