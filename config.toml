@@ -19,3 +19,16 @@ paths = "off"
 
 [extra]
 # Put all your custom variables here
+name = "Adrien Gruson"
+job_title = "Post-Doc researcher at McGill"
+job_departement = [["Dept. of Electrical and Computer Engineering", "https://www.mcgill.ca/ece/"]]
+interests = ["Light transport simulation", "Markov Chain Monte Carlo", "Gradient-domain rendering", "Machine learning" ]
+education = [["PhD in Computer Graphics, 2015", "Rennes 1 University"], 
+	["Master 2 in Computer Research, Major Computer Research, 2011", "Rennes 1 University"], 
+	["Eng. Rennes 1 University certificate (option Computer Graphics), 2011", "ESIR, Rennes 1 University"]]
+biography = """
+Adrien Gruson is a post-doc researcher at McGill University under the supervision of [Prof. Nowrouzezahrai](http://www.cim.mcgill.ca/~derek/).
+Previously he was a post-doc at the University of Tokyo with [Prof. Toshiya Hachisuka](http://www.ci.i.u-tokyo.ac.jp/~hachisuka/) 
+and was a member of the [Japanese French Laboratory of Informatics (JFLI)](http://jfli.cnrs.fr/). 
+His research interests include physically-based rendering based on MCMC or gradient-domain approaches.
+"""
