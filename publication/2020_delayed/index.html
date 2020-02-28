@@ -36,17 +36,19 @@
 <section id="publications">
 		<div class="container">
 			<div class="article-container">
-				<h1>Deep Adaptive Wavelet Network</h1>
+				<h1>Delayed Rejection Metropolis Light Transport</h1>
 				<span class="pub-authors">
 					<p>
-					M X B Rodriguez, A Gruson, L F Polania, S Fujieda, F P Ortiz, K Takayama, T Hachisuka
+					D Rioux-Lavoie*, J Litalien*, A Gruson, T Hachisuka, D Nowrouzezahrai
+					
+						(* join first authors)
 					
 					</p>
 				</div>
-				<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;dawn.png" class="pub-banner" itemprop="image">
+				<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;drmlt.png" class="pub-banner" itemprop="image">
 				<p class="pub-abstract" itemprop="text">
 					<h3 id="abstract">Abstract</h3>
-<p>Even though convolutional neural networks have become the method of choice in many fields of computer vision, they still lack interpretability and are usually designed manually in a cumbersome trial-and-error process. This paper aims at overcoming those limitations by proposing a deep neural network, which is designed in a systematic fashion and is interpretable, by integrating  multiresolution analysis at the core of the deep neural network design. By using the lifting scheme, it is possible to generate a wavelet representation and design a network capable of learning wavelet coefficients in an endto-end form. Compared to state-of-the-art architectures, the proposed model requires less hyper-parameter tuning and achieves competitive accuracy in image classification tasks. The Code implemented for this research is available at https://github.com/mxbastidasr/DAWN_WACV2020.
+<p>Designing robust mutation strategies for primary sample space Metropolis light transport is a challenging problem: poorly-tuned mutations both hinder state space exploration and introduce structural image artifacts. Scenes with complex materials, lighting and geometry make hand-designing strategies that remain optimal over the entire state space infeasible. Moreover, these difficult regions are often sparse in state space, and so relying exclusively on intricate (often expensive) proposal mechanisms can be wasteful where simpler inexpensive mechanisms are more sample efficient. We generalize Metropolis--Hastings light transport to employ a flexible two-stage mutation strategy based on delayed rejection  [Green and Mira 2001; Tierneyand Mira 1999]. Our approach generates multiple proposals based on the failure of previous ones, all while preserving Markov chain ergodicity. This allows us to reduce error while maintaining fast global exploration and low correlation across chains. Direct application of delayed rejection to light transport leads to low acceptance  robabilities, and so we also propose a novel transition kernel to alleviate this issue. We benchmark our approach on several applications including <em>bold-then-timid</em> and  <em>cheap-then-expensive</em> proposals across different light transport algorithms. Our method is applicable to any primary sample space algorithm with minimal implementation effort, producing consistently better results on a variety of challenging scenes.
 				</p>
 			</div>
 		</div>
