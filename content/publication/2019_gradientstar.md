@@ -3,10 +3,11 @@ title = "A Survey on Gradient-Domain Rendering"
 date = 2019-03-12
 
 [extra]
-authors = ["B.-S Hua", "A Gruson", "V Petitjean", "M Zwicker", "D Nowrouzezahrai", "E Eisemann", "T Hachisuka"]
+authors = ["B.-S Hua*", "A Gruson*", "V Petitjean", "M Zwicker", "D Nowrouzezahrai", "E Eisemann", "T Hachisuka"]
 
 image = "gradientdomain_star.jpg"
 image_preview = "gradientdomain_star_prev.png"
+join_first = True
 
 publication = "*Eurographics (STAR)*, 2019."
 

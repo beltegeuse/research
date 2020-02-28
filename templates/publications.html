@@ -18,10 +18,22 @@
 					<a href="{{ pub.permalink }}">{{ pub.title }}</a>
 					<div class="pub-author" itemprop="text">
 						{{ pub.extra.authors | join(sep=", ") | replace(from="A Gruson", to="**A Gruson**") | markdown(inline=true) | safe }}
+						{% if pub.extra is containing("join_first") %}
+							(* join first authors)
+						{% endif %}
 					</div>
 					<div class="pub-publication" style="color: #090">
 						{{ pub.extra.publication | markdown(inline=true) | safe }}
 					</div>
+
+					<!-- For checking to a special flag -->
+					<!-- {% if pub.extra is containing("url_pdf") %}
+					<a class="btn btn-primary btn-outline btn-xs" href="{{ pub.extra.url_pdf }}" target="_blank"
+					rel="noopener">
+						PDF
+					</a>
+					{% endif %} -->
+
 					{% for entry in pub.extra.url %}
 					<a class="btn btn-primary btn-outline btn-xs" href="{{ entry[1] }}" target="_blank"
 						rel="noopener">
