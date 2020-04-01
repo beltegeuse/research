@@ -9,7 +9,8 @@ publication = "*Eurographics*, 2020."
 image = "smcmc.jpg"
 image_preview = "smcmc_prev.jpg"
 
-url = []
+url = [["PDF (preprint)", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_SMCMC.pdf"],
+    ["Additional","http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_SMCMC/"]]
 +++
 
 ### Abstract

@@ -10,7 +10,8 @@ join_first = true
 image = "drmlt.png"
 image_preview = "drmlt_prev.png"
 
-url = []
+url = [["PDF (preprint)", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_DRMLT.pdf"],
+    ["Additional","http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_DRMLT/"]]
 +++
 
 ### Abstract
