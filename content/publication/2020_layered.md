@@ -9,7 +9,7 @@ publication = "*Eurographics*, 2020."
 image = "layered.jpg"
 image_preview = "layered_prev.jpg"
 
-url = []
+url = [["Project", "https://lc.fie.umich.mx/~legg/complexlayered.php"]]
 +++
 
 ### Abstract
