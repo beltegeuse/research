@@ -4,7 +4,7 @@ date = 2020-02-28
 
 [extra]
 authors = ["D Rioux-Lavoie*", "J Litalien*", "A Gruson", "T Hachisuka", "D Nowrouzezahrai"]
-publication = "*ACM Trans. Graph.* (Accepted), 2020."
+publication = "*ACM Trans. Graph.*, 2020."
 join_first = true
 
 image = "drmlt.png"
