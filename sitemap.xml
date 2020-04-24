@@ -1,138 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/others/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/</loc>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2012_lpmgpu/</loc>
-            
-                <lastmod>2012-02-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2012_temporaltmo/</loc>
-            
-                <lastmod>2012-10-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2013_vdpt/</loc>
-            
-                <lastmod>2013-02-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2013_whitebalancing/</loc>
-            
-                <lastmod>2013-10-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2015_aesthetics/</loc>
-            
-                <lastmod>2014-10-08</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2015_rgbdsequential/</loc>
-            
-                <lastmod>2016-02-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2016_spatialif/</loc>
-            
-                <lastmod>2016-08-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2017_gradientpm/</loc>
-            
-                <lastmod>2017-04-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2018_efficientvpl/</loc>
-            
-                <lastmod>2018-03-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2018_gradientcourse/</loc>
-            
-                <lastmod>2018-11-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2018_gradientvolumetricpm/</loc>
-            
-                <lastmod>2018-04-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2019_gradientstar/</loc>
-            
-                <lastmod>2019-03-12</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2019_vrllc/</loc>
-            
-                <lastmod>2019-06-12</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2020_SMCMC/</loc>
-            
-                <lastmod>2020-02-17</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2020_dawn/</loc>
-            
-                <lastmod>2020-01-01</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2020_delayed/</loc>
-            
-                <lastmod>2020-02-28</lastmod>
-            
-        </url>
-    
-        <url>
-            <loc>https://beltegeuse.github.io/research/publication/2020_layered/</loc>
-            
-                <lastmod>2020-02-16</lastmod>
-            
-        </url>
-    
+    <url>
+        <loc>https://beltegeuse.github.io/research/</loc>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/others/</loc>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/</loc>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2012_lpmgpu/</loc>
+        <lastmod>2012-02-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2012_temporaltmo/</loc>
+        <lastmod>2012-10-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2013_vdpt/</loc>
+        <lastmod>2013-02-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2013_whitebalancing/</loc>
+        <lastmod>2013-10-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2015_aesthetics/</loc>
+        <lastmod>2014-10-08</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2015_rgbdsequential/</loc>
+        <lastmod>2016-02-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2016_spatialif/</loc>
+        <lastmod>2016-08-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2017_gradientpm/</loc>
+        <lastmod>2017-04-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2018_efficientvpl/</loc>
+        <lastmod>2018-03-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2018_gradientcourse/</loc>
+        <lastmod>2018-11-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2018_gradientvolumetricpm/</loc>
+        <lastmod>2018-04-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2019_gradientstar/</loc>
+        <lastmod>2019-03-12</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2019_vrllc/</loc>
+        <lastmod>2019-06-12</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2020_SMCMC/</loc>
+        <lastmod>2020-02-17</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2020_dawn/</loc>
+        <lastmod>2020-01-01</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2020_delayed/</loc>
+        <lastmod>2020-02-28</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2020_fracture/</loc>
+        <lastmod>2020-04-22</lastmod>
+    </url>
+    <url>
+        <loc>https://beltegeuse.github.io/research/publication/2020_layered/</loc>
+        <lastmod>2020-02-16</lastmod>
+    </url>
 </urlset>
