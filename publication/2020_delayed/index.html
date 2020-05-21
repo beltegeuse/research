@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Adrien Gruson</title>
-	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1588633379">
+	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1590099916">
 
 	<!-- For fonts -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/18aa21ed87.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -39,17 +39,79 @@
 				<h1>Delayed Rejection Metropolis Light Transport</h1>
 				<span class="pub-authors">
 					<p>
-					D Rioux-Lavoie*, J Litalien*, A Gruson, T Hachisuka, D Nowrouzezahrai
 					
-						(* join first authors)
+						Damien Rioux-Lavoie, McGill University, Canada <br/> 
+					
+						Joey Litalien, McGill University, Canada <br/> 
+					
+						Adrien Gruson, McGill University, Canada <br/> 
+					
+						Toshiya Hachisuka, The University of Tokyo, Japan <br/> 
+					
+						Derek Nowrouzezahrai, McGill University, Canada <br/> 
+					
+					
+						(join first authors)
 					
 					</p>
-				</div>
-				<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;drmlt.png" class="pub-banner" itemprop="image">
-				<p class="pub-abstract" itemprop="text">
+
+					<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;drmlt.png" class="pub-banner" itemprop="image">
 					<h3 id="abstract">Abstract</h3>
-<p>Designing robust mutation strategies for primary sample space Metropolis light transport is a challenging problem: poorly-tuned mutations both hinder state space exploration and introduce structural image artifacts. Scenes with complex materials, lighting and geometry make hand-designing strategies that remain optimal over the entire state space infeasible. Moreover, these difficult regions are often sparse in state space, and so relying exclusively on intricate (often expensive) proposal mechanisms can be wasteful where simpler inexpensive mechanisms are more sample efficient. We generalize Metropolis--Hastings light transport to employ a flexible two-stage mutation strategy based on delayed rejection  [Green and Mira 2001; Tierneyand Mira 1999]. Our approach generates multiple proposals based on the failure of previous ones, all while preserving Markov chain ergodicity. This allows us to reduce error while maintaining fast global exploration and low correlation across chains. Direct application of delayed rejection to light transport leads to low acceptance  robabilities, and so we also propose a novel transition kernel to alleviate this issue. We benchmark our approach on several applications including <em>bold-then-timid</em> and  <em>cheap-then-expensive</em> proposals across different light transport algorithms. Our method is applicable to any primary sample space algorithm with minimal implementation effort, producing consistently better results on a variety of challenging scenes.
-				</p>
+<p>Designing robust mutation strategies for primary sample space Metropolis light transport is a challenging problem: poorly-tuned mutations both hinder state space exploration and introduce structural image artifacts. Scenes with complex materials, lighting and geometry make hand-designing strategies that remain optimal over the entire state space infeasible. Moreover, these difficult regions are often sparse in state space, and so relying exclusively on intricate (often expensive) proposal mechanisms can be wasteful where simpler inexpensive mechanisms are more sample efficient. We generalize Metropolis--Hastings light transport to employ a flexible two-stage mutation strategy based on delayed rejection  [Green and Mira 2001; Tierneyand Mira 1999]. Our approach generates multiple proposals based on the failure of previous ones, all while preserving Markov chain ergodicity. This allows us to reduce error while maintaining fast global exploration and low correlation across chains. Direct application of delayed rejection to light transport leads to low acceptance  robabilities, and so we also propose a novel transition kernel to alleviate this issue. We benchmark our approach on several applications including <em>bold-then-timid</em> and  <em>cheap-then-expensive</em> proposals across different light transport algorithms. Our method is applicable to any primary sample space algorithm with minimal implementation effort, producing consistently better results on a variety of challenging scenes.</p>
+
+
+					<h3>Downloads</h3>
+
+					
+					
+
+					
+					<h4>Publication</h4>
+					<ul class="fa-ul">
+						
+						<li>
+							<span class="fa-li">
+								<i class="fas fa-file-pdf"></i>
+							</span>
+							<a href=http:&#x2F;&#x2F;beltegeuse.s3-website-ap-northeast-1.amazonaws.com&#x2F;research&#x2F;2020_DRMLT.pdf>Paper (author's version), PDF</a>
+						</li>
+						
+						
+						<li><span class="fa-li"><i class="fas fa-atlas"></i></span>
+							<a href="https:&#x2F;&#x2F;doi.org&#x2F;10.1145&#x2F;3388538">Publisher's official version</a> – external link, may require a subscription
+						  </li>
+						
+					</ul>
+					
+
+					
+					<h4>Code & Data</h4>
+					<ul class="fa-ul">
+						<li>
+							<span class="fa-li">
+								<i class="fab fa-github"></i>
+							</span>
+							<a href=>Public repository</a>
+						</li>
+					</ul>
+					
+
+					
+					
+					<h4>Additional</h4>
+					<ul class="fa-ul">
+						<li>
+							<span class="fa-li">
+								<i class="far fa-plus-square"></i>
+							</span>
+							<a href=http:&#x2F;&#x2F;beltegeuse.s3-website-ap-northeast-1.amazonaws.com&#x2F;research&#x2F;2020_DRMLT&#x2F;>Web interactive comparison</a>
+						</li>
+					</ul>	
+					
+					
+					
+
+				</div>
 			</div>
 		</div>
 </section>

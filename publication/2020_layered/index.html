@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Adrien Gruson</title>
-	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1588633379">
+	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1590099916">
 
 	<!-- For fonts -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/18aa21ed87.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -36,18 +36,57 @@
 <section id="publications">
 		<div class="container">
 			<div class="article-container">
-				<h1>An Efficient Transport Estimator for Complex Layered Materials</h1>
+				<h1>An Efficient Transport Estimator For Complex Layered Materials</h1>
 				<span class="pub-authors">
 					<p>
-					L Gamboa, A Gruson, D Nowrouzezahrai
+					
+						Luis Gamboa, University of Montreal, Canada <br/> 
+					
+						Adrien Gruson, McGill University, Canada <br/> 
+					
+						Derek Nowrouzezahrai, McGill University, Canada <br/> 
+					
 					
 					</p>
-				</div>
-				<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;layered.jpg" class="pub-banner" itemprop="image">
-				<p class="pub-abstract" itemprop="text">
+
+					<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;layered.jpg" class="pub-banner" itemprop="image">
 					<h3 id="abstract">Abstract</h3>
-<p>Layered materials capture subtle, realistic reflection behaviors that traditional single-layer models lack. Much of this is due to the complex subsurface light transport at the interfaces of -- and in the media between -- layers. Rendering with these materials can be costly, since we must simulate these transport effects <em>at every evaluation</em> of the underlying reflectance model. Rendering an image requires thousands of such evaluations, <em>per pixel</em>. Recent work treats this complexity by introducing significant approximations, requiring large precomputed datasets per material, or simplifying the light transport simulations within the materials. Even the most effective of these methods struggle with the complexity induced by high-frequency variation in reflectance parameters and micro-surface normal variation, as well as anisotropic volumetric scattering between the layer interfaces. We present a more efficient, unbiased estimator for light transport in such general, complex layered appearance models. By conducting an analysis of the types of transport paths that contribute most to the aggregate reflectance dynamics, we propose an effective and unbiased path sampling method that reduces variance in the reflectance evaluations. Our method additionally supports reflectance importance sampling, does not rely on any precomputation, and so integrates readily into existing renderers. We consistently outperform the state-of-the-art by ~2-6x in equal-quality (i.e.,\ equal error) comparisons.
-				</p>
+<p>Layered materials capture subtle, realistic reflection behaviors that traditional single-layer models lack. Much of this is due to the complex subsurface light transport at the interfaces of -- and in the media between -- layers. Rendering with these materials can be costly, since we must simulate these transport effects <em>at every evaluation</em> of the underlying reflectance model. Rendering an image requires thousands of such evaluations, <em>per pixel</em>. Recent work treats this complexity by introducing significant approximations, requiring large precomputed datasets per material, or simplifying the light transport simulations within the materials. Even the most effective of these methods struggle with the complexity induced by high-frequency variation in reflectance parameters and micro-surface normal variation, as well as anisotropic volumetric scattering between the layer interfaces. We present a more efficient, unbiased estimator for light transport in such general, complex layered appearance models. By conducting an analysis of the types of transport paths that contribute most to the aggregate reflectance dynamics, we propose an effective and unbiased path sampling method that reduces variance in the reflectance evaluations. Our method additionally supports reflectance importance sampling, does not rely on any precomputation, and so integrates readily into existing renderers. We consistently outperform the state-of-the-art by ~2-6x in equal-quality (i.e.,\ equal error) comparisons.</p>
+
+
+					<h3>Downloads</h3>
+
+					
+					
+					<h4>Project page</h4>
+					<ul class="fa-ul">
+					<li>
+						<span class="fa-li">
+							<i class="fas fa-external-link-alt"></i>
+						</span>
+						<a href=https:&#x2F;&#x2F;lc.fie.umich.mx&#x2F;~legg&#x2F;complexlayered.php>External project website</a>
+					</li>
+					</ul>
+					
+
+					
+
+					
+					<h4>Code & Data</h4>
+					<ul class="fa-ul">
+						<li>
+							<span class="fa-li">
+								<i class="fab fa-github"></i>
+							</span>
+							<a href=>Public repository</a>
+						</li>
+					</ul>
+					
+
+					
+					
+
+				</div>
 			</div>
 		</div>
 </section>
