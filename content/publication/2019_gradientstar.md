@@ -3,15 +3,27 @@ title = "A Survey on Gradient-Domain Rendering"
 date = 2019-03-12
 
 [extra]
-authors = ["B.-S Hua*", "A Gruson*", "V Petitjean", "M Zwicker", "D Nowrouzezahrai", "E Eisemann", "T Hachisuka"]
+authors = [
+    { name = "Binh-Son Hua", institution = "The University of Tokyo, Japan" },
+    { name = "Adrien Gruson", institution = "The University of Tokyo, JFLI, Japan" },
+    { name = "Victor Petitjean", institution = "Delft University of Technology, Netherlands" },
+    { name = "Matthias Zwicker", institution = "University of Maryland, USA" }, 
+    { name = "Derek Nowrouzezahrai", institution = "McGill University, Canada" },
+    { name = "Elmar Eisemann", institution = "Delft University of Technology, Netherlands" },
+    { name = "Toshiya Hachisuka", institution = "The University of Tokyo, Japan" }
+]
+join_first = True
 
 image = "gradientdomain_star.jpg"
 image_preview = "gradientdomain_star_prev.png"
-join_first = True
-
 publication = "*Eurographics (STAR)*, 2019."
+short_description = "Survey on gradient-domain rendering."
 
-url = [["Project page", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2019_GradientSTAR/"]]
+download = [
+    { type = "project", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2019_GradientSTAR/"},
+    { type = "doi", url = "https://doi.org/10.1111/cgf.13652" },
+    { type = "code", url = "https://github.com/gradientpm/gradient-mts" } 
+]
 +++
 
 ### Abstract

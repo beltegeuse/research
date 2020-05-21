@@ -3,14 +3,23 @@ date = 2012-10-01
 title = "Temporal Coherency for Video Tone Mapping"
 
 [extra]
-authors = ["R Boitard", "K Bouatouch", "R Cozot", "D Thoreau", "A Gruson"]
+authors = [
+    { name = "Ronan Boitard", institution = "Technicolor, IRISA, University of Rennes 1, France" },
+    { name = "Kadi Bouatouch", institution = "IRISA, University of Rennes 1, France" },
+    { name = "Remi Cozot", institution = "IRISA, University of Rennes 1, France" },
+    { name = "Dominique Thoreau", institution = "Technicolor, France" },
+    { name = "Adrien Gruson", institution = "IRISA, University of Rennes 1, France" }
+]
 
 image = "temporal_video.png"
 image_preview = "temporal_video_prev.png"
-math = true
-publication_types = ["2"]
 publication = "*SPIE*, 2012."
-url = [["PDF", "http://www.ece.ubc.ca/~rboitard/articles/2012/Boitard%20et%20al.-2012-Temporal%20Coherency%20for%20Video%20Tone%20Mapping.pdf"]]
+short_description = "Tone mapping achieving more stable result with video."
+
+download = [
+    { type = "paper", url = "http://www.ece.ubc.ca/~rboitard/articles/2012/Boitard%20et%20al.-2012-Temporal%20Coherency%20for%20Video%20Tone%20Mapping.pdf"},
+    { type = "doi", url = "https://doi.org/10.1117/12.929600" }
+]
 
 +++
 

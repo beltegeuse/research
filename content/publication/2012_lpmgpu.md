@@ -3,14 +3,23 @@ date = 2012-02-01
 title = "Light Propagation Maps on Parallel Graphics Architectures"
 
 [extra]
-authors = ["A Gruson", "A Hakke Patil", "R Cozot", "K Bouatouch", "S Pattanaik"]
+authors = [
+    { name = "Adrien Gruson", institution = "IRISA, University of Rennes 1, France" },
+    { name = "Ajit Hakke Patil", institution = "University of Central Florida, USA" },
+    { name = "Remi Cozot", institution = "IRISA, University of Rennes 1, France" },  
+    { name = "Kadi Bouatouch", institution = "IRISA, University of Rennes 1, France" },
+    { name = "Sumanta Pattanaik", institution = "University of Central Florida, USA" }
+]
+
 image = "lpm.png"
 image_preview = "lpm_repr.png"
-math = true
-publication_types = ["2"]
 publication = "*EGPVG*, 2012."
-selected = false
-url = [["PDF", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2012-LPM-GPU_Gruson.pdf"]]
+short_description = "GPU implementation of light propagation maps."
+
+download = [
+    { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2012-LPM-GPU_Gruson.pdf"},
+    { type = "doi", url = "http://dx.doi.org/10.2312/EGPGV/EGPGV12/081-088"}
+]
 
 +++
 

@@ -3,18 +3,23 @@ date = 2018-11-01
 title = "Light Transport Simulation in the Gradient Domain"
 
 [extra]
-authors = ["B.-S Hua", "A Gruson", "M Zwicker", "T Hachisuka"]
+authors = [
+    { name = "Binh-Son Hua", institution = "The University of Tokyo, Japan" },
+    { name = "Adrien Gruson", institution = "The University of Tokyo, JFLI, Japan" },
+    { name = "Matthias Zwicker", institution = "University of Maryland, USA" },
+    { name = "Toshiya Hachisuka", institution = "The University of Tokyo, Japan" }
+]
 
 image = "GradientCourse.png"
 image_preview = "GradientCourse_prev.png"
-math = true
-publication_types = [7]
 publication = "*SIGGRAPH Asia (Course)*, 2018."
-publication_short = "*SIGGRAPH Asia* 2018 Course"
-selected = true
+short_description = "Course on gradient-domain rendering."
 
-url = [["Project page", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GradientCourse/"],
-    ["Additional", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/comparison/index.html"]]
+download = [
+    { type = "project", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GradientCourse/" },
+    { type = "doi", url = "https://doi.org/10.1145/3277644.3277761"},
+    { type = "additional", desc = "Web interactive comparision", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/comparison/index.html"}
+]
 +++
 
 ### Abstract

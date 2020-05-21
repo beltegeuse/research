@@ -3,18 +3,26 @@ title = "Gradient-domain Volumetric Photon Density Estimation"
 date = 2018-04-01
 
 [extra]
-authors = ["A Gruson", "B.-S Hua", "N Vibert", "D Nowrouzezahrai", "T Hachisuka"]
+authors = [
+    { name = "Adrien Gruson", institution = "The University of Tokyo, JFLI, Japan" },
+    { name = "Binh-Son Hua", institution = "The University of Tokyo, Japan" },
+    { name = "Nicolas Vibert", institution = "McGill University, Canada" },
+    { name = "Derek Nowrouzezahrai", institution = "McGill University, Canada" },
+    { name = "Toshiya Hachisuka", institution = "The University of Tokyo, Japan" }
+]
 
 image = "GradientVolumetricPM.png"
 image_preview = "GradientVolumetricPM_prev.png"
-math = true
-publication_types = [2]
 publication = "*ACM Trans. Graph. (SIGGRAPH)*, 2018."
-selected = true
+short_description = "Gradient-domain formulation of volumetric photon density estimation including beams and planes."
 
-url = [["PDF","http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM.pdf"],
-    ["Slides","http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/GVPM_Presentation.pptx"],
-    ["Additional","http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/comparison/index.html"]]
+download = [
+    { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM.pdf"},
+    { type = "doi", url = "https://doi.org/10.1145/3197517.3201363" },
+    { type = "code", url = "https://github.com/gradientpm/gvpm" },
+    { type = "slides", url="http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/GVPM_Presentation.pptx"},
+    { type = "additional", desc = "Web interactive comparison", url="http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/comparison/index.html"}
+]
 
 +++
 

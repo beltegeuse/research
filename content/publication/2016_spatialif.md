@@ -4,19 +4,28 @@ title = "A Spatial Target Function for Metropolis Photon Tracing"
 
 [extra]
 abstract_short = "We present a new target function for Metropolis photon tracing that ensures good stratification of photons leading to pixel estimates with equalized relative error. We develop a hierarchical scheme for progressive construction of the target function from paths sampled during rendering."
-authors = ["A Gruson", "M Ribardiere", "M Sik", "J Vorba", "R Cozot", "K Bouatouch", "J Krivanek"]
+authors = [
+    { name = "Adrien Gruson", institution = "IRISA, University of Rennes 1, France" },
+    { name = "Mickael Ribardiere", institution = "XLIM-SIC, University of Poitiers, France" }, 
+    { name = "Martin Sik", institution = "Charles University, Czech Republic" },
+    { name = "Jiri Vorba", institution = "Charles University, Czech Republic" },
+    { name = "Remi Cozot", institution = "IRISA, University of Rennes 1, France" },
+    { name = "Kadi Bouatouch", institution = "IRISA, University of Rennes 1, France" },
+    { name = "Jaroslav Krivanek", institution = "Charles University, Czech Republic" }
+]
 
 image = "spatialTF.png"
 image_preview = "spatialTF_prev.png"
-math = true
-publication_types = ["2"]
 publication = "*ACM Trans. Graph,* 2016 (Presented at Siggraph 2017)."
-selected = true
+short_description = "Progressive target function to better distribute error in image plane."
 
-url = [["PDF", "https://dl.acm.org/authorize?N23812"],
-    ["Slides","http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_SpatialTF/SpatialIF.pptx"],
-    ["Additional", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_SpatialTF/supplemental.pdf"],
-    ["Additional", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_SpatialTF/comparison/index.html"]]
+download = [
+    { type = "paper", url = "https://dl.acm.org/authorize?N23812" },
+    { type = "doi", url = "https://doi.org/10.1145/3072959.2963097" },
+    { type ="slides", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_SpatialTF/SpatialIF.pptx"},
+    { type ="additional", desc="Additional report", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_SpatialTF/supplemental.pdf"},
+    { type = "code", url="https://github.com/beltegeuse/spatialTF_code" },
+    { type ="additional", desc="Web interactive comparison and scenes", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_SpatialTF/comparison/index.html"}]
 
 +++
 

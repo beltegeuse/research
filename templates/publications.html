@@ -10,36 +10,86 @@
 			<br/>
 			{% for pub in section.pages %}
 			<div class="row">
-				<div class="col-2">
-					<img class="pub-repr-img pub-img-rounded"
+				<div class="col-2 d-none d-lg-block">
+					<img class="img-thumbnail pub-repr-img"
 						src="{{ get_url(path="/publication/" ~ pub.extra.image_preview) }}" />
 				</div>
 				<div class="col-10">
-					<a href="{{ pub.permalink }}">{{ pub.title }}</a>
+					<a href="{{ pub.permalink }}">{{ pub.title | title }}</a>
 					<div class="pub-author" itemprop="text">
-						{{ pub.extra.authors | join(sep=", ") | replace(from="A Gruson", to="**A Gruson**") | markdown(inline=true) | safe }}
+						{{ pub.extra.authors | map(attribute="name") | join(sep=", ") | replace(from="Adrien Gruson", to="**Adrien Gruson**") | markdown(inline=true) | safe }}
 						{% if pub.extra is containing("join_first") %}
-							(* join first authors)
-						{% endif %}
+							(join first authors)
+						{% endif %} <br/>
+					</div>
+					<div itemprop="text">
+						<i class="fas fa-lightbulb"></i> "{{ pub.extra.short_description }}"
 					</div>
 					<div class="pub-publication" style="color: #090">
 						{{ pub.extra.publication | markdown(inline=true) | safe }}
 					</div>
+					
+					{% if pub.extra.download %}
+					<ul class="fa-ul pub-links">
+						{% set project_entry = pub.extra.download | filter(attribute="type", value="project") | first %}
+						{% if project_entry %}
+							<!-- If we have project type, we only show this type -->
+							<li class="fa-li">
+								<i class="fas fa-globe-americas">
+								</i>
+								<a href="{{ project_entry.url }}">
+									Project page
+								</a>
+							</li>
+						{% else %}
+							{% for entry in pub.extra.download %}
+								{% if entry.type == 'paper' %}
+								<li class="fa-li">
+									<i class="fas fa-file-pdf">
+									</i>
+									<a href="{{ entry.url }}">
+										Paper
+									</a>
+								</li>
+								{% elif entry.type == 'doi' %}
+								<li class="fa-li">
+									<i class="fas fa-atlas">
+									</i>
+									<a href="{{ entry.url }}">
+										Publisher's version
+									</a>
+								</li>
+								{% elif entry.type == 'code' %}
+								<li class="fa-li">
+									<i class="fab fa-github">
+									</i>
+									<a href="{{ entry.url }}">
+										Code
+									</a>
+								</li>
+								{% elif entry.type == 'poster' %}
+								<li class="fa-li">
+									<i class="fas fa-portrait">
+									</i>
+									<a href="{{ entry.url }}">
+										Poster
+									</a>
+								</li>
+								{% endif %}
+							{% endfor %}
 
-					<!-- For checking to a special flag -->
-					<!-- {% if pub.extra is containing("url_pdf") %}
-					<a class="btn btn-primary btn-outline btn-xs" href="{{ pub.extra.url_pdf }}" target="_blank"
-					rel="noopener">
-						PDF
-					</a>
-					{% endif %} -->
-
-					{% for entry in pub.extra.url %}
-					<a class="btn btn-primary btn-outline btn-xs" href="{{ entry[1] }}" target="_blank"
-						rel="noopener">
-						{{ entry[0] }}
-					</a>
-					{% endfor %}
+							{% set groups = pub.extra.download | group_by(attribute="type") %}
+							{% if groups.additional or groups.slides %}
+							<li class="fa-li">
+								<i class="fas fa-ellipsis-h"></i>
+								<a href="{{ pub.permalink }}">
+									More
+								</a>
+							</li>
+							{% endif %}
+						{% endif %}
+					</ul>
+					{% endif %}
 				</div>
 			</div>
 			{% endfor %}

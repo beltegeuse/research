@@ -3,15 +3,26 @@ title = "Delayed Rejection Metropolis Light Transport"
 date = 2020-02-28
 
 [extra]
-authors = ["D Rioux-Lavoie*", "J Litalien*", "A Gruson", "T Hachisuka", "D Nowrouzezahrai"]
-publication = "*ACM Trans. Graph.*, 2020."
+authors = [
+    { name = "Damien Rioux-Lavoie", institution = "McGill University, Canada" },
+    { name = "Joey Litalien", institution = "McGill University, Canada" },
+    { name = "Adrien Gruson", institution = "McGill University, Canada" },
+    { name = "Toshiya Hachisuka", institution = "The University of Tokyo, Japan" },
+    { name = "Derek Nowrouzezahrai", institution = "McGill University, Canada" },
+]
 join_first = true
 
+publication = "*ACM Trans. Graph.*, 2020. (Presented at SIGGRAPH 2020)."
 image = "drmlt.png"
 image_preview = "drmlt_prev.png"
+short_description = "Delayed rejection in MCMC applied to rendering."
 
-url = [["PDF (preprint)", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_DRMLT.pdf"],
-    ["Additional","http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_DRMLT/"]]
+download = [
+    { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_DRMLT.pdf"},
+    { type = "doi", url = "https://doi.org/10.1145/3388538"},
+    { type = "code", url = "" },
+    { type = "additional", desc = "Web interactive comparison", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_DRMLT/"}
+]
 +++
 
 ### Abstract

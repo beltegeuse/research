@@ -4,15 +4,21 @@ title = "Eye-Centred Color Adaptation in Global Illumination"
 
 [extra]
 abstract_short = "In this paper, we propose a new color adaptation method well suited to global illumination. This method estimates the adaptation color by averaging the irradiance color arriving at the eye. Unlike other existing methods, our approach is not limited to the view frustrum."
-authors = ["A Gruson", "M Ribardiere", "R Cozot"]
+authors = [
+  { name = "Adrien Gruson", institution = "IRISA, University of Rennes 1, France" }, 
+  { name = "Mickael Ribardiere", institution = "IRISA, University of Rennes 1, France" },
+  { name = "Remi Cozot", institution = "IRISA, University of Rennes 1, France" }
+]
+
 image = "eyecenter.png"
 image_preview = "eyecenter_prev.png"
-math = true
-publication_types = ["2"]
 publication = "*Pacific Graphics*, 2013."
-selected = true
+short_description = "New color adaptation method well suited to global illumination."
 
-url = [["PDF","http://onlinelibrary.wiley.com/doi/10.1111/cgf.12218/abstract"]]
+download = [
+  { type = "paper", url = "http://onlinelibrary.wiley.com/doi/10.1111/cgf.12218/abstract" },
+  { type = "doi", url = "https://doi.org/10.1111/cgf.12218" }
+]
 
 +++
 

@@ -3,17 +3,22 @@ title = "Efficient Energy-Compensated VPLs using Photon Splatting"
 date = 2018-03-01
 
 [extra]
-authors = ["J Sriwasansak", "A Gruson", "T Hachisuka"]
+authors = [
+    { name = "Jamorn Sriwasansak", institution = "The University of Tokyo, Japan" },
+    { name = "Adrien Gruson", institution = "The University of Tokyo, JFLI, Japan" },
+    { name = "Toshiya Hachisuka", institution = "The University of Tokyo, Japan" }
+]
 
 image = "efficientVPL.png"
 image_preview = "efficientVPL_prev.png"
-math = true
-publication_types = [2]
 publication = "*I3D*, 2018."
-selected = true
+short_description = "More accurate VPL rendering using photon splatting."
 
-url = [["Project page", "http://jamorn.me/evplp/"],
-    ["Code","https://github.com/zentojamorn/evplp"]]
+download = [
+    { type = "project", url = "http://jamorn.me/evplp/"},
+    { type = "doi", url = "https://doi.org/10.1145/3203189"},
+    { type = "code", url="https://github.com/zentojamorn/evplp"}
+]
 
 +++
 

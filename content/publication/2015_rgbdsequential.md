@@ -3,17 +3,24 @@ title = "Shape and Reflectance from RGB-D Images using Time Sequential Illuminat
 date = 2016-02-01
 
 [extra]
-authors = ["M Hudon", "A Gruson", "P Kerbiriou", "R Cozot", "K Bouatouch"]
+authors = [
+    { name = "Matis Hudon", institution = "Technicolor, IRISA, University of Rennes 1, France" }, 
+    { name = "Adrien Gruson", institution = "IRISA, University of Rennes 1, France" },
+    { name = "Paul Kerbiriou", institution = "Technicolor, France" },
+    { name = "Remi Cozot", institution = "IRISA, University of Rennes 1, France" },
+    { name = "Kadi Bouatouch", institution = "IRISA, University of Rennes 1, France" }
+]
 
 image = "RGBD.png"
 image_preview = "RGBD_prev.png"
-math = true
-publication_types = ["2"]
 publication = "*VISAPP*, 2016."
-selected = false
+short_description = "Method for recovering the shape with Kinect and partially controlled illumination."
 
-url = [["PDF", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_RGBD-Sequential_Hudon.pdf"],
-    ["Project page", "http://people.irisa.fr/Matis.Hudon/Shape.html"]]
+download = [
+    { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2016_RGBD-Sequential_Hudon.pdf"},
+    { type = "doi", url = "http://doi.org/10.5220/0005726305320541" },
+    { type = "project", url = "http://people.irisa.fr/Matis.Hudon/Shape.html" }
+]
 
 +++
 

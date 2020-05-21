@@ -3,17 +3,25 @@ title = "Gradient-Domain Photon Density Estimation"
 date = 2017-04-01
 
 [extra]
-authors = ["B.-S Hua", "A Gruson", "D Nowrouzezahrai", "T Hachisuka"]
+authors = [
+    { name = "Binh-Son Hua", institution = "The University of Tokyo, Japan" },
+    { name = "Adrien Gruson", institution = "The University of Tokyo, Japan" },
+    { name = "Derek Nowrouzezahrai", institution = "McGill University, Canada" },
+    { name = "Toshiya Hachisuka", institution = "The University of Tokyo, Japan" }
+]
+
 image = "GradientPM.png"
 image_preview = "GradientPM_prev.png"
-math = true
-publication_types = ["2"]
 publication = "*Eurographics*, 2017."
-selected = true
+short_description = "Gradient-domain formulation of photon density estimation."
 
-url = [["PDF", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GradientPM_Hua.pdf"],
-    ["Slides","http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/presentation_GPM.pptx"],
-    ["Additional", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/comparison/index.html"]]
+download = [
+    { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GradientPM_Hua.pdf"},
+    { type = "doi", url = "https://doi.org/10.1111/cgf.13104" },
+    { type = "code", url = "https://github.com/gradientpm/gpm" },
+    { type = "slides", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/presentation_GPM.pptx"},
+    { type = "additional", desc = "Web interactive comparison and scenes", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2017_GPM/comparison/index.html"}
+]
 
 +++
 

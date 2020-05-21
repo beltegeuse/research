@@ -3,13 +3,21 @@ title = "An Efficient Transport Estimator for Complex Layered Materials"
 date = 2020-02-16
 
 [extra]
-authors = ["L Gamboa", "A Gruson", "D Nowrouzezahrai"]
-publication = "*Eurographics*, 2020."
+authors = [
+    { name = "Luis Gamboa", institution = "University of Montreal, Canada" },
+    { name = "Adrien Gruson", institution = "McGill University, Canada" }, 
+    { name = "Derek Nowrouzezahrai", institution = "McGill University, Canada" }
+]
 
+publication = "*Eurographics*, 2020."
 image = "layered.jpg"
 image_preview = "layered_prev.jpg"
+short_description = "More efficient estimator for complex layered appearance models."
 
-url = [["Project", "https://lc.fie.umich.mx/~legg/complexlayered.php"]]
+download = [
+    { type = "project", url = "https://lc.fie.umich.mx/~legg/complexlayered.php" },
+    { type = "code", url="" }
+]
 +++
 
 ### Abstract

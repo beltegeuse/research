@@ -3,13 +3,22 @@ title = "Deep Learning for fractographic classification in metallic materials"
 date = 2020-04-22
 
 [extra]
-authors = ["M X B Rodriguez", "L F Polania", "A Gruson", "F P Ortiz"]
-publication = "*Engineering Failure Analysis*, Volume 113, 2020."
+authors = [
+    { name = "Maria Ximena Bastidas Rodriguez", institution = "National University of Colombia, Colombia" },
+    { name = "Adrien Gruson", institution = "McGill University, Canada" },
+    { name = "Luisa F. Polania", institution = "Target Corporation, USA" },
+    { name = "Flavio Prieto Ortiz", institution = "National University of Colombia, Colombia" }
+]
 
+publication = "*Engineering Failure Analysis*, Volume 113, 2020."
 image = "fracture.png"
 image_preview = "fracture_prev.png"
+short_description = "Efficient next-event-estimation for layered materials."
 
-url = [["PDF", "https://www.sciencedirect.com/science/article/abs/pii/S1350630720300364"]]
+download = [
+    { type = "paper", url = "https://www.sciencedirect.com/science/article/abs/pii/S1350630720300364"},
+    { type = "doi", url="https://doi.org/10.1016/j.engfailanal.2020.104532"}
+]
 +++
 
 ### Abstract

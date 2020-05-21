@@ -42,11 +42,17 @@ $sta-dark-home-section-even: rgb(247, 247, 247);
 
 // Own style definition
 .pub-repr-img {
-	width: 130px;
-	height: 130px;
-	margin-left: auto;
-	margin-right: auto;
 	margin-bottom: 1rem;
 	display: block;
 	border-radius: 10%;
 }  
+
+.pub-links li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 10px;
+  }
+
+.pub-description b {
+	margin-top: 0em;
+}

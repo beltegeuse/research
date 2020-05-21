@@ -3,13 +3,26 @@ title = "Scalable Virtual Ray Lights Rendering for Participating Media"
 date = 2019-06-12
 
 [extra]
-authors = ["N Vibert", "A Gruson", "H Stokholm", "T Mortensen", "W Jarosz", "T Hachisuka", "D Nowrouzezahrai"]
-publication = "*EGSR*, 2019."
+authors = [
+    { name = "Nicolas Vibert", institution = "McGill University, Canada" }, 
+    { name = "Adrien Gruson", institution = "McGill University, Canada" },
+    { name = "Heine Stokholm", institution = "Luxion, Danemark" }, 
+    { name = "Troels Mortensen", institution = "VIA University College, Danemark" }, 
+    { name = "Wojciech Jarosz", institution = "Dartmouth College, USA" },
+    { name = "Toshiya Hachisuka", institution = "The University of Tokyo, Japan" }, 
+    { name = "Derek Nowrouzezahrai", institution = "McGill University, Canada" }
+]
 
+publication = "*EGSR*, 2019."
 image = "VRLLC.jpg"
 image_preview = "VRLLC_prev.jpg"
+short_description = "Lightcuts-like algorithm for VRLs with a proper error bound."
 
-url = [["PDF", "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2019_vrlcuts.pdf"]]
+download = [
+    { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2019_vrlcuts.pdf"},
+    { type = "doi", url = "http://dx.doi.org/10/gf6rx7" },
+    { type = "code", url = ""}
+]
 +++
 
 ### Abstract
