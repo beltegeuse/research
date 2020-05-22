@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Adrien Gruson</title>
-	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1590099916">
+	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1590120753">
 
 	<!-- For fonts -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
@@ -40,19 +40,19 @@
 				<span class="pub-authors">
 					<p>
 					
-						Adrien Gruson, McGill University, Canada <br/> 
+						<a href="https://beltegeuse.github.io/research/">Adrien Gruson</a>, McGill University, Canada <br/>
 					
-						Rex West, The University of Tokyo, Japan <br/> 
+						<a href="http://cv.rexwe.st/">Rex West</a>, The University of Tokyo, Japan <br/>
 					
-						Toshiya Hachisuka, The University of Tokyo, Japan <br/> 
+						<a href="https://www.ci.i.u-tokyo.ac.jp/%7Ehachisuka/">Toshiya Hachisuka</a>, The University of Tokyo, Japan <br/>
 					
 					
 					</p>
 
 					<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;smcmc.jpg" class="pub-banner" itemprop="image">
-					<h3 id="abstract">Abstract</h3>
-<p>Markov chain Monte Carlo (MCMC) sampling is a powerful approach to generate samples from an arbitrary distribution. The application to light transport simulation allows us to efficiently handle complex light transport such as highly occluded scenes. Since light transport paths in MCMC methods are sampled according to the path contributions over the sampling domain covering the whole image, bright pixels receive more samples than dark pixels to represent differences in the brightness. This variation in the number of samples per pixel is a fundamental property of MCMC methods. This property often leads to uneven convergence over the image, which is a notorious and fundamental issue of any MCMC method to date. We present a novel stratification method of MCMC light transport methods. Our stratification method, for the first time, breaks the fundamental limitation that the number of samples per pixel is uncontrollable. Our method guarantees that every pixel receives a specified number of samples by running a single Markov chain per pixel. We rely on the fact that different MCMC processes should converge to the same result when the sampling domain and the integrand are the same. We thus subdivide an image into multiple overlapping tiles associated with each pixel, run an independent MCMC process in each of them, and then align all of the tiles such that overlapping regions match. This can be formulated as an optimization problem similar to the reconstruction step for gradient-domain rendering. Further, our method can exploit the coherency of integrands among neighboring pixels via coherent Markov chains and replica exchange. Images rendered with our method exhibit much more predictable convergence compared to existing MCMC methods.</p>
 
+					<h3>Abstract</h3>
+					<p class="pub-abstract" > Markov chain Monte Carlo (MCMC) sampling is a powerful approach to generate samples from an arbitrary distribution. The application to light transport simulation allows us to efficiently handle complex light transport such as highly occluded scenes. Since light transport paths in MCMC methods are sampled according to the path contributions over the sampling domain covering the whole image, bright pixels receive more samples than dark pixels to represent differences in the brightness. This variation in the number of samples per pixel is a fundamental property of MCMC methods. This property often leads to uneven convergence over the image, which is a notorious and fundamental issue of any MCMC method to date. We present a novel stratification method of MCMC light transport methods. Our stratification method, for the first time, breaks the fundamental limitation that the number of samples per pixel is uncontrollable. Our method guarantees that every pixel receives a specified number of samples by running a single Markov chain per pixel. We rely on the fact that different MCMC processes should converge to the same result when the sampling domain and the integrand are the same. We thus subdivide an image into multiple overlapping tiles associated with each pixel, run an independent MCMC process in each of them, and then align all of the tiles such that overlapping regions match. This can be formulated as an optimization problem similar to the reconstruction step for gradient-domain rendering. Further, our method can exploit the coherency of integrands among neighboring pixels via coherent Markov chains and replica exchange. Images rendered with our method exhibit much more predictable convergence compared to existing MCMC methods. </p>
 
 					<h3>Downloads</h3>
 
@@ -98,6 +98,22 @@
 						</li>
 					</ul>	
 					
+					
+
+					
+					
+					<h3>Cite</h3>
+					
+    
+    
+        
+            <a href="https://beltegeuse.github.io/research/">Adrien Gruson</a>,  
+        
+            <a href="http://cv.rexwe.st/">Rex West</a>,  
+        
+         and <a href="https://www.ci.i.u-tokyo.ac.jp/%7Ehachisuka/">Toshiya Hachisuka</a>
+    
+. <b>Stratified Markov Chain Monte Carlo Light Transport</b>, <em>Eurographics</em>, 2020.
 					
 					
 
