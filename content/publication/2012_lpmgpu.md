@@ -25,7 +25,7 @@ abstract = """Light going through a participating medium like smoke can be scatt
 
 bibtex = """@inproceedings{Gruson:2012:Light,
     title = {Light Propagation Maps on Parallel Graphics Architectures.},
-    author = {Gruson, Adrien and Patil, Ajit Hakke and Cozot, R{\'e}mi and Bouatouch, Kadi and Pattanaik, Sumanta},
+    author = {Gruson, Adrien and Patil, Ajit Hakke and Cozot, R{\\'e}mi and Bouatouch, Kadi and Pattanaik, Sumanta},
     booktitle = {Eurographics Symposium on Parallel Graphics and Visualization},
     publisher = {The Eurographics Association},
     year = {2012},
