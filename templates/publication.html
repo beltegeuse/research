@@ -1,4 +1,5 @@
 {% extends "index.html" %}
+{% import "macros.html" as macros %}
 
 {% block content %}
 <section id="publications">
@@ -8,7 +9,7 @@
 				<span class="pub-authors">
 					<p>
 					{% for author in page.extra.authors %}
-						{{ author.name}}, {{author.institution}} <br/> 
+						{{macros::one_author_with_link(author=author, websites=config.extra.websites) | trim }}, {{ author.institution }} <br/>
 					{% endfor %}
 					{% if page.extra is containing("join_first") %}
 						(join first authors)
@@ -16,7 +17,9 @@
 					</p>
 
 					<img src="{{ get_url(path="/publication/" ~ page.extra.image) }}" class="pub-banner" itemprop="image">
-					{{ page.content | markdown | safe }}
+
+					<h3>Abstract</h3>
+					<p class="pub-abstract" > {{ page.extra.abstract | markdown(inline=true) | safe }} </p>
 
 					<h3>Downloads</h3>
 
@@ -77,7 +80,17 @@
 					</ul>	
 					{% endfor %}
 					{% endif %}
+
+					{{ page.content | markdown | safe }}
 					
+					<h3>Cite</h3>
+					{{ macros::authors_with_link(authors=page.extra.authors, websites=config.extra.websites, final=" and ")}}. <b>{{ page.title | title }}</b>, {{ page.extra.publication | markdown(inline=true) | safe }}
+					
+					{% if page.extra.bibtex %}
+					<div>
+						<pre class="bibtex-box">{{ page.extra.bibtex | safe }}</pre>
+					</div>
+					{% endif %}
 
 				</div>
 			</div>

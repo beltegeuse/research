@@ -30,5 +30,28 @@ biography = """
 Adrien Gruson is a post-doc researcher at McGill University under the supervision of [Prof. Nowrouzezahrai](http://www.cim.mcgill.ca/~derek/).
 Previously he was a post-doc at the University of Tokyo with [Prof. Toshiya Hachisuka](http://www.ci.i.u-tokyo.ac.jp/~hachisuka/) 
 and was a member of the [Japanese French Laboratory of Informatics (JFLI)](http://jfli.cnrs.fr/). 
-His research interests include physically-based rendering based on MCMC or gradient-domain approaches.
-"""
+His research interests include physically-based rendering based on MCMC or gradient-domain approaches."""
+websites = [
+	{ name = "Adrien Gruson", url = "https://beltegeuse.github.io/research/"},
+	{ name = "Damien Rioux-Lavoie", url = "https://riouxld21.github.io/research/" },
+	{ name = "Joey Litalien", url = "https://joeylitalien.github.io/" },
+	{ name = "Toshiya Hachisuka", url = "https://www.ci.i.u-tokyo.ac.jp/~hachisuka/" },
+	{ name = "Rex West", url = "http://cv.rexwe.st/" },
+	{ name = "Luis Gamboa", url = "https://lc.fie.umich.mx/~legg/" },
+	{ name = "Derek Nowrouzezahrai", url = "http://www.cim.mcgill.ca/~derek/" },
+	{ name = "Iliyan Georgiev", url = "http://iliyan.com/" },
+	{ name = "Luisa F. Polania", url = "https://sites.google.com/site/polanialuisa/" },
+	{ name = "Nicolas Vibert", url = "http://nicolas-vibert.me/" },
+	{ name = "Wojciech Jarosz", url = "https://cs.dartmouth.edu/~wjarosz/" },
+	{ name = "Binh-Son Hua", url = "https://sonhua.github.io/" },
+	{ name = "Matthias Zwicker", url = "https://www.cs.umd.edu/~zwicker/" },
+	{ name = "Elmar Eisemann", url = "https://graphics.tudelft.nl/~eisemann/" },
+	{ name = "Jamorn Sriwasansak", url = "http://jamorn.me/" },
+	{ name = "Mickael Ribardiere", url = "https://mribar03.bitbucket.io/" },
+	{ name = "Martin Sik", url = "https://cgg.mff.cuni.cz/~sik/" },
+	{ name = "Jiri Vorba", url = "https://cgg.mff.cuni.cz/~jirka/" },
+	{ name = "Remi Cozot", url = "http://cozot.free.fr/" },
+	{ name = "Kadi Bouatouch", url = "https://www.irisa.fr/frvsense/Kadi.Bouatouch/" },
+	{ name = "Jaroslav Krivanek", url = "https://cgg.mff.cuni.cz/~jaroslav/" },
+	{ name = "Sumanta Pattanaik", url = "http://www.cs.ucf.edu/~sumant/" }
+]
