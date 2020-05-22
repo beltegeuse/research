@@ -25,5 +25,14 @@ download = [
 
 abstract = """The most common solutions to the light transport problem rely on either Monte Carlo (MC) integration or density estimation methods, such as uni- & bi-directional path tracing or photon mapping. Recent gradient-domain extensions of MC approaches show great promise; here, gradients of the final image are estimated numerically (instead of the image intensities themselves) with coherent paths generated from a deterministic shift mapping. We extend gradient-domain approaches to light transport simulation based on density estimation. As with previous gradient-domain methods, we detail important considerations that arise when moving from a primal- to gradient-domain estimator. We provide an efficient and straightforward solution to these problems. Our solution supports stochastic progressive density estimation, so it is robust to complex transport effects. We show that gradient-domain photon density estimation converges faster than its primal-domain counterpart, as well as being generally more robust than gradient-domain uni- & bi-directional path tracing for scenes dominated by complex transport."""
 
+bibtex = """@inproceedings{Hua:2017:GradientPM,
+  title={Gradient-Domain Photon Density Estimation},
+  author={Hua, Binh-Son and Gruson, Adrien and Nowrouzezahrai, Derek and Hachisuka, Toshiya},
+  booktitle={Computer Graphics Forum},
+  volume={36},
+  year={2017},
+  doi={10.1111/cgf.13104}
+}"""
+
 +++
 

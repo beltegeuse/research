@@ -88,7 +88,12 @@
 					
 					{% if page.extra.bibtex %}
 					<div>
-						<pre class="bibtex-box">{{ page.extra.bibtex | safe }}</pre>
+						<pre class="bibtex-box">
+<code id="bibtex">{{ page.extra.bibtex | safe }}</code>
+							<div class="btn-clipboard" id="clipboard-copy" data-clipboard-target="#bibtex" data-text-swap="Copied!">
+								<i class="far fa-copy"></i> Copy to clipboard
+							</div>
+						</pre>  
 					</div>
 					{% endif %}
 
@@ -97,3 +102,29 @@
 		</div>
 </section>
 {% endblock content %}
+
+{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script type="text/javascript">
+  $(".btn-clipboard").on("click", function() {
+    var el = $(this);
+    if (el.text() == el.data("text-swap")) {
+      el.text(el.data("text-original")); 
+    } else {
+      el.empty();
+      el.append('<i class="fas fa-check"></i> ' + el.data("text-swap")); 
+      el.text(el.data("text-original")).delay(1);
+    }
+  });
+
+  var clipboard = new ClipboardJS('#clipboard-copy');
+
+  clipboard.on('success', function(e) {
+    console.log(e);
+  });
+
+  clipboard.on('error', function(e) {
+    console.log(e);
+  });
+</script>
+{% endblock scripts %}

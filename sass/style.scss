@@ -60,9 +60,26 @@ $sta-dark-home-section-even: rgb(247, 247, 247);
 .pub-abstract {
 	text-align: justify;
 }
-  
+
 .bibtex-box {
 	position: relative; 
-	color: black;
 	font-size: smaller;
+	overflow-x: hidden;
 }
+
+.btn-clipboard {
+	position: absolute; 
+	right: 0;
+	bottom: 0;
+	padding: 6px 10px;
+	font-size: 13px;
+	/* background-color: $brand-color; */
+	// font-family: $base-font-family;
+  
+	font-weight: 400;
+	font-size: 13px;
+	// color: $brand-color;
+	cursor: pointer;
+  }
+  
+  
