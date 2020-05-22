@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Adrien Gruson</title>
-	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1590120753">
+	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1590168113">
 
 	<!-- For fonts -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
@@ -117,6 +117,21 @@
 . <b>Light Transport Simulation In The Gradient Domain</b>, <em>SIGGRAPH Asia (Course)</em>, 2018.
 					
 					
+					<div>
+						<pre class="bibtex-box">
+<code id="bibtex">@incollection{Hua:2018:GradientCourse,
+  title={Light transport simulation in the gradient domain},
+  author={Hua, Binh-Son and Gruson, Adrien and Zwicker, Matthias and Hachisuka, Toshiya},
+  booktitle={SIGGRAPH Asia 2018 Courses},
+  year={2018},
+  doi={10.1145/3277644.3277761}
+}</code>
+							<div class="btn-clipboard" id="clipboard-copy" data-clipboard-target="#bibtex" data-text-swap="Copied!">
+								<i class="far fa-copy"></i> Copy to clipboard
+							</div>
+						</pre>  
+					</div>
+					
 
 				</div>
 			</div>
@@ -135,6 +150,31 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script type="text/javascript">
+  $(".btn-clipboard").on("click", function() {
+    var el = $(this);
+    if (el.text() == el.data("text-swap")) {
+      el.text(el.data("text-original")); 
+    } else {
+      el.empty();
+      el.append('<i class="fas fa-check"></i> ' + el.data("text-swap")); 
+      el.text(el.data("text-original")).delay(1);
+    }
+  });
+
+  var clipboard = new ClipboardJS('#clipboard-copy');
+
+  clipboard.on('success', function(e) {
+    console.log(e);
+  });
+
+  clipboard.on('error', function(e) {
+    console.log(e);
+  });
+</script>
+
 </body>
 
 </html>

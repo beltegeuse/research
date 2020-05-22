@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Adrien Gruson</title>
-	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1590120753">
+	<link rel="stylesheet" href="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;style.css?t=1590168113">
 
 	<!-- For fonts -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
@@ -110,14 +110,19 @@
 					
 					
 					<div>
-						<pre class="bibtex-box">@inproceedings{Gruson:2012:Light,
+						<pre class="bibtex-box">
+<code id="bibtex">@inproceedings{Gruson:2012:Light,
     title = {Light Propagation Maps on Parallel Graphics Architectures.},
     author = {Gruson, Adrien and Patil, Ajit Hakke and Cozot, R{\'e}mi and Bouatouch, Kadi and Pattanaik, Sumanta},
     booktitle = {Eurographics Symposium on Parallel Graphics and Visualization},
     publisher = {The Eurographics Association},
     year = {2012},
     doi = {10.2312/EGPGV/EGPGV12/081-088}
-}</pre>
+}</code>
+							<div class="btn-clipboard" id="clipboard-copy" data-clipboard-target="#bibtex" data-text-swap="Copied!">
+								<i class="far fa-copy"></i> Copy to clipboard
+							</div>
+						</pre>  
 					</div>
 					
 
@@ -138,6 +143,31 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script type="text/javascript">
+  $(".btn-clipboard").on("click", function() {
+    var el = $(this);
+    if (el.text() == el.data("text-swap")) {
+      el.text(el.data("text-original")); 
+    } else {
+      el.empty();
+      el.append('<i class="fas fa-check"></i> ' + el.data("text-swap")); 
+      el.text(el.data("text-original")).delay(1);
+    }
+  });
+
+  var clipboard = new ClipboardJS('#clipboard-copy');
+
+  clipboard.on('success', function(e) {
+    console.log(e);
+  });
+
+  clipboard.on('error', function(e) {
+    console.log(e);
+  });
+</script>
+
 </body>
 
 </html>
