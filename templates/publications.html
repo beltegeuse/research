@@ -18,10 +18,15 @@
 				<div class="col-10">
 					<a href="{{ pub.permalink }}">{{ pub.title | title }}</a>
 					<div class="pub-author" itemprop="text">
-						{{ pub.extra.authors | map(attribute="name") | join(sep=", ") | replace(from="Adrien Gruson", to="**Adrien Gruson**") | markdown(inline=true) | safe }}
-						{% if pub.extra is containing("join_first") %}
-							(join first authors)
-						{% endif %} <br/>
+						{% if pub.extra.join_first %}
+							{% for a in pub.extra.authors | map(attribute="name") | slice(end=2) %}
+								{{ a  | replace(from="Adrien Gruson", to="**Adrien Gruson**") | markdown(inline=true) | safe }}*,
+							{% endfor %}
+							{{ pub.extra.authors | map(attribute="name") | slice(start=2) | join(sep=", ") | replace(from="Adrien Gruson", to="**Adrien Gruson**") | markdown(inline=true) | safe }}
+						{% else %}
+							{{ pub.extra.authors | map(attribute="name") | join(sep=", ") | replace(from="Adrien Gruson", to="**Adrien Gruson**") | markdown(inline=true) | safe }}
+						{% endif %}
+						<br/>
 					</div>
 					<div itemprop="text">
 						<i class="fas fa-lightbulb"></i> "{{ pub.extra.short_description }}"

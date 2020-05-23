@@ -8,11 +8,21 @@
 				<h1>{{ page.title | title }}</h1>
 				<span class="pub-authors">
 					<p>
-					{% for author in page.extra.authors %}
-						{{macros::one_author_with_link(author=author, websites=config.extra.websites) | trim }}, {{ author.institution }} <br/>
-					{% endfor %}
+					{% if page.extra.join_first %}
+						{% for author in page.extra.authors | slice(end=2) %}
+							{{macros::one_author_with_link(author=author, websites=config.extra.websites) | trim }}*, {{ author.institution }} <br/>
+						{% endfor %}
+						{% for author in page.extra.authors | slice(start=2) %}
+							{{macros::one_author_with_link(author=author, websites=config.extra.websites) | trim }}, {{ author.institution }} <br/>
+						{% endfor %}
+					{% else %}
+						{% for author in page.extra.authors %}
+							{{macros::one_author_with_link(author=author, websites=config.extra.websites) | trim }}, {{ author.institution }} <br/>
+						{% endfor %}
+					{% endif %}
+					In {{ page.extra.publication | markdown(inline=true) | safe }} <br />
 					{% if page.extra is containing("join_first") %}
-						(join first authors)
+						(*Authors with equal contribution)
 					{% endif %}
 					</p>
 
