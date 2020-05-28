@@ -46,7 +46,7 @@
 					</ul>
 					{% endif %}
 
-					{% if dls.doi or dls.paper %}
+					{% if dls.doi or dls.paper or dls.poster %}
 					<h4>Publication</h4>
 					<ul class="fa-ul">
 						{% if dls.paper %}
@@ -60,7 +60,12 @@
 						{% if dls.doi %}
 						<li><span class="fa-li"><i class="fas fa-atlas"></i></span>
 							<a href="{{ dls.doi[0].url }}">Publisher's official version</a> – external link, may require a subscription
-						  </li>
+						</li>
+						{% endif %}
+						{% if dls.poster %}
+						<li><span class="fa-li"><i class="fas fa-portrait"></i></span>
+						<a href="{{ dls.poster[0].url }}">Poster</a> 
+						</li>
 						{% endif %}
 					</ul>
 					{% endif %}
@@ -74,6 +79,28 @@
 							</span>
 							<a href={{ dls.code[0].url }}>Public repository</a>
 						</li>
+					</ul>
+					{% endif %}
+
+					{% if dls.slides or dls.video %}
+					<h4>Presentation & Video</h4>
+					<ul class="fa-ul">
+						{% if dls.slides %}
+						<li>
+							<span class="fa-li">
+								<i class="far fa-file-powerpoint"></i>
+							</span>
+							<a href={{ dls.slides[0].url }}>Slides, PPTX</a>
+						</li>
+						{% endif %}
+						{% if dls.video %}
+						<li>
+							<span class="fa-li">
+								<i class="fas fa-video"></i>
+							</span>
+							<a href={{ dls.video[0].url }}>Video</a>
+						</li>
+						{% endif %}
 					</ul>
 					{% endif %}
 
