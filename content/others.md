@@ -2,6 +2,21 @@
 
 +++
 
+## Service (not exhaustive list)
+
+Program committee:  
+- I3D 2020
+- EG 2020 (Short papers)
+- CSA 2018.
+
+Reviewer (conference):
+- SIGGRAPH: 2020, 2019, 2018
+- SIGGRAPH Asia: 2020, 2019
+- Eurographics: 2020
+- Pacific Graphics: 2018, 2016
+
+Reviewer (journal): TVCG, JCGT, The Visual Computer, Computers & Graphics
+
 ## Presentation
 * [Recent Advances in Gradient-domain Rendering](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/JFLI_Handai_gradient.pptx) at Handai IDS-JFLI, May 11 2018.
 * [Recent Research on Photon Density Estimation methods for LT](http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/JFLI_mcmc.pptx) at
