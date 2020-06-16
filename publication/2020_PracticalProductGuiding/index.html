@@ -36,30 +36,30 @@
 <section id="publications">
 		<div class="container">
 			<div class="article-container">
-				<h1>Temporal Coherency For Video Tone Mapping</h1>
+				<h1>Practical Product Path Guiding Using Linearly Transformed Cosines</h1>
 				<span class="pub-authors">
 					<p>
 					
 						
-							Ronan Boitard, Technicolor, IRISA, University of Rennes 1, France <br/>
+							<a href="https://www-sop.inria.fr/members/Stavros.Diolatzis/">Stavros Diolatzis</a>, Université Côté d’Azur, Inria, France <br/>
 						
-							<a href="https://www.irisa.fr/frvsense/Kadi.Bouatouch/">Kadi Bouatouch</a>, IRISA, University of Rennes 1, France <br/>
+							<a href="https://beltegeuse.github.io/research/">Adrien Gruson</a>, McGill University, Canada <br/>
 						
-							<a href="http://cozot.free.fr/">Remi Cozot</a>, IRISA, University of Rennes 1, France <br/>
+							<a href="http://rgl.epfl.ch/people/wjakob/">Wenzel Jackob</a>, EPFL, Swissland <br/>
 						
-							Dominique Thoreau, Technicolor, France <br/>
+							<a href="http://www.cim.mcgill.ca/%7Ederek/">Derek Nowrouzezahrai</a>, McGill University, Canada <br/>
 						
-							<a href="https://beltegeuse.github.io/research/">Adrien Gruson</a>, IRISA, University of Rennes 1, France <br/>
+							<a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a>, Université Côté d’Azur, Inria, France <br/>
 						
 					
-					In <em>SPIE</em>, 2012. <br />
+					In <em>EGSR</em>, 2020. <br />
 					
 					</p>
 
-					<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;temporal_video.png" class="pub-banner" itemprop="image">
+					<img src="https:&#x2F;&#x2F;beltegeuse.github.io&#x2F;research&#x2F;publication&#x2F;pppg.jpg" class="pub-banner" itemprop="image">
 
 					<h3>Abstract</h3>
-					<p class="pub-abstract" > Tone Mapping Operators (TMOs) aim at converting real world high dynamic range (HDR) images captured with HDR cameras, into low dynamic range (LDR) images that can be displayed on LDR displays.  Several TMOs have been proposed over the last decade, from the simple global mapping to the more complex one simulating the human vision system.  While these solutions work generally well for still pictures, they are usually less effcient for video sequences as they are source of visual artifacts.  Only few of them can be adapted to cope with a sequence of images.  In this paper we present a major problem that a static TMO usually encounters while dealing with video sequences, namely the temporal coherency.  Indeed, as each tone mapper deals with each frame separately, no  temporal  coherency  is  taken  into  account  and  hence  the  results  can  be  quite  disturbing  for  high  varying dynamics in a video.  We propose a temporal coherency algorithm that is designed to analyze a video as a whole, and  from  its  characteristics  adapts  each  tone  mapped  frame  of  a  sequence  in  order  to  preserve  the  temporal coherency.  This temporal coherency algorithm has been tested on a set of real as well as Computer Graphics Image (CGI) content and put in competition with several algorithms that are designed to be time-dependent. Results show that temporal coherency preserves the overall contrast in a sequence of images.  Furthermore, this technique is applicable to any TMO as it is a post-processing that only depends on the used TMO. </p>
+					<p class="pub-abstract" > Path tracing is now the standard method used to generate realistic imagery in many domains, e.g., film, special effects, architecture etc. Path guiding has recently emerged as a powerful strategy to counter the notoriously long computation times required to render such images. We present a practical path guiding algorithm that performs product sampling, i.e., samples proportional to the product of the bidirectional scattering distribution function (BSDF) and incoming radiance. We use a spatial-directional subdivision to represent incoming radiance, and introduce the use of Linearly Transformed Cosines (LTCs) to represent the BSDF during path guiding, thus enabling efficient product sampling. Despite the computational efficiency of LTCs, several optimizations are needed to make our method cost effective. In particular, we show how we can use vectorization, precomputation, as well as strategies to optimize multiple importance sampling and Russian roulette to improve performance. We evaluate our method on several scenes, demonstrating consistent improvement in efficiency compared to previous work, especially in scenes with significant glossy inter-reflection. </p>
 
 					<h3>Downloads</h3>
 
@@ -74,22 +74,40 @@
 							<span class="fa-li">
 								<i class="fas fa-file-pdf"></i>
 							</span>
-							<a href=http:&#x2F;&#x2F;www.ece.ubc.ca&#x2F;~rboitard&#x2F;articles&#x2F;2012&#x2F;Boitard%20et%20al.-2012-Temporal%20Coherency%20for%20Video%20Tone%20Mapping.pdf>Paper (author's version), PDF</a>
+							<a href=http:&#x2F;&#x2F;www-sop.inria.fr&#x2F;reves&#x2F;Basilic&#x2F;2020&#x2F;DGJND20&#x2F;practical_product_path_guiding_authors.pdf>Paper (author's version), PDF</a>
 						</li>
 						
-						
-						<li><span class="fa-li"><i class="fas fa-atlas"></i></span>
-							<a href="https:&#x2F;&#x2F;doi.org&#x2F;10.1117&#x2F;12.929600">Publisher's official version</a> – external link, may require a subscription
-						</li>
 						
 						
 					</ul>
 					
 
 					
+					<h4>Code & Data</h4>
+					<ul class="fa-ul">
+						<li>
+							<span class="fa-li">
+								<i class="fab fa-github"></i>
+							</span>
+							<a href=https:&#x2F;&#x2F;gitlab.inria.fr&#x2F;sdiolatz&#x2F;practical-product-path-guiding>Public repository</a>
+						</li>
+					</ul>
+					
 
 					
 
+					
+					
+					<h4>Additional</h4>
+					<ul class="fa-ul">
+						<li>
+							<span class="fa-li">
+								<i class="far fa-plus-square"></i>
+							</span>
+							<a href=https:&#x2F;&#x2F;repo-sam.inria.fr&#x2F;fungraph&#x2F;practical_product_path_guiding&#x2F;>Web interactive comparison</a>
+						</li>
+					</ul>	
+					
 					
 
 					
@@ -99,28 +117,27 @@
     
     
         
-            Ronan Boitard,  
+            <a href="https://www-sop.inria.fr/members/Stavros.Diolatzis/">Stavros Diolatzis</a>,  
         
-            <a href="https://www.irisa.fr/frvsense/Kadi.Bouatouch/">Kadi Bouatouch</a>,  
+            <a href="https://beltegeuse.github.io/research/">Adrien Gruson</a>,  
         
-            <a href="http://cozot.free.fr/">Remi Cozot</a>,  
+            <a href="http://rgl.epfl.ch/people/wjakob/">Wenzel Jackob</a>,  
         
-            Dominique Thoreau,  
+            <a href="http://www.cim.mcgill.ca/%7Ederek/">Derek Nowrouzezahrai</a>,  
         
-         and <a href="https://beltegeuse.github.io/research/">Adrien Gruson</a>
+         and <a href="http://www-sop.inria.fr/members/George.Drettakis/">George Drettakis</a>
     
-. <b>Temporal Coherency For Video Tone Mapping</b>, <em>SPIE</em>, 2012.
+. <b>Practical Product Path Guiding Using Linearly Transformed Cosines</b>, <em>EGSR</em>, 2020.
 					
 					
 					<div>
 						<pre class="bibtex-box">
-<code id="bibtex">@inproceedings{Boitard:2012:Temporal,
-  title={Temporal coherency for video tone mapping},
-  author={Boitard, Ronan and Bouatouch, Kadi and Cozot, Remi and Thoreau, Dominique and Gruson, Adrien},
-  booktitle={Applications of Digital Image Processing XXXV},
-  volume={8499},
-  year={2012},
-  doi = {10.1117/12.929600},
+<code id="bibtex">@article {DGJND20,
+  author       = "Diolatzis, Stavros and Gruson, Adrien and Jakob, Wenzel and Nowrouzezahrai, Derek and Drettakis, George",
+  title        = "Practical Product Path Guiding Using Linearly Transformed Cosines",
+  journal      = "Computer Graphics Forum (Proceedings of the Eurographics Symposium on Rendering)",
+  year         = "2020",
+  url          = "http://www-sop.inria.fr/reves/Basilic/2020/DGJND20",
 }</code>
 							<div class="btn-clipboard" id="clipboard-copy" data-clipboard-target="#bibtex" data-text-swap="Copied!">
 								<i class="far fa-copy"></i> Copy to clipboard
