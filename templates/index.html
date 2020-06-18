@@ -111,6 +111,35 @@
 								</ul> 
 							</div>
 						</div>
+						<div class="row">
+							<h3>Peer-reviewing conflicts</h3>
+							Automatically generated from publications in the last two years:
+							{% set publications = get_section(path="publication/_index.md") %}
+							{% set time_now = now() | date(format="%s") | int %}
+							{% set_global conflicts = [] %}
+
+							{# Collect all authors from last two years #}
+							{% for pub in publications.pages %}
+								{% set curr_date = pub.date | date(format="%s") | int %}
+								{% if curr_date + 2*31556926 > time_now %}
+									{% set authors = pub.extra.authors | map(attribute="name") %}
+									{% set_global conflicts = conflicts | concat(with=authors) %}
+								{% endif %}
+							{% endfor %}
+
+							{# Remove duplicate authors and sort the list #}
+							{% set conflicts_unique = conflicts | sort | unique | safe %}
+
+							{# Remove the website authors #}
+							{% set_global conflicts = [] %}
+							{% for a in conflicts_unique %}
+								{% if a != "Adrien Gruson" %}
+									{% set_global conflicts = conflicts | concat(with=a) %}
+								{% endif %}
+							{% endfor %}
+							
+							<p>{{ conflicts | join(sep=", ") }}.</p>
+						</div>
 					</div>
 				</div>
 			</div>
