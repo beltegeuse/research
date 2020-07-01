@@ -18,7 +18,7 @@ short_description = "Efficient combinaison of Practical Path guiding and LTC"
 
 download = [
     { type = "paper", url = "http://www-sop.inria.fr/reves/Basilic/2020/DGJND20/practical_product_path_guiding_authors.pdf"},
-    { type = "doi", url = "https://diglib.eg.org/bitstream/handle/10.1111/cgf14051/v39i4pp023-033.pdf"},
+    { type = "doi", url = "https://diglib.eg.org/handle/10.1111/cgf14051" },
     { type = "additional", desc = "Web interactive comparison", url = "https://repo-sam.inria.fr/fungraph/practical_product_path_guiding/"},
     { type = "code", url = "https://gitlab.inria.fr/sdiolatz/practical-product-path-guiding"},
 ]
