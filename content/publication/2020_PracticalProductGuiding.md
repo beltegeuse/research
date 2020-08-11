@@ -6,7 +6,7 @@ date = 2020-06-15
 authors = [
     { name = "Stavros Diolatzis", institution = "Université Côté d’Azur, Inria, France"},
     { name = "Adrien Gruson", institution = "McGill University, Canada" },
-    { name = "Wenzel Jackob", institution = "EPFL, Swissland" },
+    { name = "Wenzel Jakob", institution = "EPFL, Swissland" },
     { name = "Derek Nowrouzezahrai", institution = "McGill University, Canada" },
     { name = "George Drettakis", institution = "Université Côté d’Azur, Inria, France" },
 ]

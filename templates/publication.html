@@ -77,7 +77,11 @@
 							<span class="fa-li">
 								<i class="fab fa-github"></i>
 							</span>
+							{% if dls.code[0].desc %}
+							<a href={{ dls.code[0].url }}>Public repository</a> - {{ dls.code[0].desc }}
+							{% else %}
 							<a href={{ dls.code[0].url }}>Public repository</a>
+							{% endif %}
 						</li>
 					</ul>
 					{% endif %}

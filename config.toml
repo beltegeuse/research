@@ -55,6 +55,6 @@ websites = [
 	{ name = "Jaroslav Krivanek", url = "https://cgg.mff.cuni.cz/~jaroslav/" },
 	{ name = "Sumanta Pattanaik", url = "http://www.cs.ucf.edu/~sumant/" },
 	{ name = "Stavros Diolatzis", url = "https://www-sop.inria.fr/members/Stavros.Diolatzis/" },
-	{ name = "Wenzel Jackob", url = "http://rgl.epfl.ch/people/wjakob/"},
+	{ name = "Wenzel Jakob", url = "http://rgl.epfl.ch/people/wjakob/"},
 	{ name = "George Drettakis", url = "http://www-sop.inria.fr/members/George.Drettakis/"},
 ]
