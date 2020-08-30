@@ -38,3 +38,7 @@ bibtex = """@article{Rioux-Lavoie:2020:DRMLT,
 }"""
 
 +++
+
+### Presentation 
+
+<iframe width="650" height="365" src="https://www.youtube.com/embed/m22d-cTcubc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
