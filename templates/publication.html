@@ -54,7 +54,8 @@
 							<span class="fa-li">
 								<i class="fas fa-file-pdf"></i>
 							</span>
-							<a href={{ dls.paper[0].url }}>Paper (author's version), PDF</a>
+							<a href={{ dls.paper[0].url }}>Paper (author's version), PDF</a> 
+							{% if dls.paper[0].desc %} – {{ dls.paper[0].desc }} {% endif %}
 						</li>
 						{% endif %}
 						{% if dls.doi %}
