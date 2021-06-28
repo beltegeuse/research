@@ -57,4 +57,5 @@ websites = [
 	{ name = "Stavros Diolatzis", url = "https://www-sop.inria.fr/members/Stavros.Diolatzis/" },
 	{ name = "Wenzel Jakob", url = "http://rgl.epfl.ch/people/wjakob/"},
 	{ name = "George Drettakis", url = "http://www-sop.inria.fr/members/George.Drettakis/"},
+	{ name = "Keven Villeneuve", url = "https://kevenv.github.io/" },
 ]

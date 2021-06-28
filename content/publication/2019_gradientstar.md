@@ -12,7 +12,7 @@ authors = [
     { name = "Elmar Eisemann", institution = "Delft University of Technology, Netherlands" },
     { name = "Toshiya Hachisuka", institution = "The University of Tokyo, Japan" }
 ]
-join_first = True
+join_first = true
 
 image = "gradientdomain_star.jpg"
 image_preview = "gradientdomain_star_prev.png"
