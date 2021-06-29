@@ -18,7 +18,7 @@ short_description = "Different sampling routines for single scattering"
 
 download = [
     { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2021_PointNormal_Villeneuve.pdf"},
-    #{ type = "doi", url = "#" },
+    { type = "doi", url = "https://doi.org/10.2312/sr.20211290" },
     { type ="additional", desc="Additional report", url = "#"},
     { type = "code", url = "https://github.com/beltegeuse/rustlight/tree/point-normal"},
 ]
@@ -31,7 +31,8 @@ bibtex = """@article{Villeneuve:2021:VolumeProductSampling,
   booktitle = {Proceedings of EGSR - Digital Library Only Track},
   year = {2021},
   month = jun,
-  publisher = {The Eurographics Association}
+  publisher = {The Eurographics Association},
+  DOI = {10.2312/sr.20211290}
 }"""
 
 +++
