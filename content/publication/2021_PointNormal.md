@@ -11,7 +11,7 @@ authors = [
 ]
 join_first = true
 
-publication = "*EGSR* - Digital Library Only Track, 2020."
+publication = "*EGSR* - Digital Library Only Track, 2021."
 image = "point_normal.png"
 image_preview = "point_normal_prev.png"
 short_description = "Different sampling routines for single scattering"
