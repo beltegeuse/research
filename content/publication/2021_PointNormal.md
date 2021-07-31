@@ -19,7 +19,7 @@ short_description = "Different sampling routines for single scattering"
 download = [
     { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2021_PointNormal_Villeneuve.pdf"},
     { type = "doi", url = "https://doi.org/10.2312/sr.20211290" },
-    { type ="additional", desc="Additional report", url = "#"},
+    { type ="additional", desc="Additional report", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2021_PointNormal/2021_PointNormal_Villeneuve_additional.pdf"},
     { type = "code", url = "https://github.com/beltegeuse/rustlight/tree/point-normal"},
     { type = "slides", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2021_PointNormal/volume_product_sampling_EGSR2021.pptx" }
 ]
