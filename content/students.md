@@ -21,43 +21,36 @@ My main expertise is in computer graphics and, more precisely, light transport s
  
 Aside from doing research in forwarding rendering, I started to work on differentiable rendering and machine learning applied in graphics. I listed  below some of my current research topics that I am actively exploring:
 
-**Exploiting and controlling correlation in rendering**  is an efficient way to design robust estimators. For example, Markov-chains can locally explore the path-space by applying small perturbations on the sampled paths. Another example is the gradient-domain shift-mapping operator, which leverages the positive correlation of a pair of paths when estimating the image space gradient. I want to continue pursuing my research in this area and see how to control this amount of correlation and introduce negative correlations. 
+**Exploiting and controlling correlation in rendering**  is an efficient way to design robust estimators. For example, Markov-chains generate correlated samples that locally explore the integration space. Or, gradient-domain shift-mapping operators use positively correlated pairs of samples to estimate image space gradient. Thus, I strongly believe that correlation in rendering is a key to designing efficient sampling techniques. The key is to decide the right amount of correlation :) 
 
-**Robust sampling strategies via data-driven approaches** Adhoc, and hard-coded decisions are often present in rendering algorithms, reducing efficiency to final algorithms. Data-driven or leveraging more information of the input will improve performance for such techniques. 
+**Designing more robust sampling routines with data-driven approaches** is an important work area in light transport simulation. Too often, the proposed techniques rely on hard-coded decisions or complex user parameters which need to be properly set to get optimal performance. Therefore, I think it is important to move to more automatic approaches that leverage more scene input information (via machine learning) to improve the robustness of light transport algorithms. 
 
-**Scalable differentiable rendering** 
+**Improving the scalability of differentiable rendering** is a key ingredient to unlock real applications of differentiable rendering. I believe this improvement needs to be made through designing new sampling strategies and/or new (continuous) scene representation.  
 
-**Efficient volume rendering** Variance in term of transmittance evaluation. Techniques that leverage correlation. Exploiting the higher dimension available inside the volume. 
+**Exploring new volume rendering integration techniques** by leveraging the higher integration dimensions possible inside the volume. 
 
 ## Common questions & answers
 
-**What are the differences between Undergraduate and Graduate studies?**
+**What work environment can I expect working with you at ÉTS?**
 
-passive learning. Clear assignment and tasks to do. Active learning, need to decide how you proceed. The answer to a particular problem that you will work on is often unclear at the start.   
+I strongly believe that an inclusive and good work environment is essential for performing research. I also think that collaborative work and exchanging ideas are crucial components to advancing in research. For these reasons, my students will be placed inside the common multimedia students' lab space, which regroups students from different professors on various topics. You can expect to have your own space and a dedicated working station with up-to-date specifications in this space. 
 
-**What difference I can expect between doing my research with you as Master or PhD?**
+You can also expect to get a weekly 1-on-1 meeting with me to discuss your progress and any related issue. I tend to work closely with my students (e.g., coding together, discussing papers, doing derivation on the whiteboard, etc...).  You can also expect that I organize other group events with students to spark discussions.  
 
-Master is often too short to complete a research topic by yourself. Often, continuing the work when starting PhD. More career options with PhD and better mobility. However, deciding to pursue a PhD is a rough adventure. For PhD contact me before doing any application. For PhD, you should be able to demonstrate your interest and potentially your past experience in computer graphics. 
+**Can I perform all my research activities remotely from home?**
 
-## What work environment I can expect at ÉTS?
+One thing for sure: I will not micromanage you. I am normally flexible regarding your time inside the lab. However, I prefer that students regularly come to the lab to build a team spirit and encourage spontaneous discussions. Exclusive WFH can be accommodated in some individual cases for different reasons. 
 
-Student of my group will be placed inside the common multimedia's students lab space which regroup different professors on various topic. This environment will give you the opportunity to interact with other students. You can expect to have your own space and a dedicated working station with up-to-date specifications. I will also provide you access to Compute Canada Cluster ressources if you need more compute power. 
+**Does I need funding/scholarship to be supervised by you?**
 
-You can also expect to get weekly and dedicated 1-on-1 meeting with me to discuss about your progress and any related issue. There will be also some group meeting with other students. If you want to work in collaboration with other students, it is fine. I will also have opportunities to work with some external collaborators both from academia and industries. 
+I have a simple rule: everybody needs to be paid for their work. So you can expect that if we decide to work together, you will receive some payment for your work. However, as you might know, funding can be a rare resource in research. So I will encourage and help you to apply for a scholarship before or during your studies. 
 
-## Can I perform all my research activities remotely from home?
+Note that some scholarships do not cover your tuition fees. These fees can be important for international students. However, graduate students can get reduced tuition fees in some conditions.  
 
-I am flexible regarding your time inside the lab. Exclusive WFH can be accommodated for in some cases, but I think it is important that students come regularly inside the lab because it give you opportunities to interact with other people and maybe that will passing by inside the lab. 
+**Is it a problem if I am too weak in French?**
 
-## Does I need funding/scholarship to be supervised by you?
+As you might know, French is the only official language in Quebec, and ÉTS is a french engineering school. However, you can pursue your graduate studies with only minimal French, and as Montreal is an international city, it is not required to know french to live here. 
 
-I have a simple rule: If you should be paid for your work we do together. So you can expect that if you have a strong profile and I have adequate funding, I will fund you. However, as you might know but funding is a rare and important resource in research and I will encourage you to apply for a scholarship. 
+## Additional ressources
 
-Note that some scholarships do not cover your tuition fees. These fees can be important for international students. However, for graduate students, it exists possibility to get regular fees if enough course credit have been taken.  
-
-## Is it a problem if I am not confident enough in my French or/and English skill?
-
-
-# Additional ressources
-
-[Prof. Hachisuka's Graduate Study Survival Guide](https://cs.uwaterloo.ca/~thachisu/survival.pdf): Describe in detail many aspects of doing graduate studies, including motivations, possible outcomes and challenges. Highly recommended read!
+[Prof. Hachisuka's Graduate Study Survival Guide](https://cs.uwaterloo.ca/~thachisu/survival.pdf): Describe many aspects of doing graduate studies in detail, including motivations, possible outcomes, and challenges. Highly recommended read! (note that he was one of my past post-doctoral supervisors)
