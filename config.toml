@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://beltegeuse.github.io/research/"
+base_url = "https://profs.etsmtl.ca/agruson/"
 title = "Adrien Gruson"
 default_language = "en"
 
@@ -33,7 +33,7 @@ I am an Assistant Professor at [École Supérieure de Technologie (ÉTS)](https:
 
 Adrien Gruson was a post-doc researcher at McGill University and The University of Tokyo under the supervision of Profs [Nowrouzezahrai](http://www.cim.mcgill.ca/~derek/) and [Hachisuka](http://www.ci.i.u-tokyo.ac.jp/~hachisuka/). He was also a member of the [Japanese French Laboratory of Informatics (JFLI)](http://jfli.cnrs.fr/). His research interests include physically-based rendering, using advance sampling techniques such Markov-chain Monte Carlo, gradient-based estimators."""
 websites = [
-	{ name = "Adrien Gruson", url = "https://beltegeuse.github.io/research/"},
+	{ name = "Adrien Gruson", url = "https://profs.etsmtl.ca/agruson/"},
 	{ name = "Damien Rioux-Lavoie", url = "https://riouxld21.github.io/research/" },
 	{ name = "Joey Litalien", url = "https://joeylitalien.github.io/" },
 	{ name = "Toshiya Hachisuka", url = "https://www.ci.i.u-tokyo.ac.jp/~hachisuka/" },

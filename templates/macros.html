@@ -1,7 +1,7 @@
 {% macro one_author_with_link(author, websites) %}
     {% set website = websites | filter(attribute="name", value=author.name) | first %}
     {% if website %}
-        {{ "[" ~ author.name ~ "](" ~ website.url ~ ")" | markdown(inline=true) }}
+        {{ "[" ~ author.name ~ "](" ~ website.url ~ ")" | markdown(inline=true) | safe }}
     {% else %}
         {{ author.name }}
     {% endif %}
@@ -11,11 +11,11 @@
     {% set nb_authors = authors | length %}
     {% if nb_authors == 0 %}
     {% elif nb_authors == 1 %}
-        {{ macros::one_author_with_link(author=authors | last , websites=websites) }}
+        {{ macros::one_author_with_link(author=authors | last , websites=websites) | safe }}
     {% else %}
         {% for a in authors | slice(end=nb_authors - 1) %}
-            {{ macros::one_author_with_link(author=a, websites=websites) | trim }}{{ ", " }} 
+            {{ macros::one_author_with_link(author=a, websites=websites) | trim | safe }}{{ ", " }} 
         {% endfor %}
-        {{ final }}{{ macros::one_author_with_link(author=authors | last , websites=websites) | trim }}
+        {{ final }}{{ macros::one_author_with_link(author=authors | last , websites=websites) | trim | safe }}
     {% endif %}
 {% endmacro authors_with_link %}
