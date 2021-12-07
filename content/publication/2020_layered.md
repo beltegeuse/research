@@ -16,9 +16,9 @@ short_description = "More efficient estimator for complex layered appearance mod
 
 download = [
     { type = "project", url = "https://lc.fie.umich.mx/~legg/complexlayered.php" },
-    { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_EfficientLayered.pdf" },
-    { type = "slides", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_Layered/layered_slides.pptx" },
-    { type = "video", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2020_Layered/layered_video.mp4" },
+    { type = "paper", url = "https://profs.etsmtl.ca/agruson/DATA/2020_EfficientLayered.pdf" },
+    { type = "slides", url = "https://profs.etsmtl.ca/agruson/DATA/2020_Layered/layered_slides.pptx" },
+    { type = "video", url = "https://profs.etsmtl.ca/agruson/DATA/2020_Layered/layered_video.mp4" },
     { type = "doi", url = "https://diglib.eg.org/handle/10.1111/cgf13936" },
     { type = "code", url="https://github.com/leggcg/EfficientComplexLayered" }
 ]

@@ -19,7 +19,7 @@ image_preview = "VRLLC_prev.jpg"
 short_description = "Lightcuts-like algorithm for VRLs with a proper error bound."
 
 download = [
-    { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2019_vrlcuts.pdf"},
+    { type = "paper", url = "https://profs.etsmtl.ca/agruson/DATA/2019_vrlcuts.pdf"},
     { type = "doi", url = "http://dx.doi.org/10/gf6rx7" },
     { type = "code", url = ""}
 ]

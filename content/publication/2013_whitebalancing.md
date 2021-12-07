@@ -37,6 +37,6 @@ bibtex = """@inproceedings{Gruson:2013:Eye,
 
 ### Video
 <video width="320" height="240" controls>
-  <source src="http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2013_whitebalancing/video.mp4" type="video/mp4">
+  <source src="https://profs.etsmtl.ca/agruson/DATA/2013_whitebalancing/video.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>

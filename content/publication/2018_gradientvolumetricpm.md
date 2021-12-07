@@ -17,11 +17,11 @@ publication = "*ACM Trans. Graph. (SIGGRAPH)*, 2018."
 short_description = "Gradient-domain formulation of volumetric photon density estimation including beams and planes."
 
 download = [
-    { type = "paper", url = "http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM.pdf"},
+    { type = "paper", url = "https://profs.etsmtl.ca/agruson/DATA/2018_GVPM.pdf"},
     { type = "doi", url = "https://doi.org/10.1145/3197517.3201363" },
     { type = "code", url = "https://github.com/gradientpm/gvpm" },
-    { type = "slides", url="http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/GVPM_Presentation.pptx"},
-    { type = "additional", desc = "Web interactive comparison", url="http://beltegeuse.s3-website-ap-northeast-1.amazonaws.com/research/2018_GVPM/comparison/index.html"}
+    { type = "slides", url="https://profs.etsmtl.ca/agruson/DATA/2018_GVPM/GVPM_Presentation.pptx"},
+    { type = "additional", desc = "Web interactive comparison", url="https://profs.etsmtl.ca/agruson/DATA/2018_GVPM/comparison/index.html"}
 ]
 
 abstract = """Gradient-domain rendering can improve the convergence of surface-based light transport by exploiting smoothness in image space. Scenes with participating media exhibit similar smoothness and could potentially benefit from gradient-domain techniques. We introduce the first gradient-domain formulation of image synthesis with homogeneous participating media, including four novel and efficient gradient-domain volumetric density estimation algorithms. We show that naive extensions of gradient domain path-space and density estimation methods to volumetric media, while functional, can result in inefficient estimators. Focussing on point-, beam- and plane-based gradient-domain estimators, we introduce a novel shift mapping that eliminates redundancies in the naive formulations using spatial relaxation within the volume. We show that gradient-domain volumetric rendering improve convergence compared to primal domain state-of-the-art, across a suite of scenes. Our formulation and algorithms support progressive estimation and are easy to incorporate atop existing renderers."""
