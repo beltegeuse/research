@@ -19,6 +19,7 @@ paths = "off"
 
 [extra]
 # Put all your custom variables here
+old_website = true
 name = "Adrien Gruson"
 job_title = "Assistant Professor at École de technologie supérieure"
 job_departement = [["Software and Information Technology Engineering Dept.", "https://www.etsmtl.ca/ets/gouvernance/decanats-et-departements/departement-genie-logiciel-ti"]]

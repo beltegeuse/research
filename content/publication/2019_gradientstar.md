@@ -20,7 +20,7 @@ publication = "*Eurographics (STAR)*, 2019."
 short_description = "Survey on gradient-domain rendering."
 
 download = [
-    { type = "project", url = "https://profs.etsmtl.ca/agruson/DATA/2019_GradientSTAR/"},
+    { type = "project", url = "https://adrien-gruson.com/research/2019_GradientSTAR/"},
     { type = "doi", url = "https://doi.org/10.1111/cgf.13652" },
     { type = "code", url = "https://github.com/gradientpm/gradient-mts" } 
 ]

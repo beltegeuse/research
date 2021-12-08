@@ -24,8 +24,8 @@ Reviewer (journal): TVCG, JCGT, The Visual Computer, Computers & Graphics
 Note that these information above are not an exhaustive list.
 
 ## Presentation
-* [Recent Advances in Gradient-domain Rendering](https://profs.etsmtl.ca/agruson/DATA/JFLI_Handai_gradient.pptx) at Handai IDS-JFLI, May 11 2018.
-* [Recent Research on Photon Density Estimation methods for LT](https://profs.etsmtl.ca/agruson/DATA/JFLI_mcmc.pptx) at JFLI Seminar, May 15 2017.
+* [Recent Advances in Gradient-domain Rendering](https://adrien-gruson.com/research/JFLI_Handai_gradient.pptx) at Handai IDS-JFLI, May 11 2018.
+* [Recent Research on Photon Density Estimation methods for LT](https://adrien-gruson.com/research/JFLI_mcmc.pptx) at JFLI Seminar, May 15 2017.
 
 ## Publications
 * [Comment simuler efficacement les interactions lumière/matière en synthèse d’image](http://www.societe-informatique-de-france.fr/wp-content/uploads/2015/12/1024-no7-Gruson-Bouatouch.pdf), A. Gruson and K. Bouatouch, SIF 2015 volume 7.

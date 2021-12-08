@@ -41,6 +41,17 @@
 		</div>
 	</nav> 
 	<main class="content">
+		
+		{% if config.extra["old_website"] %}
+		<div class="alert alert-danger" role="alert">
+			<div class="container">
+				<div class="col-xs-12 col-md-12">
+					You are currently visiting my old website - Please visit my <a href="https://profs.etsmtl.ca/agruson{{ current_path }}">new website</a>. 
+				</div>
+			</div>
+		</div>
+		{% endif %}
+
 		{% block content %}
 		<section id="about" class="home-section">
 			<div class="container">
