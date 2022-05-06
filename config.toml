@@ -37,7 +37,7 @@ websites = [
 	{ name = "Adrien Gruson", url = "https://profs.etsmtl.ca/agruson/"},
 	{ name = "Damien Rioux-Lavoie", url = "https://riouxld21.github.io/research/" },
 	{ name = "Joey Litalien", url = "https://joeylitalien.github.io/" },
-	{ name = "Toshiya Hachisuka", url = "https://www.ci.i.u-tokyo.ac.jp/~hachisuka/" },
+	{ name = "Toshiya Hachisuka", url = "https://cs.uwaterloo.ca/~thachisu/" },
 	{ name = "Rex West", url = "http://cv.rexwe.st/" },
 	{ name = "Luis Gamboa", url = "https://lc.fie.umich.mx/~legg/" },
 	{ name = "Derek Nowrouzezahrai", url = "http://www.cim.mcgill.ca/~derek/" },
@@ -60,4 +60,6 @@ websites = [
 	{ name = "Wenzel Jakob", url = "http://rgl.epfl.ch/people/wjakob/"},
 	{ name = "George Drettakis", url = "http://www-sop.inria.fr/members/George.Drettakis/"},
 	{ name = "Keven Villeneuve", url = "https://kevenv.github.io/" },
+	{ name = "Gurprit Singh", url = "https://sampling.mpi-inf.mpg.de/"},
+	{ name = "Corentin Salaun", url = "https://iribis.github.io/" }
 ]
