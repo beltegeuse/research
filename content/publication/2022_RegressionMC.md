@@ -13,12 +13,12 @@ authors = [
 join_first = false
 
 publication = "ACM Trans. Graph. (SIGGRAPH) 2022."
-image = "regressionMC.png"
+image = "regressionMC.jpg"
 image_preview = "regressionMC_prev.png"
 short_description = "Probably more efficient MC estimator based on regression"
 
 download = [
-    #{ type = "paper", url = "https://adrien-gruson.com/research/2021_PointNormal_Villeneuve.pdf"},
+    { type = "paper", url = "https://adrien-gruson.com/research/2022_RegressionMC_Salaun.pdf"},
     #{ type = "doi", url = "https://doi.org/10.2312/sr.20211290" },
     #{ type ="additional", desc="Additional report", url = "https://adrien-gruson.com/research/2021_PointNormal/2021_PointNormal_Villeneuve_additional.pdf"},
     #{ type = "code", url = "https://github.com/beltegeuse/rustlight/tree/point-normal"},

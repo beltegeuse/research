@@ -21,12 +21,12 @@
 						{% endfor %}
 					{% endif %}
 					In {{ page.extra.publication | markdown(inline=true) | safe }} <br />
-					{% if page.extra is containing("join_first") %}
+					{% if page.extra.join_first %}
 						(*Authors with equal contribution)
 					{% endif %}
 					</p>
 
-					<img src="{{ get_url(path="/publication/" ~ page.extra.image) }}" class="pub-banner" itemprop="image">
+					<img src="{{ get_url(path="/publication/" ~ page.extra.image) }}" itemprop="image">
 
 					<h3>Abstract</h3>
 					<p class="pub-abstract" > {{ page.extra.abstract | markdown(inline=true) | safe }} </p>
