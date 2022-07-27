@@ -25,8 +25,10 @@
 						(*Authors with equal contribution)
 					{% endif %}
 					</p>
-
+					
+					{% if page.extra.image %}
 					<img src="{{ get_url(path="/publication/" ~ page.extra.image) }}" itemprop="image">
+					{% endif %}
 
 					<h3>Abstract</h3>
 					<p class="pub-abstract" > {{ page.extra.abstract | markdown(inline=true) | safe }} </p>
