@@ -112,17 +112,17 @@
 					{% endif %}
 
 					{% if dls.additional %}
-					{% for add in dls.additional %}
 					<h4>Additional</h4>
 					<ul class="fa-ul">
+					{% for add in dls.additional %}
 						<li>
 							<span class="fa-li">
 								<i class="far fa-plus-square"></i>
 							</span>
 							<a href={{ add.url }}>{{add.desc}}</a>
 						</li>
-					</ul>	
 					{% endfor %}
+					</ul>	
 					{% endif %}
 
 					{{ page.content | markdown | safe }}

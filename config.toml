@@ -61,5 +61,6 @@ websites = [
 	{ name = "George Drettakis", url = "http://www-sop.inria.fr/members/George.Drettakis/"},
 	{ name = "Keven Villeneuve", url = "https://kevenv.github.io/" },
 	{ name = "Gurprit Singh", url = "https://sampling.mpi-inf.mpg.de/"},
-	{ name = "Corentin Salaun", url = "https://iribis.github.io/" }
+	{ name = "Corentin Salaun", url = "https://iribis.github.io/" },
+	{ name = "Ege Ciklabakkal", url = "https://cs.uwaterloo.ca/~meciklab/" }
 ]
