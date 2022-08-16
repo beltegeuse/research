@@ -21,7 +21,7 @@ download = [
     { type = "paper", url = "https://adrien-gruson.com/research/2022_RegressionMC_Salaun.pdf"},
     { type = "doi", url = "https://doi.org/10.1145/3528223.3530095" },
     { type ="additional", desc = "Web interactive comparison", url = "http://adrien-gruson.com/research/2022_RegressionMC/"},
-    #{ type = "code", url = "https://github.com/beltegeuse/rustlight/tree/point-normal"},
+    { type = "code", url = "https://github.com/iribis/regressionmc"},
     #{ type = "slides", url = "https://adrien-gruson.com/research/2021_PointNormal/volume_product_sampling_EGSR2021.pptx" }
 ]
 
@@ -38,4 +38,8 @@ bibtex = """@article{Salaun:2022:RegressionMC,
 }"""
 
 +++
+
+#### Presentation
+
+<iframe width="650" height="365" src="https://www.youtube.com/embed/CWVn3L_JghM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
