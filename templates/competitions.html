@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% import "macros.html" as macros %}
+
+{% block content %}
+<section id="competitions">
+		<div class="container">
+			<br/>
+			<div class="col section-heading">
+				<h1>Rendering Competition</h1>
+			</div>
+			<br/>
+			<p>The course MTI882: Physically-based rendering is offered at ETS and is taught by Adrien Gruson. The course includes various assignments and culminates in a final rendering competition. This page displays all of the entries that have been submitted in previous years.</p> 
+			
+			{% for pub in section.pages %}
+			<div class="row">
+				<div class="col-10">
+					<a href="{{ pub.permalink }}">{{ pub.title | title }}</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</section>
+{% endblock content %}

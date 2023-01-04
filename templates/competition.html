@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+{% import "macros.html" as macros %}
+
+{% block content %}
+<section id="competitions">
+    <div class="article-container">
+        <center><h1>{{ page.title | title }}</h1></center>
+        <br/>
+        
+        {{ page.content | markdown | safe }}
+
+        <h3>Entries</h3>
+
+        {% for entry in page.extra.entries %}
+            <img src="{{  get_url(path="competition/" ~ entry.image) }}">
+            {% if entry.type == "winner" %}
+            <center><i class="fa fa-trophy" aria-hidden="true"> Winner: </i> <a href="{{  get_url(path="competition/" ~ entry.url) }}">{{ entry.name }}</a></center>
+            {% endif %}
+            {% if entry.type == "entry" %}
+            <center><a href="{{  get_url(path="competition/" ~ entry.url) }}">{{ entry.name }}</a></center>
+            {% endif %}
+            <br/>
+        {% endfor %}
+    </div>
+</section>    
+{% endblock content %}

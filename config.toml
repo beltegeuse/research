@@ -34,8 +34,16 @@ I am an Assistant Professor at [École Supérieure de Technologie (ÉTS)](https:
 
 <h3>Current Students</h3>
 <ul>
-	<li style="font-size:90%">Benjamin Boineau, M. Ing (co-supervised with Sheldon Andrew)</li>
-	<li style="font-size:90%">Marc Haraoui, M. Ing (co-supervised with Marco Pedersoli)</li>
+    <li style="font-size:90%">Hassan-Walid Boulerhcha, Undergraduate MITACS Globalinks (intern)</li>
+    <li style="font-size:90%">Haolun Ma, Undergraduate MITACS Globalinks (intern)</li>
+    <li style="font-size:90%">Justin Benoist, Undergraduate (intern)</li>
+	<li style="font-size:90%">Daniel Milenov Milanov, MASc (co-supervised with Sheldon Andrew)</li>
+	<li style="font-size:90%">Marc Haraoui, M. Ing (co-supervised with Marco Pedersoli) - CAE</li>
+</ul>
+
+<h3>Past Students</h3>
+<ul>
+	<li style="font-size:90%">Benjamin Boineau, M. Ing (co-supervised with Sheldon Andrew) - Depix</li>
 </ul>
 
 <h3>Bio</h3>
@@ -43,9 +51,17 @@ Adrien Gruson was a post-doc researcher at McGill University and The University 
 
 <h3>Research Fundings</h3>
 <ul>
+	<li style="font-size:90%">MITACS Acceleration and Globalkinks</li>
 	<li style="font-size:90%">NSERC, Discovery, 2022 to present</li>
 	<li style="font-size:90%">ÉTS, startup grant, 2021 to present</li>
 </ul>
+
+<h3>Course</h3>
+
+- MTI882: Rendu photoréaliste (A2022)
+	- <a href="competition/">Results rendering competition</a>
+- LOG750: Infographie (H2022, H2023)
+
 """
 websites = [
 	{ name = "Adrien Gruson", url = "https://profs.etsmtl.ca/agruson/"},
