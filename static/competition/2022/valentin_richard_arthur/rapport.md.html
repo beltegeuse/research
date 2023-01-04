@@ -1,0 +1,247 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Compétition de rendu
+
+**Nom de l'équipe**: Equipe 4
+
+**Membres de l'équipe**: 
+* Valentin Bouillon
+* Richard Fambon
+* Arthur Leclercq
+
+## Image(s) choisies
+
+![image exemple](https://user-images.githubusercontent.com/58634012/200201496-84d97c41-8121-4aa3-af1c-c32f5c5340f2.png)
+
+**Motivation:** 
+Nous avons choisi de représenter une scène d'exploration souterraine, de ce fait les technologies d'explorations que nous avons choisi de représenter sont les lampes torches et autres sources lumineuses qui permettent d'explorer les cavernes profondes sans source de lumière naturelles. La lumière traversant des cristaux est très esthétique et donne des images impressionantes. L'image choisie représente la base de la grotte que l'on souhaite représenter, en remplaçant les champignons lumineux par des cristaux et en remplaçant la source de lumière au loin par une lampe torche au premier plan, on pense pouvoir obtenir une très belle image.
+
+## Image obtenue
+
+![out_4096](https://user-images.githubusercontent.com/57452534/207238493-43b9ceff-e486-4452-a110-259977f93ea1.png)
+
+
+## Liste des fonctionnalités mise en œuvre
+
+### Source de lumière discrète : spotlight
+
+Les sources de lumières que nous avons choisies pour éclairer notre scène sont des lampes torches. Pour créer et faire le rendu de lampes torches, nous avons créé un nouveau matériau et une nouvelle forme dans notre moteur : le matériau cone_emitter et la forme point. En effet, les lumières des lamptes torches sont des points qui émettent de la lumière dans une forme de cône.
+
+La particularité de la forme point est que par nature elle ne peut jamais être atteinte par un rayon, et que donc pour prendre en compte la lumière qu'elle émet, on ne peut que prendre en compte sa participation à chaque rebond d'un rayon. Nous avons donc fait en sorte que lorsqu'on échantillonne un point, l'échantillon soit catégorisé comme "delta" (c'est-à-dire provenant d'un matériau spéculaire), ce qui entraîne des modifications dans l'intégrateur au moment du calcul de la participation de la source lumineuse. Qui plus est, l'échantillon renvoyé contient toujours la même position et la même normale (qui correspond à la direction vers laquelle le point émettra de la lumière dans le cas d'un cône).
+
+Quant au matériau cone_emitter, il est très semblable au matériau émetteur basique diffuse_emitter, mais au lieu de vérifier que le rayon entrant ne vient pas de "l'intérieur de la forme" (sa composante z ne doit pas être négative), on vérifie que le rayon appartient au cône dans lequel on veut émettre de la lumière (sa composante z doit être supérieure au cosinus d'un angle définissant le cône). Nous avons également voulu faire en sorte que la lumière émise soit à sa pleine intensité au centre du cône, et qu'une fois dépassé un certain angle (l'angle falloff qui est inférieur ou égal à l'angle limite du cône, voir figure ci-dessous tirée du chapitre 12.3.1 de PBRT) l'intensité de la lumière s'atténue jusque'à atteindre zéro, afin d'imiter l'illuination d'une vraie lampe torche.
+
+<img src="https://user-images.githubusercontent.com/57452534/206885481-357ec6f1-f052-4f70-8d86-b58490751250.png" width="500" >
+
+
+### Texture procédurale : champignon
+
+Afin de créer une texture procédurale pour notre chapeau de champignon, nous avons décidé d'utiliser un bruit de Voronoï. 
+
+D'après Wikipédia : <br>
+> En mathématiques, un diagramme de Voronoï est un pavage (découpage) du plan en cellules (régions adjacentes) à partir d'un ensemble discret de points appelés « germes ». Chaque cellule enferme un seul germe, et forme l'ensemble des points du plan plus proches de ce germe que d'aucun autre. La cellule représente en quelque sorte la « zone d'influence » du germe. 
+
+En principe, cela ressemble à ça : 
+
+![Screenshot_698](https://user-images.githubusercontent.com/113860355/206938697-4f3be69f-6c07-414e-b59c-9b14e0315131.png)
+
+
+
+### Matériau avancé  : micro-facettes
+
+Nous avons implémenté le matériau micro-facettes pour représenter des minerais dans la caverne, ces minerais seraient des matériaux conducteurs comme de l'or ou de l'argent et nécessitent donc une mise en place particulière de micro-facette. Dans un premier temps, nous avons sélectionné le modèle de Torrance-Sparrow (1967) qui consiste à considérer que toutes les facettes ont une réflexion parfaitement spéculaire. 
+
+![modeleTorranceSparrow](https://user-images.githubusercontent.com/58634012/206826853-b3e26e2c-c166-4d2c-90ac-b976abb3275c.png)
+
+
+De ce fait, pour l'échantillonage de la direction, nous générons d'abord le "half angle" qui représente en théorie la normale de la facette sur laquelle le rayon va rebondir. Une fois cette normale obtenue, le modèle Torrance-Sparrow nous indique donc que la direction de sortie est la direction de réflexion parfaitement spéculaire de la surface par rapport à cette normale soit : (-d_in.x, -d_in.y, d_in.z). Pour ce qui est de l'évaluation du matériau et de la PDF, nous avons utilisé la distribution GGX et le modèle de maskage et d'ombrage de Torrance-Sparrow (Blinn). 
+
+
+![GGX](https://user-images.githubusercontent.com/58634012/206826900-078a1aa6-514e-4aee-8531-a0b6e0c090b9.png)
+
+![Blinn](https://user-images.githubusercontent.com/58634012/206826904-10d24310-ad82-432c-a89e-16a25354c140.png)
+
+Le changement important entre un matériau micro-facette diélectrique et conducteur est le calcul du Fresnel qui dans le cas d'un matériau conducteur doit prendre en compte le eta intérieur, extérieur mais aussi une constante complexe k propre à chaque matériau changement le calcul du Fresnel :
+
+![Fresnel](https://user-images.githubusercontent.com/58634012/206826947-5d1a963a-ce5d-4207-85d4-5ebc8373cb72.png)
+
+La PDF du modèle de GGX est la suivante avec Phi égale à celui de la sphère et Theta :
+
+![Theta](https://user-images.githubusercontent.com/58634012/206826992-59556b05-8253-4843-8ff3-bd8e3607abd0.png)
+
+### Rendu volumétrique : milieu homogène infini
+
+Nous avons mis en place un milieu homogène inifini pour représenter de la potentielle poussière dans la caverne. Pour ce volume, nous avons choisi une fonction de phase isotropique simple : 
+
+![isotropique](https://user-images.githubusercontent.com/58634012/206827723-b59d067e-8d7d-463f-9d46-70cfe36ccc9a.png)
+
+Puis nous avons sélectionné les σ_s et σ_a arbitrairement jusqu'à ce qu'ils correspondent aux attentes de notre rendu. Toutes les modifications liées au volume homogène ont pu être directement apporté dans l'intérateur car nous n'avions qu'un volume à implémenter, donc des caractéristiques uniques, et que le volume était infini, donc pas de matériau propre à définir.
+
+### Méthode avancée d’échantillonnage : Path Guiding
+
+Le rendu des matériaux diélectriques ou translucides est coûteux : les algorithmes de transport de lumière doivent simuler un grand nombre
+de sample scattering à l'intérieur du matériau avant d'atteindre une convergence vers la source de lumière. En somme, les chemins se perdent dans le milieu.
+
+Grâce à une utilisation du path Guiding pour effectuer nos rendus de surface, nous allons pouvoir rendre la convergence plus rapide en guidant le processus d'échantillonnage. En effet, l'algorithme va nous permettre de créer une représentation approximative adaptative de la distribution de radiance dans notre volume. 
+
+Cette représentation consiste en un 5D Tree : un arbre binaire 3D représentant les coordonnées d'un pixel de notre scène, et un Quad Tree 2D représentant la distribution de radiance dans chaque direction autour du pixel.
+
+![Screenshot_696](https://user-images.githubusercontent.com/113860355/206937405-293fcd7c-34aa-444b-a3db-e37a241520e5.png)
+
+Nous allons ensuite utiliser cette représentation afin d'échantillonner la direction de diffusion. Puis une fois tous les échantillonnages terminés nous allons mettre à jour nos distributions. Le principe est le suivant :
+
+![Screenshot_695](https://user-images.githubusercontent.com/113860355/206937208-f37d1d6c-9017-4894-81f8-9537468953fe.png)
+
+Ici, nous allons combiner cette technique avec un échantillonnage BSDF classique, avec une probabilité de 0.5. 
+
+## Validation des fonctionnalités
+
+### Source de lumière discrète : spotlight
+
+La première étape pour représenter une lampe torche était de créer une source lumineuse ayant la forme d'un point. Ici, le point est placé au centre de la pièce et sa normale est dirigée dans le même sens que la caméra, donc il émet de la lumière vers le fond de la pièce car son matériau est un émetteur diffus.
+
+<img src="https://user-images.githubusercontent.com/57452534/206885575-9f687e5a-8ee3-4d5b-88db-6353d3aaa5a9.png" width="800" >
+
+Ensuite, nous avons modifié le matériau de ce point en émetteur cône, ce qui limite son émission dans la forme souhaitée. L'image ci-dessous est la même scène que l'image précédente, mais le matériau du point est désormais un cone_emitter dont l'angle max est 0.8 et l'angle d'atténuation est 0.3.
+
+<img src="https://user-images.githubusercontent.com/57452534/206885685-6763933e-50df-493d-8395-e2ef18faaed8.png" width="800" >
+
+### Texture procédurale : champignon
+
+Nous allons implémenter notre bruit de Voronoï en créant une "grille" de points autours de notre pixel. En fonction de la distance entre le point le plus proche et le pixel, nous décideront de renvoyer soit la couleur rouge soit la couleur blanche.
+
+Voici les résultats obtenus :
+
+Représentation du diagramme de Voronoï
+
+![Screenshot_679](https://user-images.githubusercontent.com/113860355/206938808-48c0449b-f4bf-42ee-914c-fea58f6a8296.png)
+
+Représentation de la distance point le plus proche - pixel 
+
+![Screenshot_598](https://user-images.githubusercontent.com/113860355/206938870-9878d580-a029-41c6-8fe1-eb954c002dca.png)
+
+Représentation ajustée pour notre champignon 
+
+![Screenshot_599](https://user-images.githubusercontent.com/113860355/206938946-df395646-3dfa-4dae-b019-448e208dca84.png)
+
+En bakant les textures correctement sur Blender et en ajustant les facteurs de scale, nous obtenons les champignons suivants : 
+
+![unnamed](https://user-images.githubusercontent.com/113860355/206939021-c2ca9406-a276-4e43-88af-59e7fa5d7ff1.png)
+
+Finalement, la dernière chose à faire est de modifier la manière dont nous crééons les meshs afin de créer un offset aléatoire lors de la création de chaque champignon. Nous appliquons cet offset sur les UVs des meshs ayant notre texture procédurale, et voilà, nous avons des champignons tous différents les uns des autres.
+
+
+### Micro-Facettes
+La première vérification à faire était le bon échantillonage proportionnellement à la PDF, pour se faire nous avons repris les tests fourni lors du devoir 3 afin de comparer les distributions de la PDF et de l'échantillonage et de s'assurer qu'elles soient identiques, ce qui nous a donné les résultats suivants :
+
+PDF puis Histogramme avec Alpha = 0.8 et Angle = z
+
+![pdf-micro_facet-0 8-z](https://user-images.githubusercontent.com/58634012/206827278-e738dae3-64e0-4cfa-adb9-73377fdae3da.png) 
+
+![hist-micro_facet-0 8-z](https://user-images.githubusercontent.com/58634012/206827285-7706977f-7d29-4e9a-a18b-dd7f4000debd.png)
+
+PDF puis Histogramme avec Alpha = 0.8 et Angle = 45°
+
+![hist-micro_facet-0 8-45-degree](https://user-images.githubusercontent.com/58634012/206827288-9c5657d1-3455-4f38-bb1c-c117e782c890.png)
+
+![pdf-micro_facet-0 8-45-degree](https://user-images.githubusercontent.com/58634012/206827291-1c114c35-7bd8-4de4-bbd9-e396dd038234.png)
+
+PDF puis Histogramme avec Alpha = 0.8 et Angle = 3°
+
+![hist-micro_facet-0 8-3-degree](https://user-images.githubusercontent.com/58634012/206827294-39f292b8-0081-4cfc-9402-0a4a63e13349.png)
+
+![pdf-micro_facet-0 8-3-degree](https://user-images.githubusercontent.com/58634012/206827303-6827ecc0-4d9c-4adf-ba9d-714b26139d08.png)
+
+Nous avons aussi rendu une scène simple avec micro-facette comme matériau afin de s'assurer de son bon fonctionnement et de ses réflexions, nous avons repris la scène utilisé pour représenter les différents exposants de Phong et remplacé par les différents Alpha pour Micro-facette. Pour les tests nous avons cherché à représenter de l'or et à comparer le rendu avec un Phong :
+
+Rendu micro-facette : α = [0.01, 0.2, 0.3, 0.4, 0.6, 0.8] η = 0.37 k = 2.82
+
+![MicroFacettes](https://user-images.githubusercontent.com/58634012/206827448-142cb404-80de-4ffd-bd17-6fc60f9b8f81.png)
+
+Rendu avec phong : exposant = [300, 90, 60, 30, 4, 1]
+
+![Phong](https://user-images.githubusercontent.com/58634012/206827463-08830df0-0b68-4f4e-9e72-3227af749c23.png)
+
+### Volume Homogène Infini
+
+Pour valider le fonctionnement du volume homogène encapsulé puis infini nous avons utilisé la scène simple "CornelBox" que nous avons modifiée soit pour faire apparaitre des volumes encapsulés, soit pour la rendre dans un volume infini. Les résultats étaient considérés comme satisfaisant si on pouvait voir la propagation de la lumière nettement dans le volume proche de celle-ci, et si on pouvait voir les objets présents dans le volume même loin de la source de lumière.
+
+Nous avons tout d'abord cherché à implémenter les volumes encapsulés mais nous n'avons pas réussi à réunir ces 2 conditions en même temps lors de l'implémentation de ce dernier :
+
+Bonne propagation mais mauvaise vision de l'objet
+
+![Encapsule1](https://user-images.githubusercontent.com/58634012/206827961-62b18e9a-54f4-4fd8-9a26-84b44b3d6408.png)
+
+Mauvaise propagation mais bonne vision de l'objet
+
+![Encapsule2](https://user-images.githubusercontent.com/58634012/206827982-6dd83847-2041-4a53-9069-18444f60a0d7.png)
+
+Nous avons donc refait les tests pour le volume infini et avons obtenu les résultats escomptés :
+
+Bonne propagation et bonne vision de l'objet, sans et avec couleurs
+
+![CornelVolume](https://user-images.githubusercontent.com/58634012/206828027-38581276-5049-4a49-b60f-2e76580b3cd6.png)
+
+![CornelJusPomme](https://user-images.githubusercontent.com/58634012/206828029-98ea70d8-63e7-4e77-be31-a312f9841dca.png)
+
+### Méthode avancée d’échantillonnage : Path Guiding
+
+Voici les différents résultats que nous avons réussi à obtenir :
+
+Path guiding sans utilisation de l'estimateur de Monte-Carlo 
+
+![Screenshot_674](https://user-images.githubusercontent.com/113860355/206937603-94e342f2-267d-4ab6-96b8-e623a531393a.png)
+
+Path guiding avec utilisation de l'estimateur de Monte-Carlo 
+
+![unnamed](https://user-images.githubusercontent.com/113860355/206937825-99dcc31d-e782-4a5b-96f8-4bdfebedcd91.png)
+
+Path guiding avec mise en place de la mixture pour le calcul de la PDF 
+
+![Screenshot_685](https://user-images.githubusercontent.com/113860355/206937874-82398e1d-4bf8-476c-b736-5965e2ff98a5.png)
+
+Path guiding complet avec combinaison BSDF 
+
+![Screenshot_680](https://user-images.githubusercontent.com/113860355/206937910-399a2f80-b65d-4f62-9b0e-08cdd3f0b0db.png)
+
+Comme nous pouvons le voir notre solution n'est pas tout à fait fonctionnelle, et il reste un bug quelque part, cependant nous n'avons pas réussi à déterminer sa cause dans le temps qui nous était imparti?
+
+## Difficultés rencontrées
+
+Pour les textures procédurales, il nous a fallu un moment avant de comprendre comment différencier tous les champignons en travaillant sur les meshs, cependant une fois que nous savions où travailler, la mise en place a été rapide.
+
+Pour les micro-facettes, chercher les différents coefficients de tous les matériaux et trouver une formule du Fresnel des matériaux conducteurs a été très difficile.
+
+Pour le volume, nous avons eu beaucoup de problèmes à trouver des valeurs de σ_s et σ_a qui nous permettaient de tester les mises en oeuvres, car un mauvais réglage de ces derniers ruine la scène sans pour autant que l'implémentation soit mauvaise. Un autre problème a été lors de la mise en oeuvre des volumes encapsulés, de savoir exactement dans quel cas on était (Dans volume intéraction volume, dans volume intéraction surface...). Problème réglé lors du passage en volumes infinis. Enfin le dernier problème a été la combinaison de l'intégrateur de volumes avec les intégrateurs utilisés pour rendre la scène (Path_MIS ou Path_guiding) car la scène finale comprend des sources de lumières discrètes et donc inatteignables par l'intégrateurs classique. Ce dernier problème n'a d'ailleurs toujours pas été résolu, les volumes sont donc manquants dans la scène finale.
+
+Pour le path guiding, à cause de la complexité du 5D Tree, il est difficile de débugger les problèmes de couleurs de Quad Trees rencontrés. On peut voir dans les résultats montrés plus haut que toutes les difficultés n'ont pas pu être corrigées.
+
+## Création de la scène et de l'image finale
+
+L'image que nous avons choisie comme exemple était en fait le résultat d'un tutoriel blender (https://www.youtube.com/watch?v=1J4r0mt9zz0), dont nous avons pu nous inspirer pour créer notre propre grotte. Nous n'avons pas pu suivre le tutoriel en entier, car le pugin d'export qui nous permettait de créer ntore scène en format json ne supporte pas une partie des fonctionnalités de blender, mais ce tutoriel nous a quand même bien aidés.
+
+La grotte en elle-même est un cylindre modifié avec notamment des subsurface modifiers et une displacement map dans blender, auquel nous avons rajouté un matériau personnalisé (blend entre phong et diffus), une texture et une normal map de roche après l'export de la scène.\
+Les stalactites et champignons sont égalements créés à partir de formes basiques blender, et ont été placés automatiquement sur le sol et le plafond avec la fonction Particle system de blender, puis ont été transformés en des objets indépendants afin de pouvoir être exportés avec le plugin.\
+Les cristaux devaient originalement être réalisés en matériau multi-couches, mais l'idée a été abandonnée suite à un manque de temps, et ils sont finalement en matériau diélectrique, dont l'indice de réfraction est environ égal à celui du diamant.\
+Les blocs de minerai ont été créés grâce au Rock generator de blender, puis un matériau micro-facettes et une normal map leur ont été ajoutés après l'export de la scène.\
+Toutes les modifications faites aux matériaux et à la scène en elle-même ont été stockées dans un fichier json, ce qui permet, si on a modifié la scène blender, de pouvoir relancer l'export et appliquer ce json pour avoir la scène souhaitée, au lieu de devoir modifier le json produit par le plugin d'export.\
+Ci-dessous la scène obtenue sous blender, avant l'export : 
+![screen_blender](https://user-images.githubusercontent.com/57452534/206886634-f3d77248-8b9e-49f2-95a9-ed146a0f1e28.png)
+
+
+
+## Répartition du travail 
+
+Valentin Bouillon : texture procédurale : champignon, intégrateur path guiding.
+
+Richard Fambon : matériau micro-facette, volume homogène.
+
+Arthur Leclercq :  source de lumière discrète : spotlight, création de la scène et de l'image finale.
+
+<!-- Markdeep: -->
+<style class="fallback">
+    body {
+        visibility: hidden
+    }
+</style>
+<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script> 

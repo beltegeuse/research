@@ -1,0 +1,342 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Compétition de rendu
+
+**Nom de l'équipe**:  Équipe 3 
+
+**Membres de l'équipe**: 
+* Jian Jia
+* Daniel Milenov Milanov
+
+## Image(s) choisies
+
+<center><img src="images/brouillon.png" alt="brouillon" width="500"/></center>
+
+### Inspiration 
+
+<img src="images/1.png" alt="inspiration" width="300"/>
+<img src="images/2.png" alt="inspiration" width="300"/>
+<img src="images/3.png" alt="inspiration" width="300"/>
+<img src="images/4.png" alt="inspiration" width="300"/>
+<img src="images/6.png" alt="inspiration" width="300"/>
+<img src="images/7.png" alt="inspiration" width="300"/>
+<img src="images/8.png" alt="inspiration" width="300"/>
+
+**Motivation:** 
+Le thème “Les technologies de l’exploration” nous on fait penser à l’exploration marine. Nous voudrions faire le rendu d’un sous-marin qui découvre un artéfact d’une civilisation perdue.
+## Image obtenue
+
+**volume + microfacette + carte env bleue** - 4096 spp, 1366x768 temps de rendu : ~6h (avec avg.json)
+
+<img src="images/image_jian_finale.png" />
+
+### variantes :
+
+Seulement tâches Jian (volumetrique + carte_env):
+4096 spp, 1366 x 768, temps de rendu : 2h 30min
+
+<img src="images/final_4kspp_no_microfacette.png" width="700"/>
+
+Seulement tâches Daniel (microfacettes):
+100spp, 1366 x 768, temps de rendu : 6m 19s
+
+<img src="images/validation/microfacette/render_microfacette.png" width="700"/>
+
+Finale avec carte environnement noire
+1024 spp, 1366 x 768, temps de rendu : 30 minutes
+
+<img src="images/scene_final_carte_sombre.png" width="700"/>
+
+Rendu volumétrique + carte environnement (pas de microfacettes) - 2096 spp, 1366 x 768, temps de rendu : 2h
+
+<img src="images/image_jian_volumetrique_2h.png" width="700"/>
+
+Volumétrique + microfacettes + carte environnement + spotlight bleu : 4096 spp, 1366 x 768, temps de rendu : 2h30
+
+<img src="images/scene_complexe_spotlight_bleu.png" width="700"/>
+
+
+## Répartition du travail 
+# Daniel : 
+## Liste des fonctionnalités mises en œuvre
+    1- Matériaux microfacette.
+    2- Modélisation de la scène blender.
+## Fonctionnalité : Matériaux Microfacettes
+    Pour augmenter le réalisme de notre scène nous avons décidé d'implémenté des matériaux microfacettes. Nous avons implémenter plusieurs types de matériaux microfacettes soit, l'implémentation Oren-Nayar, Diélectrique, Conducteur et Transmission. Chacun de nos matériaux utilise le paramètre *roughness* pour répliquer la quantité de microfacettes sur un modèle.
+### Oren-nayar 
+    Cette implémentation est basée sur la documentation offerte par PBR. Nous utilisons ce matériaux pour avoir des surfaces diffuses plus réalistes. Nous avons aussi emprunter des notions de cette implémentation pour avoir de meilleurs résultats dans les cas où la roughness se rapproche de 1. https://mimosa-pudica.net/improved-oren-nayar.html. De plus, nous avons implémenté une variation de celui-ci dans le but de corriger les cas extrêmes (https://mimosa-pudica.net/improved-oren-nayar.html). Nous utilisons donc, le paramètre imaginaire *p* pour avoir de meilleurs résultats. 
+    
+<center><img src="images/validation/microfacette/comparaison-oren_nayar_diffuse.png" alt="lambertienne vs oren-nayar" width="500"/></center>
+<img src="images/formule_oren_nayar.png" alt="formule" width="500"/>
+
+### Dielectrique 
+    Cette implémentation se base sur le modèle de cook-Torrance pour les BRDF microfacette soit une formule qui prend en compte les paramètres suivants :
+        * Fresnel
+        * La fonction de distribution de la normale
+        * Le terme géométrique
+        * Le terme de masque et ombrage
+        * Le jacobien
+    Nous utilison principalement le Fresnel vu en cours et une implémentation GGX car, c'est celle-ci qui nous donne les résultats les plus réalistes.
+    Dans le matériau diélectrique nous faisons que de la réflexion ou de la transmission selon le paramètre *delta* passé en paramètre dans la configuration JSON.
+
+    Voici les formules GGX utilisées:
+
+<img src="images/formule_dielectric.png" alt="formule" width="500"/>
+
+### Conducteur
+    L'implémentation de matériaux conducteurs est très similaire à l'implémentation diélectrique cependant, nous devons utiliser un fresnel différent pour représente la conservation d'énergie de façon plus réaliste. Nous avons utilisé cette référence pour l'implémentation de notre fresnel: https://seblagarde.wordpress.com/2013/04/29/memo-on-fresnel-equations/.
+    Ce matériau ne fait que de la réflexion.
+
+<img src="images/formule_conductor.png" alt="formule" width="700"/>
+
+### Transmission
+  Finalement cette implémentation sert à représenter les matériaux transmissible comme de la glace bruité ou d'autres matériaux imparfaits. Encore une fois l'implémentation est proche du matériau diélectrique, mais, il faut modifier notre jacobien et certaines parties de la formule.
+  En comparaison avec les autres matériaux, le matériau de transmission fait de la réflexion **et** de la transmission selon le fresnel, semblable aux matériaux Fresnel-Blend implémentés dans le devoir 3.
+
+<img src="images/validation/microfacette/comparaison-transmission.png" alt="reflection vs transmission" width="500"/><img src="images/formule_transmission.png" alt="formule" width="700"/>
+
+## Utilisation
+
+   Nous allons donc, utiliser les différents matériaux microfacettes pour différents objets dans notre scène. Tous nos matériaux diffus sont remplacés par des matériaux oren-nayar, la tête en or et le métal du vaisseau seront des matériaux conducteurs et la fenêtre du vaisseau seras un matériau transmissible. Les méduses garderont leurs matériaux diélectriques, car, nous ferons un autre tour de passe-passe sur ceux-ci pour leur donner une apparence volumétrique.Voici comment nous avons réparti nos matériaux dans notre scène.
+
+<img src="images/validation/microfacette/representation_microfacette.png" alt="formule" width="700"/>
+
+## Implémentation 
+    Pour implémenter ces matériaux nous avons rajouté 4 nouveaux matériaux dans notre liste de matériaux, ils héritent de la classe Material et implémentent evaluate, pdf, is_delta et sample.
+Chacun des matériaux (sauf Oren-nayar), utilisent notre implémentation du pdf microfacette et font un échantillonnage selon la fonction de distribution de la normale au lieu de faire un échantillonnage selon le cosinus comme pour les surfaces lambertienne. 
+Une fois les matériaux créer nous n'avons qu' à les utiliser dans nos fichiers JSON.
+
+<img src="images/json.png" alt="formule" width="700"/>
+    
+**Exemple de configuration json**
+
+## Validation Microfacettes
+    
+    Afin de valider nos rendus, nous devons d'abord valider notre échantillonnage. Nous nous sommes basées sur l'implémentation de la source suivante : https://agraphicsguynotes.com/posts/sample_microfacet_brdf/ pour obtenir les formules suivantes pour la pdf et l’échantillonnage.
+
+<img src="images/validation/microfacette/pdf_sample.png" alt="formule" width="500"/>
+    
+    Pour l'utilisation de ceux-ci, nous avons rajouté une nouvelle tâche (tâche 7) dans l'exécutable du devoir 3 qui testera notre mise en place et créera des images d'hist, diff pour nous permettre de comparer nos résultats.
+Voici les résultats :
+
+<img src="images/validation/microfacette/res_pdf_sample.png" alt="formule" width="500"/>
+
+    Nous pouvons constater que nous avons des problèmes dans la génération du pdf et l'échantillonnage pour oren_nayar soit l'utilisation d'un échantillonnage selon le cosinus.
+
+Voici nos résultats pour le rendu de chacun de nos matériaux microfacette selon le paramètre *roughness* :
+**Oren_nayar** : 
+*roughness des boules : 0.1 0.3 0.5 0.6 0.7 0.95 à 200 spp*
+
+Blender (gauche) vs Nous (droite)
+
+<img src="images/validation/microfacette/blender_oren_nayar_test_200.png" width="500"/><img src="images/validation/microfacette/oren_nayar.png" alt="formule" width="500"/>
+
+**Dielectric** : 
+Blender (gauche) vs Nous (droite) 
+
+<img src="images/validation/microfacette/blender_dielectric_test_200.png"  width="500"/><img src="images/validation/microfacette/dielectric_delta.png" alt="formule" width="500"/>
+
+**Conducteur** Nous (première sphère est à 0.1 de roughness) vs Nous sans la première sphère. n1 = 1.0 n2 = 1.3
+
+<img src="images/validation/microfacette/conductor.png" alt="formule" width="500"/><img src="images/validation/microfacette/conductor_no_01.png" alt="formule" width="500"/>
+
+**Transmission** Nous (première sphère est à 0.1 de roughness) vs Nous sans la première sphère. n1 = 1.0 n2 = 1.3
+
+<img src="images/validation/microfacette/transmission.png" alt="formule" width="500"/><img src="images/validation/microfacette/transmission_no_01_13.png" alt="formule" width="500"/>
+
+Voici notre rendu de notre scène complexe avec des matériaux de base (devoir 3):
+**blender** vs **devoir 3** (200 samples, 7m:08s, 1.005 intersections/rayon) vs **microfacettes** (200 samples, 6m:19s, 0.996 intersections/rayon)
+
+<img src="images/validation/microfacette/blender.png" alt="formule" width="500"/><img src="images/validation/microfacette/render_naif.png" width="500"/><img src="images/validation/microfacette/render_microfacette.png" width="500"/>
+
+Nous pouvons constater que plusieurs de nos implémentations n'ont pas les mêmes résultats que nos scènes dans blender. L'implémentation de oren-nayar nous donne des images beaucoup plus sombres et il est difficile de voir l'impact du paramètre *roughness* sur une forme. Dans le contexte des autres matériaux, nous pouvons voir que les valeurs proches de 0 nous donnent des résultats complètement faux et contaminent notre scène. Au contraire, avoir un roughness proche de 1 rend notre sphère complètement noire.  Nous pouvons expliquer ces résultats en disant que l'implémentation est erronée, mais les résultats sont tout de même intéressants dans notre scène finale.
+ 
+### Difficultés rencontrées
+
+    Les premiers problèmes rencontrés ont été la difficulté de compréhension concernant l'utilisation du half-vector dans notre implémentation courante et les problèmes d’échantillonnage et pdf avec notre implémentation d'oren-nayar.
+    
+    Cependant la plus grande difficulté est la validation de nos implémentations. Il est difficile de comparer nos matériaux avec des logiciels comme blender car, ils appliquent du denoising et des algorithmes de post-processing par dessus leur résultat. De plus, trouver des matériaux dans blender qui suivent exactement notre implémentation est très difficile. Blender offre plusieurs paramètres avec lesquels nous devons jouer, mais, il est impossible de deviner quelle est la bonne combinaison. 
+##  Fonctionnalité : Scène Blender
+    Pour avoir une scène intéressante, il faut tout d'abord la modéliser. Nous avons modélisé plusieurs scènes pour aider aux prototypages de nos implémentations. Chacune des scènes était une version plus simple de la scène finale. Les éléments importants dans notre scène sont le vaisseau, les méduses, l'environnement et la tête en or.
+    Le vaisseau a été conçu en prenant un modèle 3d existant et en le démontant pour avoir un modèle personnaliser. L'environnement consiste d'un plan subdiviser plusieurs fois qui a été sculpter dans blender pour lui donner une apparence onduler, d'algues, de roches avec des textures, des étoiles de mers et d'anatifes. Pour la tête en or, nous avons juste pris un modèle 3d détaillé et l'avons placé dans notre scène.
+
+<img src="images/blender/vaisseau.png"  width="500"/><img src="images/blender/scene_complexe.png" width="500"/>
+
+### Difficultés rencontrées
+Lors de nos rendus nous avons remarquer que les normales doivent être bien ajustées face à la lumière sinon, les rendus étaient très sombres et complètement inutiles. De plus, chacun de nos objets doit être subdivisé pour le rendre détaillé, car, sinon nous n'avons pas assez de normales pour répartir la lumière. Cela est dû au fait que chacun de nos objets dans notre scène blender est un maillage composé de triangles. 
+
+En addition, nous avons vu plus haut que l'utilisation de microfacettes assombrissent la scène rapidement alors pour combler ce problème nous changeons le *roughness* pour nos matériaux pour avoir de meilleurs résultats. Malgré le fait que nous n'utilisons pas les valeurs représentant la réalité, nos scènes sont mieux illuminées.
+
+**Comparaison** scène à 100 spp avec valeurs microfacettes réaliste vs scène à 100 spp avec valeurs microfacettes avec *roughness* plus petit.
+
+<img src="images/blender/real_microfacettes.png" alt="formule" width="600"/><img src="images/blender/fake_microfacettes.png" width="600"/>
+
+# Jian : 
+
+##  Fonctionnalité : Volume Homogène avec Bordure
+On modèlise le milieu sous la surface de l'eau comme un volume homogène englobant toute la scène.
+Aussi, les méduses sont des volumes plus denses qui sont englobés par leur maillage (bordure).
+Ces deux idées nécessitent la mise en oeuvre du volume homogène avec bordure dans le projet.
+La fonction de phase isotrope est choisie pour sa simplicité, la seule paramètre est albedo, qui détermine la perte d'énergie et donne l'apparence de couleur dans le volume.
+À cause que les méduses sont dans l'eau, il faut aussi que les volumes peuvent s'englober sans comportement étrange.
+
+### Volume homogène isotrope sphèrique
+<img src="images/volume_architecture.png" alt="volume architecture"/>
+
+La classe `ConstantMedium` est une sous-classe de `Shape`, donc elle va override la fonction `hit()`. 
+Pour déterminer s’il y a une réflexion dans le volume, `neg_inv_density` est utilisé pour échantillonner  une distance aléatoire. Cette distance va être comparée aux intersections de deux rayons à la forme du volume - `m_shape`. 
+La première mise en oeuvre va seulement utiliser le `Sphere` comme forme englobante.
+Ces deux intersections donnent les deux points que le rayon traverse sur la surface du volume s’il n'y a pas de réflexion dans le volume.
+
+<img src="images/volume_hit.png" alt="volume hit"/>
+### Validation
+<img src="images/hist-isotropic-3-degree.png" alt="histogram isotropic" width=200 />
+<img src="images/diff-isotropic-3-degree.png" alt="histogram isotropic" width=200 />
+<img src="images/pdf-isotropic-3-degree.png" alt="histogram isotropic" width=200 />
+
+Les images générées par les tests devoir 3 du matériel Isotropic (histogram, diff, pdf). Elles sont pareilles que celles pour échantillonnage sphérique.
+
+<figure>
+<img src="images/volume_light.png" alt="volume light cornel box"/>
+<figcaption align = "center">4096 spp
+
+Volume: density=0.001\
+radius=1500\
+albedo=(0.6,0.6,0.9)
+</figcaption></figure>
+
+<figure>
+<img src="images/volume_in_volume_3.png" alt="volume in volume cornel box"/>
+<figcaption align = "center">1024 spp
+
+Volumes: \
+density=0.002/0.002/0.005\
+radius=300/200/100\
+albedo=(1.0,1.0,1.0)
+</figcaption></figure>
+
+<figure>
+<img src="images/spotlight_volume.png" alt="volume spotlight cornel box"/>
+<figcaption align = "center">
+
+1024 spp \
+Volumes: \
+density=0.001\
+radius=1500\
+albedo=(1.0,1.0,1.0)
+</figcaption></figure>
+
+
+### Volume englobant avec maillage comme bordure
+Une façon simple et intuitive de simuler le subsurface scattering est d'avoir une surface diélectrique comme bordure d'un volume homogène.
+C'est notre approche pour faire les "têtes" des méduses. 
+Pour y arriver, `m_shape` dans la classe ConstantMedium peut aussi être un BVH.
+Comme ça, on garde la performance du BVH, et le code dans `ConstantMedium::hit()` reste presque pareille. La seule modification
+est d'ajouter le cas quand le rayon origine en dehors du volume, et rentre dans le volume pour la première fois. Dans ce cas-ci,
+on veut échantillonner le matériel (BSDF) de la surface, qui va être `dielectric`.
+Aussi, la surface BSDF est utilisée quand le rayon sort du volume, en autres mots quand le rayon origine dans le volume, et `hit()` retourne faux.
+Cette approche est limitée aux maillages convexe et watertight, parce qu'on teste seulement deux intersections par rayon sur le même maillage.
+Ce problème n'est pas critique pour les maillages de méduses, mais doit être réglé
+ si on utilise des bordures plus complexes, par exemple le dragon.
+
+
+<img src="images/bvh_changes.PNG" alt="BVH changes"/>
+
+### Validation
+<figure>
+<img src="images/volume_classic_2.png" alt="volume avec bordures scene classic"/>
+<figcaption align = "center">4096 spp
+
+Avec maillages non-convexes, BSDF surface seulement en entrant. Il y a des problèmes. Ex. le pied du dragon, les oreilles du lapin.
+</figcaption></figure>
+<figure>
+<img src="images/volume_classic_exit.png" alt="volume avec bordures scene classic, exiting surface BSDF"/>
+<figcaption align = "center">4096 spp
+
+Avec maillages non-convexes, BSDF surface en entrant et en sortant. Certaines régions sont très différentes.
+</figcaption></figure>
+<figure>
+<img src="images/jellyfish_4kspp.png" alt="volume avec bordures jellyfish"/>
+<figcaption align = "center">4096 spp
+
+La méduse
+</figcaption></figure>
+<figure>
+<img src="images/final_4kspp_no_microfacette.png" alt="scene avec volume et jellyfish"/>
+<figcaption align = "center">
+4096 spp
+
+La scène avec volume englobant sphérique, et les méduses (`dielectric` + `volume`).
+</figcaption></figure>
+
+### Difficultés rencontrées
+
+La difficulté principale est de bien traiter les intersections avec la bordure du volume. `Ray Tracing the Next Week` est une bonne place pour commencer,
+mais la complexité augmente avec MIS, BVH, les conditions sur les bordures, etc.
+Avec `Isotropic`, la fonction `evaluate()` ne peut pas multiplier par un cosine comme d'habitude, parce qu'on garde toutes les directions sphériques.
+Aussi, la bonne valeur de densité n'est pas facile de deviner pour chaque volume, nécessitant des essais-erreur qui prennent beaucoup de temps.
+Nous n'avons pas eu le temps de regarder des algorithmes pour accélérer le rendu du volume, ou d'ajouter la fonction de phase anisotropique, qui est plus réaliste pour l'eau. 
+
+##  Fonctionnalité : Carte Environnement avec Échantillonnage par Importance
+
+Avec une texture qui représente la lumière environnement directionnelle, on peut ajouter beaucoup de réalisme. L'approche simple
+`path tracing` est de convertir la direction du rayon quand il ne touche pas la scène à un UV sur la texture. On convertit
+la direction normalisée aux deux angles `theta` et `phi`, et map dans une étendue de 0 à 1. Cette approche a été mise en oeuvre dans
+`scene.h`. Pour avoir plus de contribution par itération, il faut échantillonner cette source par importance.
+On doit donner un `pdf` à chaque texel, en fonction de sa valeur lumineuse comparée au total des texels. Le total des `pdf` doit donner 1. 
+Les fichiers `environment.h`, `Scene.h`, `Scene.cpp`, `path_mis.h`, `environment_emitter.h`, `Vec.h` ont été ajoutés ou modifiés pour cette tâche
+Les classes de distribution 1D et 2D dans `Vec.h` viennent de PBRT.
+La classe `Environment` est un `Shape`, qui est un membre de `Scene`. `path_mis.h` l'utilise comme un émetteur extra. 
+La construction de la distribution et de l'émetteur est dans `Scene.cpp`, qui contient aussi des tests avec images générées.  
+### Difficulté
+Cette fonctionnalité n'est pas bien testée, le pdf s'ajoute à 1 dans les tests effectués dans `Scene.cpp` (ligne 140-), mais pas avec `generate_histogram()`.
+Avec des valeurs très élevées de couleur (HDR) ou des pdf trop petits, des "fireflies" peuvent être introduits.
+Les imprécisions numériques vont être importantes si les pdfs sont trop petits, ça peut même être la cause d'un crash (`invalid vector subscript`).
+ ### Validation
+</figcaption></figure>
+<figure>
+<img src="images/low_res_bg.png" alt="head avec low res image"/>
+<figcaption align = "center">
+64 spp
+
+Texture base résolution, avec les deux stratégies de `path_mis`.
+</figcaption></figure>
+</figcaption></figure>
+<figure>
+<img src="images/low_res_bg_no_mis.png" alt="head avec low res image"/>
+<figcaption align = "center">
+64 spp
+
+Texture base résolution, sans échantillonner par importance. On voit moins de détail. 
+</figcaption></figure>
+
+<figure>
+<img src="images/underwater.png" alt="texture exemple" width=300 />
+<img src="images/lum-background-pure_sky.png" alt="texture to maxelem" width=300 />
+<img src="images/pdf-background-pure_sky.png" alt="texture to pdf" width=300 />
+<figcaption align = "center">
+
+1. Texture 2. texture convertie en fonction de maxelem(texel) 3. image avec pdf pour chaque texel, plus difficile à visualiser parce que chaque pdf est trop petit.
+</figcaption></figure>
+
+## Image finale
+  - [retourner à image obtenue](#image-obtenue)  
+  
+
+# Sources
+Rendering Jellyfish - CS348B Final Project. (n.d.). Graphics.stanford.edu. Retrieved November 3, 2022, from http://graphics.stanford.edu/~kayvonf/misc/jellies/proposal.html
+
+Three types of marine algae you need to know. (n.d.). Aquarobotman Store. https://aquarobotman.com/blogs/underwater-sea-creatures/three-types-of-marine-algae-you-need-to-know
+
+Small Translucent Fish In An Aquarium On A Green Algae Background. Selective Focus, Banner Format Stock Photo - Image of ecology, defocused: 217214042. (n.d.). Www.dreamstime.com. Retrieved November 3, 2022, from https://www.dreamstime.com/small-translucent-fish-aquarium-green-algae-background-selective-focus-banner-format-amazing-underwater-life-image217214042
+
+https://www.artstation.com/artwork/ybGGk3 https://www.artstation.com/artwork/Eag0Xn film godzilla : king of monsters https://www.thingiverse.com/thing:5155301/files https://thangs.com/search/barnacles?scope=all https://www.cgtrader.com/free-3d-models/plant/other/seaweed-6c855842-c6ff-4078-86d3-f521d78f445b
+https://www.cgtrader.com/free-3d-models/vehicle/other/cyclops-subnautica 
+
+<!-- Markdeep: -->
+<style class="fallback">
+  body {
+      visibility: hidden
+  }
+</style>
+<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script> 

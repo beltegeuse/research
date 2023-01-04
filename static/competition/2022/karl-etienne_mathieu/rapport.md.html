@@ -1,0 +1,277 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+# Compétition de rendu
+
+**Nom de l'équipe**: glouglou
+
+**Membres de l'équipe**: 
+* Karl-Étienne Bolduc
+* Matthieu Beaud
+
+## Image(s) choisies
+
+![Vieux scaphandrier sous l'eau](https://images.pexels.com/photos/54306/underwater-divers-helmet-diver-historically-54306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+
+![Vision artistique d'un scaphandrier](https://cdna.artstation.com/p/assets/images/images/006/000/528/large/alexey-kruglov-sea9.jpg?1495308799)
+
+![Vieux Scaphandrier entouré d'eau trouble](https://i.pinimg.com/originals/d0/1c/5d/d01c5d2c1003912b692a734095ac3a82.jpg)
+
+**Sources:**
+- https://www.pexels.com/photo/vintage-underwater-diving-diving-suit-54306/
+- https://www.pinterest.com/pin/483574078711020306/
+- https://www.artstation.com/artwork/96DWL
+
+**Motivation:**
+Le thème de la compétition était de respecter le thème: "technologie de l'exploration". Pour notre projet, nous voulions recréer des environnements peu accessibles. De cette volonté, nous avons voulu modéliser les fonds marins. Après une courte recherche, nous avons trouvés les images ci-haut. Elles décrivent des scaphandriers sous l'eau (une ancienne version du scaphandre de plongée) avec plusieurs débris technologiques qui jonchent le fond marin (épaves de bateau, vieille lampe d'exploration, résidus issus de naufrages [coffre, outils de navigation, etc.]). C'est, ainsi, que nous avons voulu recréer une scène regroupant ces éléments.
+
+## Image obtenue
+
+![Image Finale (1024 spp)](./imagesRapport/RenderV3.png)
+
+## Modélisation
+
+Dans notre scène final, on y retrouve un rocher sur un fond marin sableux ainsi qu'une ancre abandonnée en arrière-plan. Dans cette arrière plan, on peut y voir les caustiques "god rays" formés par l'interaction de la lumière avec l'eau trouble. Tandis qu'au premier plan, on y retrouve un vieux scaphandre, un peu abimé par endroits, qui est illuminés par une lampe torche. Cette lampe torche serait tombée des mains d'un nageur lors d'une ancienne escapade.
+
+Pour les modèles, nous avons pu récupérer la majorité sur le site turbosquid.com. Voici les liens pour les différents modèles utilisés:
+* Rocher entouré de sable (https://www.turbosquid.com/fr/3d-models/beach-rock-scan-16k-free-3d-model-1863926)
+* Lampe torche (https://www.turbosquid.com/fr/3d-models/3d-flash-light-lowpoly-1888231)
+* Ancre (https://www.turbosquid.com/fr/3d-models/3d-model-hall-anchor-1707630)
+
+![Figure 1: Modélisation du casque de scaphandre](./imagesRapport/modelisation1.png)
+![Figure 2: Modélisation du terrain](./imagesRapport/modelisation2.png)
+
+Le casque du scaphandre a été modélisé sur blender (figure 1), de même que le sol et ses irrégularités (figure 2). L'ensemble a ensuite été mis en scène dans blender avec quelques itérations en utilisant le plugin fourni (https://github.com/beltegeuse/io_scene_render) pour le cours afin de l'exporter dans notre moteur de rendu.
+
+!!! Tip
+    La correspondance entre Blender et notre implémentation n'était pas explicite pour les milieux participatifs homogènes (qui n'émet pas de lumière). Blender offre 3 paramètres pour controler la génération de ces milieux homogènes grâce au noeud "Volume Scatter": color, density et anisotrope. Ces paramètres correspondent à $\sigma_s = \text{density} * \text{color}$, $\sigma_t = \text{density} * \text{color}$, $g = \text{anisotrope}$ et $\sigma_a = 0$ dans notre moteur.
+
+## Liste des fonctionnalités mise en œuvre
+
+* Rendu Volumétrique: Homogène
+* Rendu Volumétrique: Homogène NEE MIS
+* Rendu Volumétrique: Homogène NEE MIS Spectral (Mixture)
+* Rendu Volumétrique: Hétérogène Analytique NEE MIS Spectral (Mixture)
+* Rendu Volumétrique: Hétérogène Spectral (Bayer 2019)
+* Rendu Volumétrique: Superposition de milieu participatif
+
+## Validation des fonctionnalités
+
+### Rendu Volumétrique: Homogène
+
+`path_vol_homo.h`
+
+Pour l'implémentation du rendu volumétrique, nous nous sommes inspirés des notes de cours. Au lieu de simplement considérer les intersections surfaciques dans la scène, nous avons considéré les possibles intersections/collisions avec les particules du milieu participatif. En pratique, l'idée est d'échantilloner un point le long du rayon [closed-form tracking]. Dans notre cas, on échantillonne ce point selon la CDF proportionnelle à la transmistance $T_r(t) = e^{-\sigma_t t}$. Si le point est à l'intérieur du milieu, on échantillonne une direction selon une fonction de phase $f_p(\boldsymbol{x}_t, \vec{\omega}, \vec{\omega}_i)$ (similaire à la BRDF pour les matériaux). Si on touche une surface, on échantillonne une direction selon la BRDF de ce matériau. L'intégration se fait, ensuite, avec le terme de gauche lorsqu'on est à la surface et le terme de droite losqu'on est dans le milieu. 
+
+$$
+
+< L(\boldsymbol{x}, \vec{\omega}) > = \frac{T_r(z)}{P(z)} L_o(\boldsymbol{x}_z, \vec{\omega}) + \frac{f_t(t)}{p_t(t)} ( \frac{\sigma_a}{\sigma_t} L_e(\boldsymbol{x}_t,\vec{\omega}) + \frac{\sigma_s}{\sigma_t} < L_s(\boldsymbol{x}_t,\vec{\omega}) >)
+$$
+
+où $ < L_s(\boldsymbol{x}_t,\vec{\omega}) > = \frac{f_p(\boldsymbol{x}_t, \vec{\omega}, \vec{\omega}_i)L_i(\boldsymbol{x}_t, \vec{\omega}_i)}{p(\vec{\omega}_i | \boldsymbol{x}_t, \vec{\omega} )} $, $L_o$ est l'équation de rendu surfacique et $\sigma_t = \sigma_a + \sigma_s$ le coefficient d'extinction scalaire.
+
+Dans les deux cas, on s'assure de considérer la contribution de chaque rebonds par rapport au chemin généré afin de déterminer la radiance reçue au plan image.
+
+!!! Tip
+    Plusieurs termes s'annulent dans cette formulation tel que
+
+    $$
+        \frac{T_r(z)}{P(z)} = \frac{f_t(t)}{p_t(t)} = 1
+    $$
+
+    et 
+
+    $$
+        \frac{f_p(\boldsymbol{x}_t, \vec{\omega}, \vec{\omega}_i)}{p(\vec{\omega}_i | \boldsymbol{x}_t, \vec{\omega} )} = 1
+    $$
+
+    puisqu'on échantillonne en fonction de la transmittance ainsi que de la fonction de phase respectivement.
+
+!!! Warning 
+    Si le point échantillonné va plus loin que la surface, il sufift de considérer le point à sa surface.
+
+!!! Info
+    ![PBRT vs Our](./imagesRapport/pbrt_vs_us.png)
+    Idéalement, nous aurions aimé effectuée une comparaison avec PBRT pour notre moteur de rendu. Cependant, nous avions une connaissance limitée de PBRT. Donc, pour y arriver, nous avons eu recours au plugin mentionné. Malheureusement, le plugin pour exporter vers PBRT semble être très limité.
+
+#### Rendu Volumétrique: Homogène NEE MIS
+
+`path_mis_vol_homo.h`
+
+Afin d'améliorer les performances et l'efficacité de notre algorithme, nous avons voulu implémenter NEE avec MIS. Cette fonctionnalité était essentielle afin d'avoir un temps de convergence raisonnable dans notre scène.
+
+L'idée générale de NEE est de construire un chemin à chaque rebonds et de calculer la contribution résultante de ce chemin. 
+
+NEE est particulièrement efficace quand il est combiné avec différentes stratégies d'échantillonages. L'un des algorithmes les plus utilisés pour combiner différentes stratégies consiste à utiliser le Multiple Importance Sampling.
+
+$$
+    < I_{mis} > = w(x_1) \frac{f(x_1)}{p(x_1)} + w(x_2) \frac{f(x_2)}{p(x_2)} 
+$$
+
+Puisqu'on a un milieu participatif, il faut maintenant calculer la contribution de la lumière directe autant sur la surface que dans le milieu participatif. Les deux algorithmes sont conceptuellement très proches, mais il faut faire attention au fait que certains termes ne se simplifie plus.
+
+!!! Warning
+    Puisqu'on "force" le chemin à terminer dans des directions précises, il faut faire attention de bien ajouter le terme de transmittance quand on calcule la lumière directe.
+
+Pour valider les images générées sans image de référence, nous avons adopté une stratégie dite de "cross-validation". Les intégrateurs Homogène NEE MIS et Homogène devraient tous donner le même résultat lorsque le nombre d'échantillons est élevé. Donc, pour des paramètres similaires, nous devrions obtenir, à un bruit près, la même image. Ainsi, dans l'incapacité d'évaluer directement si notre implémentation est correcte, notre méthodologie nous empêche de produire des erreurs incohérentes entre les deux implémentations et réduit,ainsi, la présence de bugs.
+
+![Figure 3: Les images ont été générés respectivement dans l'ordre avec les intégrateurs: "pat_vol_homo.h", "path_mis_vol_homo.h". Pour les 2 images, les paramètres utilisés sont: g=0.0, sigma_a=(0.0,0.0,0.0), sigma_s=(0.8,0.8,0.8) pour 128 échantillons.](./imagesRapport/crossvalidation_mishomogene_g0.png)
+
+![Figure 4: Les images ont été générés respectivement dans l'ordre avec les intégrateurs: "pat_vol_homo.h", "path_mis_vol_homo.h". Pour les 2 images, les paramètres utilisés sont: g=0.5, sigma_a=(0.0,0.0,0.0), sigma_s=(0.8,0.8,0.8) pour 128 échantillons.](./imagesRapport/crossvalidation_mishomogene_g05.png)
+
+Comme on peut le voir, les résultats sont excessivement similaires. Dans la seconde image, cette dernière est moins bruité parce qu'elle complète le chemin à chaque intersection/collision à l'aide de NEE MIS. Cette différence était attendu parce que NEE MIS réduit drastiquement la variance si utilisé judicieusement.
+
+![Figure 5: Les images ont été générés respectivement dans l'ordre avec les intégrateurs: "pat_vol_homo.h", "path_mis_vol_homo.h". Pour les 2 images, les paramètres utilisés sont: g=0.5, sigma_a=(0.0,0.0,0.0), sigma_s=(0.8,0.8,0.8) pour 128 échantillons.](./imagesRapport/crossvalidation_mishomogene_small.png)
+
+Pour vérifier si notre méthode fonctionne, nous avons testé une scène où la source de lumière est très petite afin que l'échantillonage par importance soit crucial au temps de convergence. Comme attendu, NEE MIS converge très rapidement à la solution comparativement à l'implémentation naïve.
+
+#### Rendu Volumétrique: Homogène NEE MIS Spectrale (Mixture)
+
+`path_mis_vol_homo.h`
+
+`path_vol_homo.h`
+
+Par après, afin d'ajouter de la couleur à notre rendu volumétrique, nous avons décidé de faire un rendu spectrale. L'une des manières les plus simples est d'utiliser une mixture par rapport aux différents spectres utilisés. Ainsi, $\boldsymbol{\sigma_t}$ n'est plus un scalaire, mais un vecteur avec une entrée pour chaque longueur d'onde. La probabilité est alors la moyenne des probabilités pour chaque longueur d'onde utilisée.
+
+Également, il aurait été possible de calculer l'image pour chaque spectre et pour ensuite combiner chaque spectre pour former l'image final, mais il aurait fallu générer l'image autant de fois qu'il y a d'entrées dans le vecteur $\boldsymbol{\sigma_t}$.
+
+!!! Warning
+    Lors du calcul de la contribution de la lumière, le terme $\frac{T_r(z)}{P(z)} = \frac{f_t(t)}{p_t(t)}$ étaient égale à 1 puisque la probabilité d'obtenir ce point était directement relié à la transmittance. Puisqu'on a plus d'un spectre, la probabilité est une mixture et ces deux termes doivent être calculer explcitement.
+
+Pour cette étape, nous avons adopter la même stratégie de validation que pour l'intégrateur précédent. 
+
+![Figure 6: Les images ont été générés respectivement dans l'ordre avec les intégrateurs: "pat_vol_homo.h", "path_mis_vol_homo.h". Pour les 3 images, les paramètres utilisés sont: g=0.0, sigma_a=(0.0,0.0,0.0), sigma_s=(0.1,0.1,0.01) pour 128 échantillons.](./imagesRapport/homogene_spectrale_mixture.png)
+
+Par la suite, on a utilisé les deux intégrateurs avec l'implémentation spectrale afin de vérifier qu'on obtient les mêmes résultats entre eux. Comme observé, on obtient la même coloration dans les deux cas.
+
+### Rendu Volumétrique: Hétérogène Analytique NEE MIS
+
+`path_mis_vol_merge.h`
+
+`medium.h`
+
+Par la suite, pour rajouter du réalisme à la scène, nous avons voulu recréer l'aspect typique de l'eau trouble causés par le sable en suspension. Pour arriver à recréer ce milieu, nous avons utilisé une méthode de null-scattering. Avec cette approche, il suffit de transformer le milieu hétérogène en un milieu homogène en comblant le vide par des particules virtuelles. L’ensemble de ces deux types de particules, réelles et virtuelles, permet ainsi d’obtenir un volume homogène qui peut être traité de la même façon que précédemment (voir figure 7). Les coefficients $\sigma_a, \sigma_s$ ne sont alors plus constants et varient en fonction des coordonnées spatiales.
+
+![Figure 7: Transformation d'un volume hétérogène en volume homogène (tiré du cours de Adrien Gruson)](./imagesRapport/volumeheterogene.png "Figure 3: Transformation d'un volume hétérogène en volume homogène (tiré du cours de Adrien Gruson)")
+
+Toutefois, puisqu'on a introduit des particules imaginaires, lors du lancer de rayon, il faut déterminer si la particule intersectée est réelle (et donc si elle a une contribution au chemin lumineux et peut l'altérer) ou si elle est virtuelle (et n’a alors aucun impact). On introduit alors une distribution pour les particules virtuelles dans notre équation de rendu. $\sigma_n(x) = \sigma_t - (\sigma_a(x) + \sigma_s(x))$ où $\sigma_t$ devient le majorant. Afin de faciliter la modélisation, nous avons décidé d'utiliser une distribution analytique pour décrire la variation du terme $\sigma_s(x)$ et de la transmistance dans le milieu en question. Puisqu'on échantillone en fonction de la transmistance, nous avons décidé de borner cette dernière entre 0 et 1 afin de faciliter l'implémentation.
+
+Pour notre scène, afin de recréer l'eau trouble causé par le sable en suspension proche du sol, nous avons cherché un milieu où la densité diminuerait avec l’altitude puisque notre sol se trouve dans le plan xy. Nous avons, alors, expérimenté avec deux fonctions: $\frac{1}{|{1+z}|}$ et $e^{-|{z}|}$. Dans notre scène, on évalue la densité et la transmistance uniquement dans les z positifs afin de faciliter l'implémentation et que les fonctions soient contraints entre 0 et 1.
+
+Ainsi, lorsqu'on rencontre une particule du milieu en un point $\boldsymbol{x}$, la probabilité que ce soit une particule réelle est égale au ratio  $\frac{\sigma_s(\boldsymbol{x})}{\sigma_t}$ puisque notre milieu n'émet pas de lumière. S'il s'agit d'une particule virtuelle, on ne fait que déplacer le rayon à la position de la particule virtuelle tout en conservant la direction. S'il s'agit d'une particule réelle, on lance un nouveau rayon et on altère la contribution comme pour le milieu homogène. Dans les deux cas, il faut prendre en compte la probabilité d'être tombé sur la particule en question.
+
+Afin de valider nos résultats, nous avons alors créé une scène avec 2 plans émissifs à gauche et à droite pour encadrer la scène et ainsi voir l’impact de l’altitude Z sur la densité du milieu (voir figures 8). 
+
+![Figure 8.a: Tests de volumes hétérogènes: Référence homogène](./imagesRapport/test2Homogene.png)
+![Figure 8.b: Tests de volumes hétérogènes: Densité 1/(1+z)](./imagesRapport/testInvZ.png)
+![Figure 8.c: Tests de volumes hétérogènes: Densité exp(-z)](./imagesRapport/testExpMinusZ.png)
+
+On peut également visualiser le fait que la distribution $e^{-|{z}|}$ fait que la densité diminue bien plus vite vers les z positifs que la distribution $\frac{1}{|{1+z}|}$. C’est donc cette première approche que nous utiliserons pour la scène car elle représente bien mieux le comportement de sable en suspension.
+
+!!! Warning
+    Contrairement à un volume homogène, il n'est plus possible de simplement prendre la distance parcourue par le rayon pour calculer la transmittance. En effet, comme la densité n'est plus constante tout au long de ce rayon, ce n'est plus trivial. Dans notre cas, puisque nous utilisons des distributions de densités analytiques dans un milieu non-bornés, il est possible de les intégrer le long du chemin. Cela nous contraint énormémement sur le type de milieu hétérogène possible. On ne peut plus utiliser des milieux générés de manière procéduralement pour nos volumes hétérogènes. 
+
+*Après relecture, on a noté une erreur de code pour le calcul de la transmission, qui faisait qu'il retournait dans tous les cas, la transmistance d'un milieu homogène. Après correction, notre intégration de la densité sur le chemin résulte en des valeurs de pixels NaN. Il doit donc y avoir une erreur dans la façon dont on intègre notre densité. Cela peut être du au fait que notre densité n'est plus isotropique, et dépend alors de la direction. Donc les formules utilisées jusqu'à présent ne s'appliquent plus. Nous gardons donc les images générées avant cette remarque, mais cela implique que le volume hétérogène implémenté dans `path_mis_vol_merge.h` n'est pas totalement exact.*
+
+### Rendu Volumétrique: Hétérogène Spectrale (Miller 2019)
+
+`path_vol_hetero.h`
+
+Afin de recréer un milieu participatif volumétrique quelconque spectrale au lieu d’être défini analytiquement, nous avons cherché d’autres méthodes. Dans l'objectif d'implémenter MIS NEE plus tard, nous nous sommes basés sur 
+https://cs.dartmouth.edu/wjarosz/publications/miller19null.html.
+
+![Figure 9: Informations tirés de l'article de Miller](./imagesRapport/heterogene_miller.png)
+
+De manière assez grossière, la philosophie dernière l'approche consiste à considérer les milieux hétérogènes comme des milieux homogènes remplis de particules virtuelles. Enfin, au lieu de considérer le chemin localement, tous les chemins sont considérsé dans leur intégralité. Avec cette interprétation, on peut utiliser la plupart des outils développés pour les millieux homogènes.
+
+En pratique, ça se résume à conserver deux valeurs tout le long afin d'accumuler la mesure ainsi que de la pdf associée respectivement. Ensuite, selon la stratégie adoptée, il suffit de calculer la contribution du chemin en divisant la mesure accumulée par le calcul de poids souhaîté entre les différentes stratégies.
+
+Afin de valider notre intégrateur, nous avons utilisé la même approche que décrite plus tôt. En effet, nous avons cherchés à cross-validé nos résultats avec les intégrateurs précédents.
+
+![Figure 10: Les images ont été générés respectivement dans l'ordre avec les intégrateurs: "path_vol_hetero.h","pat_vol_homo.h", "path_vol_homo.h". Pour les 3 images, les paramètres utilisés sont: g=0.0, sigma_a=(0.0,0.0,0.0), sigma_s=(0.1,0.1,0.01) pour un milieu homogène avec 128 échantillons.](./imagesRapport/crossvalidation_heterogene_spectrale_miller.png)
+
+Dans les 3 images, on obtient sensiblement la même chose. La présence de fireflies, dans la 2e image, indique que la distribution résultante a une variance plus élevée que la 1ere image. Cette observation était attendue parce qu'il est mentionnée dans l'article de Miller. Comparativement à la 3e image, cette dernière est beaucoup moins bruité que la première. Cependant, on peut toujours observer quelques fireflies dans la troisième.
+
+![Figure 11: Les images ont tous été générés avec "path_vol_hetero.h". Chaque image est un milieu hétérogène généré avec du bruit de perlin pour des combinasons spectrales différentes](./imagesRapport/heterogene_spectrale_sample.png)
+
+Voici également ce que nous avons lorsque la densité n'est plus constante. Malheureusement, puisqu'il s'agit de notre seule implémentation, cette section est difficilement vérifiable. C'est pour cette raison que nous faisons la comparaison avec un milieu homogène. Cependant, on peut bien voir les différents amas de gaz suspendu.
+
+*À noter que cette intégrateur n'a pu être utilisé dans l'image finale parce que nous avions besoin de l'approche MIS dû à la manière qu'on génère la lumière dans la scène.*
+
+### Rendu Volumétrique: Superposition de milieu participatif
+
+`path_mis_vol_merge.h`
+
+`medium.h`
+
+Enfin, maintenant que nous pouvons générer différents types de milieux, nous voulions trouver un moyen de les regrouper. Pour chaque nouveau segment du chemin de lumière, au lieu d'échantillonner un point le long du rayon, nous le faisons pour chaque milieu ($t_1$ et $t_2$ respectivement) selon leur transmistance respective. Par la suite, il suffit de prendre le plus petit des deux. Cette méthode est similaire à celle décrite par "decompose tracking". Enfin, pour évaluer correctement la contribution de notre rayon à travers le milieu superposé, il suffit de prendre en compte les deux sigmas ainsi que la transmistance des deux milieux. Si on a une surface, il suffit d'effectuer la même stratégie que celle décrite pour le milieu homogène.
+
+Par exemple, pour un volume homogène, la transmittance est de $e^{-\sigma_t * t}$ tandis que pour un milieu hétérogène, elle est de $e^{-\sigma_t \tau}$ où $\tau$ qui correspond à l'intégrale de la distribution de densité le long du chemin. Il suffit de multiplier les transmittances pour évaluer la transmistance du milieu superposé. À noter, de part les propriétés de la fonction exponentielle: $e^{a} e^{b} = e^{a+b}$, c'est, donc, comme si on interagissait avec un seul milieu de valeur $\sigma(x) = \sigma_1(x) + \sigma_2(x)$ (potentiellement non constants dans l'espace).
+
+!!! Warning
+    Si on interagit avec un milieu hétérogène, il est toujours possible de toucher une particule virtuelle. Il faut donc faire attention à appliquer la transmittance correctement parqu'on a tout de même parcouru une distance dans le milieu superposé.
+
+Cette section est difficile à valider parce que nous n'avions pas de référence qui nous permettrait de facilement reproduire les résultats. La validation a été uniquement visuelle.
+
+## Difficultés rencontrées
+
+### Visualisation des caustiques volumétriques ("God Rays")
+Afin de pouvoir visualiser clairement les rayons lumineux dispersés dans l’eau, un élément central de notre rendu, plusieurs options s’offraient à nous.
+ 
+Dans un premier temps, nous pouvions rester au plus proche de la physique et simuler des vagues au- dessus de l’eau, et en calculer les caustiques et concentrations de lumières qui seraient générées, puis utiliser cela sous forme de carte d’environnement afin d’illuminer notre scène. Si cette approche aurait sans doute permis des effets réalistes, elle n’était pas la plus simple à implémenter, ni la plus efficace niveau temps. Nous ne l’avons donc pas choisie
+
+Une deuxième option, qui est une pratique utilisée par des artistes dans d’autres moteurs de rendu (comme dans Blender), aurait été d’implémenter une nouvelle source de lumière sous forme de cône ou de “spotlight” (définie par un point, une direction, un rayon du maximum et un rayon de limite). Cette nouvelle source aurait pu ensuite être combinée avec une grille à trou (composée d’un matériau absorbant), permettant ainsi de créer plusieurs faisceaux lumineux de façon efficace dans la scène. Si cette méthode aurait pu être bien plus efficace au niveau du temps de rendu, le temps de développement dont nous disposions n’était plus suffisant pour pouvoir développer et tester cette approche. D’autant plus que, étant une source ponctuelle, il aurait fallu modifier notre code d’intégrateur et de MIS afin de pouvoir la prendre en compte. Cela n’aurait pas été si compliqué que cela, mais notre nouvelle version volumétrique associée au rendu spectral et la nouvelle version de MIS n’étant pas très stable, il était compliqué de développer cela en parallèle.
+
+Une troisième option, qui a été implémentée, aurait été d’utiliser un simple plan émetteur, et de changer le volume de l’eau en un volume hétérogène, dont la densité dépendrait d’un Perlin Noise 2 dimensions. Par défaut, la densité du volume aurait été constante pour toute altitude Z à une coordonnées X et Y fixées, résultant en des faisceaux verticaux visibles suites à des couloirs de densités différents. Il ne restait alors plus qu’à utiliser un objet Frame pour transposer ces coordonnées dans un nouveau repère défini par une simple direction pour pouvoir orienter ces différents faisceaux verticaux selon la direction souhaitée (voir figure 9).
+
+![Figure 12: Utilisation de Perlin Noise 2D pour visualiser les God Rays](./imagesRapport/scenePerlin.png)
+
+Toutefois, cette approche ne fonctionnait plus une fois que nous combinons plusieurs volumes, et que le Perlin Noise ne devenait plus une différence de densité suffisante pour visualiser ces rayons. De plus, après les corrections liées au volume hétérogène, il n'était plus possible d'utiliser un bruit de Perlin pour la répartition de la densité du volume, de par l'impossibilité de l'intégrer facilement (sans approximation ou ray marching) le long du chemin parcouru par le rayon. Cette image (figure 9) avait été générée par une version erronée de notre moteur de rendu, mais elle permet de voir quel potentiel cela aurait pu avoir.
+
+Finalement, nous avons préféré utiliser les ressources dont nous étions confiants du bon fonctionnement suite à leur utilisation dans les devoirs précédents, qui sont les surfaces émettrices. Afin de pouvoir simuler le même effet qu’avec une “spotlight” et une grille, nous avons alors créé une grille émettrice. Puis à chaque cellule émettrice, nous avons associé une sorte de tuyaux composé d’un matériau totalement absorbant, afin que ce qui sorte de ce tuyaux soit une lumières quasi directionnelle, proche d’une lumière de “spotlight” (voir figure 6). Le résultat n'est définitivement pas efficace au niveau des calculs d’intersection, mais cette approche était convaincante sur Blender,que nous n’avons pas eu le temps de le remplacer par des méthodes plus efficaces.
+
+![Figure 13: Utilisation de surface émettrice et absorbante pour générer des rayons de lumière relativement directionnels](./imagesRapport/godraymachine.png)
+
+### Rendu Volumétrique: Hétérogène NEE MIS Spectrale (Miller 2019)
+
+L'objectif idéal aurait été d'implémenter la méthode de Miller avec NEE MIS. Cependant, l'implémentation a été problématique. En effet, il est est difficile de combiner NEE MIS avec Spectrale MIS. Dans le calcul de la lumière, puisqu'on "force" le chemin à aller vers une lumière, on doit maintenant prendre en compte la probabilité d'avoir frappé la source lumineuse d'après le milieu participatif pour un spectre donné. Cette partie est moins évidente. 
+
+En effet, pour les stratégies utilisés avec NEE MIS, nous avons dû calculer la probabilité que le chemin se produise ainsi que la mesure associée.  Puisqu'on rejoint notre source de lumière directement, le chemin final doit avoir passé à travers uniquement des particules virtuelles. Afin d'obtenir un résultat non-biaisé, nous avons employé un algorithme de "ratio tracking" qui consiste à un échantilonner un point jusqu'à la source lumineuse. Dans notre cas, puisqu'on rejoint directement la lumière, nous avons supposés que tous les points/particules échantillonnés étaient des particules nulles.
+
+!!! Warning
+    La méthode de Miller est intéressante, mais elle a certains défauts. 
+
+    * Qu'arrives-t-il pour les matériaux où la pdf et l'échantillonage se font selon des matériaux où leur pdf est un delta?
+    * Comment faire pour négliger les problèmes d'imprécisions liés au fait qu'on caclule la mesure la pdf séparément?
+
+
+![Figure 14: Comparaison entre l'image obtenue avec MIS NEE Spectral (Miller 2019) et l'équivalent sans MIS NEE pour les mêmes paramètres soit: g=0.0, sigma_a=(0.0,0.0,0.0), sigma_s=(0.1,0.1,0.01).](./imagesRapport/diff_mishetero_hetero_blue_homo.png)
+
+Malheureusement, cette section n'est pas fonctionnnelle comme démontré dans l'image. La contribution résultant dans notre image est trop grande. Elle est, environ, le double de ce qu'il serait attendu. Sa cause est non-déterminée, mais est possiblement causé par le calcul du matériel/milieu.
+Mon hypothèse principal est lié à l'échantillonage des matériaux/milieux? Est-ce qu'assumer que toutes les particules sont virtuelles? Est-ce qu'on doit terminer le chemin si les particules ne sont pas réelles?
+
+## Répartition du travail 
+
+### Implémentations
+* Rendu Volumétrique: Homogène [Karl-Étienne]
+* Rendu Volumétrique: Homogène NEE MIS [Karl-Étienne]
+* Rendu Volumétrique: Homogène NEE MIS Spectral (Mixture) [Karl-Étienne]
+* Génération de bruit: Fonctions Perlin Noise 2D/3D [Karl-Étienne] (Non utilisée)
+* Rendu Volumétrique: Hétérogène Analytique NEE MIS (Mixture) [Matthieu Beaud] 
+* Rendu Volumétrique: Hétérogène Spectrale (Bayer 2019) [Karl-Étienne]
+* Rendu Volumétrique: Superposition de milieu participatif [Matthieu Beaud]
+* Modélisation [Matthieu Beaud]
+
+### Difficultés Rencontrées
+* Visualisation/Création des caustiques volumétriques ("God Rays") [Matthieu Beaud]
+* Rendu Volumétrique: Hétérogène NEE MIS Spectrale (Bayer 2019) [Karl-Étienne]
+
+## Remerciements
+Nous tenions à remercier Adrien Gruson pour son implication et sa grande disponibilité à travers cette session ainsi que pour l'enseignement qui nous a été offert tout au long. 
+
+<!-- Markdeep: -->
+<style class="fallback">
+    body {
+        visibility: hidden
+    }
+</style>
+<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js?" charset="utf-8"></script> 
