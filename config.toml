@@ -31,21 +31,8 @@ biography = """
 I am an Assistant Professor at [École Supérieure de Technologie (ÉTS)](https://www.etsmtl.ca/) in the department of [Information and Communications Technologies](https://www.etsmtl.ca/en/research/Research-innovation/Information-communications-technologies) since September 2021, where I am a member of [the Multimedia Lab](https://en.etsmtl.ca/unites-de-recherche/labmultimedia/accueil?lang=en-CA). 
 
 <div class="alert alert-primary" role="alert">I am actively looking for multiple Master/Ph.D. students who have a strong interest in computer graphics, particularly in rendering. If you are interested in working with me, please first read this <a href="students">page</a> containing additional important information. Then, please send me an email mentioning you read this page and stating your interests in computer graphics. If you have any questions, don't hesitate to reach out to me.</div>
-
-<h3>Current Students</h3>
-<ul>
-    <li style="font-size:90%">Hassan-Walid Boulerhcha, Undergraduate MITACS Globalinks (intern)</li>
-    <li style="font-size:90%">Haolun Ma, Undergraduate MITACS Globalinks (intern)</li>
-    <li style="font-size:90%">Justin Benoist, Undergraduate (intern)</li>
-	<li style="font-size:90%">Daniel Milenov Milanov, MASc (co-supervised with Sheldon Andrew)</li>
-	<li style="font-size:90%">Marc Haraoui, M. Ing (co-supervised with Marco Pedersoli) - CAE</li>
-</ul>
-
-<h3>Past Students</h3>
-<ul>
-	<li style="font-size:90%">Benjamin Boineau, M. Ing (co-supervised with Sheldon Andrew) - Depix</li>
-</ul>
-
+"""
+extrainfo = """
 <h3>Bio</h3>
 Adrien Gruson was a post-doc researcher at McGill University and The University of Tokyo under the supervision of Profs <a href="http://www.cim.mcgill.ca/~derek/">Nowrouzezahrai]</a> and <a href="http://www.ci.i.u-tokyo.ac.jp/~hachisuka/">Hachisuka</a>. He was also a member of the <a href="http://jfli.cnrs.fr/">Japanese French Laboratory of Informatics (JFLI)</a>. His research interests include physically-based rendering, using advance sampling techniques such Markov-chain Monte Carlo, gradient-based estimators.
 
@@ -58,11 +45,11 @@ Adrien Gruson was a post-doc researcher at McGill University and The University 
 
 <h3>Course</h3>
 
-- MTI882: Rendu photoréaliste (A2022)
+- MTI882: Rendu photoréaliste (A2022, A2023)
 	- <a href="competition/">Results rendering competition</a>
-- LOG750: Infographie (H2022, H2023)
-
+- LOG750: Infographie (H2022, H2023, H2024)
 """
+
 websites = [
 	{ name = "Adrien Gruson", url = "https://profs.etsmtl.ca/agruson/"},
 	{ name = "Damien Rioux-Lavoie", url = "https://riouxld21.github.io/research/" },

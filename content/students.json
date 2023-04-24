@@ -1,0 +1,29 @@
+{
+    "students" : [
+        {
+            "name" : "Marc Haraoui",
+            "type" : "M. Ing",
+            "cosupervised" : ["Marco Pedersoli"]
+        },
+        {
+            "name" : "Jian Jia",
+            "type" : "M. Ing"
+        },
+        {
+            "name" : "Daniel Milenov Milanov",
+            "type" : "M.Sc.",
+            "cosupervised" : ["Sheldon Andrews"]
+        },
+        {
+            "name" : "Justin Benoist",
+            "type" : "Intern"
+        }        
+    ],
+    "graduated" : [
+        {
+            "name" : "Benjamin Boineau",
+            "type" : "M. Ing",
+            "cosupervised" : ["Sheldon Andrews"]
+        }
+    ]
+}

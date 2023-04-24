@@ -104,6 +104,59 @@
 						<h1 id="biography">Biography</h1>
 						{{ config.extra["biography"] | markdown | safe }}
 
+						<h3>Students</h3>
+						<center><i class="fas fa-chess-queen"></i> Post. doc  <i class="fas fa-chess-rook"></i> Ph.D. <i class="fas fa-chess-knight"></i> M.Sc./M. Ing <i class="fas fa-chess-pawn"></i> Intern</center>
+						{% set data = load_data(path="content/students.json", format="json") %}
+						
+						<h4>Current</h4>
+						{% set nb_students = data["students"] | length %}
+						<div class="row">
+						{% for idcol in [0, 1] %}
+						<div class="col-sm-6">
+						<ul style="list-style-type: none;">
+						{% for student in data["students"] | slice(start=idcol*nb_students/2, end=(idcol+1)*nb_students/2) %}
+							<li>
+								{% if student.type == "Post doc."%}
+								<i class="fas fa-chess-queen"></i> 
+								{% elif student.type == "Ph.D." %}
+								<i class="fas fa-chess-rook"></i> 
+								{% elif student.type == "M.Sc." or student.type == "M. Ing" %}
+								<i class="fas fa-chess-knight"></i> 
+								{% elif student.type == "Intern" %}
+								<i class="fas fa-chess-pawn"></i> 
+								{% endif %}
+								{{ student.name }} </li>
+						{% endfor %}
+						</ul>
+						</div>
+						{%endfor%}
+						</div>
+
+						<h4>Past</h4>
+						{% set nb_students = data["graduated"] | length %}
+						<div class="row">
+						{% for idcol in [1, 0] %}
+						<div class="col-sm-6">
+						<ul style="list-style-type: none;">
+						{% for student in data["graduated"] | slice(start=idcol*nb_students/2, end=(idcol+1)*nb_students/2) %}
+							<li>
+								{% if student.type == "Post doc."%}
+								<i class="fas fa-chess-queen"></i> 
+								{% elif student.type == "Ph.D." %}
+								<i class="fas fa-chess-rook"></i> 
+								{% elif student.type == "M.Sc." or student.type == "M. Ing" %}
+								<i class="fas fa-chess-knight"></i> 
+								{% elif student.type == "Intern" %}
+								<i class="fas fa-chess-pawn"></i> 
+								{% endif %}
+								{{ student.name }} </li>
+						{% endfor %}
+						</ul>
+						</div>
+						{%endfor%}
+						</div>
+						
+
 						<div class="row">
 							<div class="col-sm-5">
 								<h3>Interests</h3>
