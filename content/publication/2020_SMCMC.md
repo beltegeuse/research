@@ -17,7 +17,7 @@ short_description = "Perfect image-space stratification with MCMC."
 download = [
     { type = "paper", url = "https://data.adrien-gruson.com/research/2020_SMCMC.pdf"},
     { type = "doi", url = "https://diglib.eg.org/handle/10.1111/cgf13935"}, 
-    { type = "additional", desc = "Web interactive comparison", url = "https://data.adrien-gruson.com/research/2020_SMCMC/"}, 
+    { type = "additional", desc = "Web interactive comparison", url = "https://data.adrien-gruson.com/research/2020_SMCMC/index.html"}, 
     { type = "code", url = "https://github.com/beltegeuse/smcmc"},
     { type = "slides", url = "https://data.adrien-gruson.com/research/2020_SMCMC/SMCMC_slides.pptx" }
 ]
