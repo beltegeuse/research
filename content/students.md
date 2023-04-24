@@ -2,11 +2,18 @@
 
 +++
 
+<div class="alert alert-danger" role="alert" >
+<center><img src="https://data.adrien-gruson.com/web/teaser_call.png" style="border: 3px solid;"/></center>
+I am actively looking for a Ph.D. for a join project with Poitiers university on differentiable rendering and material modeling. <a href="https://data.adrien-gruson.com/web/sujet_en.pdf" class="alert-link">More information on the official call.</a>
+</div>
+
 This page contains guidelines and Q/A for anyone interested in being supervised/mentored by me or collaborating with me. 
 
 ## How to reach me
 
-It is important that you **read this entire page first and clearly state it inside the email** you will send to [me](emailto:adrien.gruson@etsmtl.ca). 
+<div class="alert alert-danger" role="alert" >
+It is important that you <strong>read this entire page first and clearly state it inside the email</strong> you will send to <a href="emailto:adrien.gruson@etsmtl.ca">me</a>. 
+</div>
 
 You must also provide information inside this first email to maximize your chance of getting my attention and avoiding unnecessary back-and-forth. Providing clear information is essential if you want to be supervised by me. To help you write this first email, here is a list of what type of information I would like to see:
 * What are your research interests? Why do you want to perform research in computer graphics?   
