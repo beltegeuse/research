@@ -17,7 +17,7 @@ publication = "*EGPVG*, 2012."
 short_description = "GPU implementation of light propagation maps."
 
 download = [
-    { type = "paper", url = "https://adrien-gruson.com/research/2012-LPM-GPU_Gruson.pdf"},
+    { type = "paper", url = "https://data.adrien-gruson.com/research/2012-LPM-GPU_Gruson.pdf"},
     { type = "doi", url = "http://dx.doi.org/10.2312/EGPGV/EGPGV12/081-088"}
 ]
 

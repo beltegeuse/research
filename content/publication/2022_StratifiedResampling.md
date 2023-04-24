@@ -18,9 +18,9 @@ image_preview = "SIS_prev.png"
 short_description = "Stratification made available within resampled importance sampling"
 
 download = [
-    { type = "paper", url = "http://adrien-gruson.com/research/2022_StratifiedResampling/2022_StratifiedResampling.pdf"},
+    { type = "paper", url = "https://data.adrien-gruson.com/research/2022_StratifiedResampling/2022_StratifiedResampling.pdf"},
     { type = "doi", url = "https://doi.org/10.1111/cgf.14585" },
-    { type ="additional", desc = "Web interactive comparison", url = "http://adrien-gruson.com/research/2022_StratifiedResampling/"},
+    { type ="additional", desc = "Web interactive comparison", url = "https://data.adrien-gruson.com/research/2022_StratifiedResampling/index.html"},
     { type = "code", url = "https://github.com/EgeCiklabakkal/spsir"},
 ]
 
@@ -41,5 +41,5 @@ bibtex = """@article{Ciklabakkal:2022:StratifiedResampling,
 
 #### Presentation
 
-<video style="width: 100%; border: 1px solid #c7c7c7" controls=""><source src="http://adrien-gruson.com/research/2022_StratifiedResampling/2022_StratifiedResampling.mp4" type="video/mp4"></video>
+<video style="width: 100%; border: 1px solid #c7c7c7" controls=""><source src="https://data.adrien-gruson.com/research/2022_StratifiedResampling/2022_StratifiedResampling.mp4" type="video/mp4"></video>
 

@@ -17,7 +17,7 @@ publication = "*VISAPP*, 2016."
 short_description = "Method for recovering the shape with Kinect and partially controlled illumination."
 
 download = [
-    { type = "paper", url = "https://adrien-gruson.com/research/2016_RGBD-Sequential_Hudon.pdf"},
+    { type = "paper", url = "https://data.adrien-gruson.com/research/2016_RGBD-Sequential_Hudon.pdf"},
     { type = "doi", url = "http://doi.org/10.5220/0005726305320541" },
     { type = "project", url = "http://people.irisa.fr/Matis.Hudon/Shape.html" }
 ]
