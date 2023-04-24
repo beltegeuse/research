@@ -114,7 +114,8 @@
 						{% for idcol in [0, 1] %}
 						<div class="col-sm-6">
 						<ul style="list-style-type: none;">
-						{% for student in data["students"] | slice(start=idcol*nb_students/2, end=(idcol+1)*nb_students/2) %}
+						{% for idstudent in range(start=idcol, end=nb_students, step_by=2) %}
+							{% set student = data["students"][idstudent] %}
 							<li>
 								{% if student.type == "Post doc."%}
 								<i class="fas fa-chess-queen"></i> 
@@ -135,10 +136,11 @@
 						<h4>Past</h4>
 						{% set nb_students = data["graduated"] | length %}
 						<div class="row">
-						{% for idcol in [1, 0] %}
+						{% for idcol in [0, 1] %}
 						<div class="col-sm-6">
 						<ul style="list-style-type: none;">
-						{% for student in data["graduated"] | slice(start=idcol*nb_students/2, end=(idcol+1)*nb_students/2) %}
+						{% for idstudent in range(start=idcol, end=nb_students, step_by=2) %}
+							{% set student = data["graduated"][idstudent] %}
 							<li>
 								{% if student.type == "Post doc."%}
 								<i class="fas fa-chess-queen"></i> 
