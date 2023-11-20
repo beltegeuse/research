@@ -2,10 +2,10 @@
 
 +++
 
-<div class="alert alert-danger" role="alert" >
+<!-- <div class="alert alert-danger" role="alert" >
 <center><img src="https://data.adrien-gruson.com/web/teaser_call.png" style="border: 3px solid;"/></center>
 I am actively looking for a Ph.D. for a join project with Poitiers university on differentiable rendering and material modeling. <a href="https://data.adrien-gruson.com/web/sujet_en.pdf" class="alert-link">More information on the official call.</a>
-</div>
+</div> -->
 
 This page contains guidelines and Q/A for anyone interested in being supervised/mentored by me or collaborating with me. 
 

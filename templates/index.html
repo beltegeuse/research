@@ -105,7 +105,7 @@
 						{{ config.extra["biography"] | markdown | safe }}
 
 						<h3>Students</h3>
-						<center><i class="fas fa-chess-queen"></i> Post. doc  <i class="fas fa-chess-rook"></i> Ph.D. <i class="fas fa-chess-knight"></i> M.Sc./M. Ing <i class="fas fa-chess-pawn"></i> Intern</center>
+						<center><i class="fas fa-chess-queen"></i> Post. doc  <i class="fas fa-chess-rook"></i> Ph.D. <i class="fas fa-chess-knight"></i> M.Sc. <i class="fas fa-chess-bishop"></i> M. Ing <i class="fas fa-chess-pawn"></i> Intern</center>
 						{% set data = load_data(path="content/students.json", format="json") %}
 						
 						<h4>Current</h4>
@@ -117,11 +117,17 @@
 						{% for idstudent in range(start=idcol, end=nb_students, step_by=2) %}
 							{% set student = data["students"][idstudent] %}
 							<li>
+								{% if student.cosupervised %}
+								<i class="fas fa-user-friends" data-toggle="tooltip" data-placement="top" title="Co-supervision: {{student.cosupervised | join(sep=" ") }}"></i>
+								{% endif %}
+
 								{% if student.type == "Post doc."%}
 								<i class="fas fa-chess-queen"></i> 
 								{% elif student.type == "Ph.D." %}
 								<i class="fas fa-chess-rook"></i> 
-								{% elif student.type == "M.Sc." or student.type == "M. Ing" %}
+								{% elif student.type == "M. Ing" %}
+								<i class="fas fa-chess-bishop" ></i> 
+								{% elif student.type == "M.Sc." %}
 								<i class="fas fa-chess-knight"></i> 
 								{% elif student.type == "Intern" %}
 								<i class="fas fa-chess-pawn"></i> 
@@ -141,17 +147,23 @@
 						<ul style="list-style-type: none;">
 						{% for idstudent in range(start=idcol, end=nb_students, step_by=2) %}
 							{% set student = data["graduated"][idstudent] %}
-							<li>
+							<li>		
 								{% if student.type == "Post doc."%}
 								<i class="fas fa-chess-queen"></i> 
 								{% elif student.type == "Ph.D." %}
 								<i class="fas fa-chess-rook"></i> 
-								{% elif student.type == "M.Sc." or student.type == "M. Ing" %}
+								{% elif student.type == "M. Ing" %}
+								<i class="fas fa-chess-bishop"></i> 
+								{% elif student.type == "M.Sc." %}
 								<i class="fas fa-chess-knight"></i> 
 								{% elif student.type == "Intern" %}
 								<i class="fas fa-chess-pawn"></i> 
 								{% endif %}
-								{{ student.name }} </li>
+								{{ student.name }} 
+								{% if student.cosupervised %}
+								<i class="fas fa-user-friends" data-toggle="tooltip" data-placement="top" title="Co-supervision: {{student.cosupervised | join(sep=" ") }}"></i>
+								{% endif %}
+							</li>
 						{% endfor %}
 						</ul>
 						</div>
@@ -232,6 +244,11 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
+	<script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+	</script>
 	{% block scripts %}
 	<!-- To include additional script -->
 	{% endblock scripts %}

@@ -1,9 +1,8 @@
 {
     "students" : [
         {
-            "name" : "Marc Haraoui",
-            "type" : "M. Ing",
-            "cosupervised" : ["Marco Pedersoli"]
+            "name" : "Justin Benoist",
+            "type" : "Ph.D."
         },
         {
             "name" : "Jian Jia",
@@ -11,12 +10,23 @@
         },
         {
             "name" : "Daniel Milenov Milanov",
-            "type" : "M.Sc.",
+            "type" : "M.Sc."
+        },
+        {
+            "name" : "Terry Chen",
+            "type" : "M.Sc."
+        }
+    ],
+    "graduated" : [
+        {
+            "name" : "Benjamin Boineau",
+            "type" : "M. Ing",
             "cosupervised" : ["Sheldon Andrews"]
         },
         {
-            "name" : "Justin Benoist",
-            "type" : "Intern"
+            "name" : "Marc Haraoui",
+            "type" : "M. Ing",
+            "cosupervised" : ["Marco Pedersoli"]
         },
         {
             "name" : "Vishesh Gupta",
@@ -30,12 +40,5 @@
             "name" : "Hassan-Walid Boulerhcha",
             "type" : "Intern"
         }        
-    ],
-    "graduated" : [
-        {
-            "name" : "Benjamin Boineau",
-            "type" : "M. Ing",
-            "cosupervised" : ["Sheldon Andrews"]
-        }
     ]
 }
