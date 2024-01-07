@@ -12,9 +12,12 @@
         <h3>Entries</h3>
 
         {% for entry in page.extra.entries %}
-            <img src="{{  get_url(path="competition/" ~ entry.image) }}">
+            <center><img src="{{  get_url(path="competition/" ~ entry.image) }}"></center>
             {% if entry.type == "winner" %}
             <center><i class="fa fa-trophy" aria-hidden="true"> Winner: </i> <a href="{{  get_url(path="competition/" ~ entry.url) }}">{{ entry.name }}</a></center>
+            {% endif %}
+            {% if entry.type == "runnup" %}
+            <center><i class="fa fa-trophy" aria-hidden="true"> Runner-up: </i> <a href="{{  get_url(path="competition/" ~ entry.url) }}">{{ entry.name }}</a></center>
             {% endif %}
             {% if entry.type == "entry" %}
             <center><a href="{{  get_url(path="competition/" ~ entry.url) }}">{{ entry.name }}</a></center>
