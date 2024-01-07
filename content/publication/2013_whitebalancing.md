@@ -16,7 +16,7 @@ publication = "*Pacific Graphics*, 2013."
 short_description = "New color adaptation method well suited to global illumination."
 
 download = [
-  { type = "paper", url = "http://onlinelibrary.wiley.com/doi/10.1111/cgf.12218/abstract" },
+  { type = "paper", url = "https://data.adrien-gruson.com/research/2013_eye-white-balance_gruson.pdf" },
   { type = "doi", url = "https://doi.org/10.1111/cgf.12218" }
 ]
 

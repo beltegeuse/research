@@ -17,7 +17,7 @@ publication = "*SPIE*, 2012."
 short_description = "Tone mapping achieving more stable result with video."
 
 download = [
-    { type = "paper", url = "http://www.ece.ubc.ca/~rboitard/articles/2012/Boitard%20et%20al.-2012-Temporal%20Coherency%20for%20Video%20Tone%20Mapping.pdf"},
+    { type = "paper", url = "https://data.adrien-gruson.com/research/2012_tcvtm.pdf"},
     { type = "doi", url = "https://doi.org/10.1117/12.929600" }
 ]
 

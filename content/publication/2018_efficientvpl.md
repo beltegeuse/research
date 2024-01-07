@@ -16,6 +16,7 @@ short_description = "More accurate VPL rendering using photon splatting."
 
 download = [
     { type = "project", url = "http://jamorn.me/evplp/"},
+    { type = "paper", url = "https://data.adrien-gruson.com/research/2018_efficientvpl.pdf" }
     { type = "doi", url = "https://doi.org/10.1145/3203189"},
     { type = "code", url="https://github.com/zentojamorn/evplp"}
 ]
