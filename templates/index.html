@@ -101,14 +101,17 @@
 						</div>
 					</div>
 					<div class="col-xs-12 col-md-8" itemprop="description">
-						<h1 id="biography">Biography</h1>
+						<h2 id="biography">Biography</h1>
 						{{ config.extra["biography"] | markdown | safe }}
 
-						<h3>Students</h3>
-						<center><i class="fas fa-chess-queen"></i> Post. doc  <i class="fas fa-chess-rook"></i> Ph.D. <i class="fas fa-chess-knight"></i> M.Sc. <i class="fas fa-chess-bishop"></i> M. Ing <i class="fas fa-chess-pawn"></i> Intern</center>
+						<h2 id="biography">Informations</h1>
+						{{ config.extra["extrainfo"] | markdown | safe }}
+
+						<h2 id="biography">Students</h1>
+						<center><i class="fas fa-chess-queen"></i> Post. doc  <i class="fas fa-chess-rook"></i> Ph.D. <i class="fas fa-chess-knight"></i> M.Sc. <i class="fas fa-chess-bishop"></i> M. Ing <i class="fas fa-chess-pawn"></i> Intern <i class="fas fa-user-friends"></i>Co-supervision <i class="fas fa-laptop-house"></i>Remote </center>
 						{% set data = load_data(path="content/students.json", format="json") %}
 						
-						<h4>Current</h4>
+						<h3>Current</h3>
 						{% set nb_students = data["students"] | length %}
 						<div class="row">
 						{% for idcol in [0, 1] %}
@@ -117,10 +120,6 @@
 						{% for idstudent in range(start=idcol, end=nb_students, step_by=2) %}
 							{% set student = data["students"][idstudent] %}
 							<li>
-								{% if student.cosupervised %}
-								<i class="fas fa-user-friends" data-toggle="tooltip" data-placement="top" title="Co-supervision: {{student.cosupervised | join(sep=" ") }}"></i>
-								{% endif %}
-
 								{% if student.type == "Post doc."%}
 								<i class="fas fa-chess-queen"></i> 
 								{% elif student.type == "Ph.D." %}
@@ -132,14 +131,21 @@
 								{% elif student.type == "Intern" %}
 								<i class="fas fa-chess-pawn"></i> 
 								{% endif %}
-								{{ student.name }} </li>
+								{{ student.name }} 
+								{% if student.cosupervised %}
+								<i class="fas fa-user-friends" data-toggle="tooltip" data-placement="top" title="Co-supervision: {{student.cosupervised | join(sep=", ") }}"></i>
+								{% endif %}
+								{% if student.remote %}
+								<i class="fas fa-laptop-house" data-toggle="tooltip" data-placement="top" title="Remote supervision"></i>
+								{% endif %}
+							</li>
 						{% endfor %}
 						</ul>
 						</div>
 						{%endfor%}
 						</div>
 
-						<h4>Past</h4>
+						<h3>Past</h3>
 						{% set nb_students = data["graduated"] | length %}
 						<div class="row">
 						{% for idcol in [0, 1] %}
@@ -161,7 +167,10 @@
 								{% endif %}
 								{{ student.name }} 
 								{% if student.cosupervised %}
-								<i class="fas fa-user-friends" data-toggle="tooltip" data-placement="top" title="Co-supervision: {{student.cosupervised | join(sep=" ") }}"></i>
+								<i class="fas fa-user-friends" data-toggle="tooltip" data-placement="top" title="Co-supervision: {{student.cosupervised | join(sep=", ") }}"></i>
+								{% endif %}
+								{% if student.remote %}
+								<i class="fas fa-laptop-house" data-toggle="tooltip" data-placement="top" title="Remote supervision"></i>
 								{% endif %}
 							</li>
 						{% endfor %}

@@ -5,19 +5,43 @@
             "type" : "Ph.D."
         },
         {
-            "name" : "Jian Jia",
-            "type" : "M. Ing"
-        },
-        {
             "name" : "Daniel Milenov Milanov",
             "type" : "M.Sc."
         },
         {
+            "name" : "Enrique Vega",
+            "type" : "M.Sc.",
+            "cosupervised" : ["Luis Gamboa"],
+            "remote" : true
+        },
+        {
             "name" : "Terry Chen",
             "type" : "M.Sc."
+        },
+        {
+            "name" : "Matthieu Josse",
+            "type" : "Intern"
+        },
+        {
+            "name" : "Raghav Agarwal",
+            "type" : "Intern"
+        },
+        {
+            "name" : "Pratyay Suvarnapathaki",
+            "type" : "Intern"
         }
     ],
     "graduated" : [
+        {
+            "name" : "Ishann Shah",
+            "type" : "M.Sc.",
+            "cosupervised" : ["P. J. Narayanan", "Luis Gamboa"],
+            "remote" : true
+        },
+        {
+            "name" : "Jian Jia",
+            "type" : "M. Ing"
+        },
         {
             "name" : "Benjamin Boineau",
             "type" : "M. Ing",
@@ -39,6 +63,6 @@
         {
             "name" : "Hassan-Walid Boulerhcha",
             "type" : "Intern"
-        }        
+        }
     ]
 }

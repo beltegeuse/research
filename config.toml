@@ -30,24 +30,22 @@ education = [["PhD in Computer Graphics, 2015", "Rennes 1 University"],
 biography = """
 I am an Assistant Professor at [École Supérieure de Technologie (ÉTS)](https://www.etsmtl.ca/) in the department of [Information and Communications Technologies](https://www.etsmtl.ca/en/research/Research-innovation/Information-communications-technologies) since September 2021, where I am a member of [the Multimedia Lab](https://en.etsmtl.ca/unites-de-recherche/labmultimedia/accueil?lang=en-CA). 
 
-<div class="alert alert-danger" role="alert">I am actively looking for multiple Master/Ph.D. students who have a strong interest in computer graphics, particularly in rendering. <a href="students" class="alert-link">If you are interested in working with me, please first read this page containing additional important information.</a> Then, please send me an email mentioning you read this page and stating your interests in computer graphics. If you have any questions, don't hesitate to reach out to me.</div>
+<div class="alert alert-danger" role="alert"> <a href="students" class="alert-link">If you are interested in working with me, please first read this page containing additional important information.</a> If you have a strong interest in computer graphics, particularly in rendering and want to do a Master/Ph.D do not hesitate to contact me. Send me an email mentioning that you read this page and stating your interests in computer graphics.</div>
 """
 extrainfo = """
-<h3>Bio</h3>
-Adrien Gruson was a post-doc researcher at McGill University and The University of Tokyo under the supervision of Profs <a href="http://www.cim.mcgill.ca/~derek/">Nowrouzezahrai]</a> and <a href="http://www.ci.i.u-tokyo.ac.jp/~hachisuka/">Hachisuka</a>. He was also a member of the <a href="http://jfli.cnrs.fr/">Japanese French Laboratory of Informatics (JFLI)</a>. His research interests include physically-based rendering, using advance sampling techniques such Markov-chain Monte Carlo, gradient-based estimators.
-
 <h3>Research Fundings</h3>
 <ul>
-	<li style="font-size:90%">MITACS Acceleration and Globalkinks</li>
+	<li style="font-size:90%">MITACS Acceleration and Globalinks</li>
+	<li style="font-size:90%">NSERC, Create (VISION: VIsual effectS and animation InnovatiOn and simulatioN, UCarlton), 2024 to present</li>
 	<li style="font-size:90%">NSERC, Discovery, 2022 to present</li>
 	<li style="font-size:90%">ÉTS, startup grant, 2021 to present</li>
 </ul>
 
 <h3>Course</h3>
 
-- MTI882: Rendu photoréaliste (A2022, A2023)
+- MTI882/MTI870: Rendu photoréaliste (A2022, A2023, A2024)
 	- <a href="competition/">Results rendering competition</a>
-- LOG750: Infographie (H2022, H2023, H2024)
+- LOG750: Infographie (H2022, H2023, H2024, A2024, H2025)
 """
 
 websites = [
@@ -79,5 +77,7 @@ websites = [
 	{ name = "Keven Villeneuve", url = "https://kevenv.github.io/" },
 	{ name = "Gurprit Singh", url = "https://sampling.mpi-inf.mpg.de/"},
 	{ name = "Corentin Salaun", url = "https://iribis.github.io/" },
-	{ name = "Ege Ciklabakkal", url = "https://cs.uwaterloo.ca/~meciklab/" }
+	{ name = "Ege Ciklabakkal", url = "https://cs.uwaterloo.ca/~meciklab/" },
+	{ name = "Ishaan Shah", url = "https://ishaanshah.github.io/"},
+	{ name = "P. J. Narayanan", url ="https://faculty.iiit.ac.in/~pjn/"}
 ]
