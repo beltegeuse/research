@@ -17,8 +17,8 @@ image_preview = "neural_glint_prev.png"
 short_description = "Appearance filtering and analytical lighting integration of a glinty surface"
 
 download = [
+    { type = "project", url = "https://ishaanshah.xyz/neural_glint/" },
     { type = "paper", url = "https://data.adrien-gruson.com/research/2024_NeuralGlint_Shah.pdf"},
-    { type ="additional", desc = "Web interactive comparison", url = "https://data.adrien-gruson.com/research/2024_NeuralGlint/NeuralGlint_supplemental.zip"},
     { type = "code", url = "https://github.com/ishaanshah/neural_glint"},
 ]
 
@@ -38,4 +38,4 @@ bibtex = """@article{Shah:2024:NeuralGlint,
 
 #### Results
 
-<video style="width: 100%; border: 1px solid #c7c7c7" controls=""><source src="https://data.adrien-gruson.com/research/2024_NeuralGlint/video.mp4" type="video/mp4"></video>
+Please visit the project website for the video and image viewer: https://ishaanshah.xyz/neural_glint/ 
