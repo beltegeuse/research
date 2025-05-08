@@ -5,6 +5,48 @@
             "type" : "Ph.D."
         },
         {
+            "name" : "Euan Huges",
+            "type" : "M.Sc.",
+            "cosupervised" : ["Eric Paquette"]
+        },
+        {
+            "name" : "Wylliam Cantin Charawi",
+            "type" : "M.Sc.",
+            "cosupervised" : ["Chrstian Desrosiers"]
+        },
+        {
+            "name" : "Terry Chen",
+            "type" : "M.Sc.",
+            "cosupervised" : ["Derek Nowrouzezahrai"]
+        },
+        {
+            "name" : "Vincent Ducros",
+            "type" : "M. Ing",
+            "cosupervised" : ["Damien Rioux-Lavoie"]
+        },
+        {
+            "name" : "Matthieu Josse",
+            "type" : "Intern"
+        },
+        {
+            "name" : "Alexei Czornyj",
+            "type" : "Intern"
+        }
+    ],
+    "graduated" : [
+        {
+            "name" : "Francis Beauchamp",
+            "type" : "M. Ing"
+        },
+        {
+            "name" : "Raghav Agarwal",
+            "type" : "Intern"
+        },
+        {
+            "name" : "Pratyay Suvarnapathaki",
+            "type" : "Intern"
+        },
+        {
             "name" : "Daniel Milenov Milanov",
             "type" : "M.Sc."
         },
@@ -14,24 +56,6 @@
             "cosupervised" : ["Luis Gamboa"],
             "remote" : true
         },
-        {
-            "name" : "Terry Chen",
-            "type" : "M.Sc."
-        },
-        {
-            "name" : "Matthieu Josse",
-            "type" : "Intern"
-        },
-        {
-            "name" : "Raghav Agarwal",
-            "type" : "Intern"
-        },
-        {
-            "name" : "Pratyay Suvarnapathaki",
-            "type" : "Intern"
-        }
-    ],
-    "graduated" : [
         {
             "name" : "Ishann Shah",
             "type" : "M.Sc.",
