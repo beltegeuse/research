@@ -38,14 +38,14 @@ extrainfo = """
 	<li style="font-size:90%">MITACS Acceleration and Globalinks</li>
 	<li style="font-size:90%">NSERC, Create (VISION: VIsual effectS and animation InnovatiOn and simulatioN, UCarlton), 2024 to present</li>
 	<li style="font-size:90%">NSERC, Discovery, 2022 to present</li>
-	<li style="font-size:90%">ÉTS, startup grant, 2021 to present</li>
+	<li style="font-size:90%">ÉTS, startup grant, 2021 to 2024</li>
 </ul>
 
 <h3>Course</h3>
 
-- MTI882/MTI870: Rendu photoréaliste (A2022, A2023, A2024)
+- MTI882/MTI870/SDE885: Rendu photoréaliste (A2022, A2023, A2024, A2025)
 	- <a href="competition/">Results rendering competition</a>
-- LOG750: Infographie (H2022, H2023, H2024, A2024, H2025)
+- LOG750: Infographie (H2022, H2023, H2024, A2024, H2025, A2025)
 """
 
 websites = [

@@ -20,6 +20,13 @@
             "cosupervised" : ["Derek Nowrouzezahrai"]
         },
         {
+            "name" : "Jie Bao",
+            "type" : "Intern",
+            "cosupervised" : ["Pierre Poulin"]
+        }
+    ],
+    "graduated" : [
+        {
             "name" : "Vincent Ducros",
             "type" : "M. Ing",
             "cosupervised" : ["Damien Rioux-Lavoie"]
@@ -31,9 +38,7 @@
         {
             "name" : "Alexei Czornyj",
             "type" : "Intern"
-        }
-    ],
-    "graduated" : [
+        },
         {
             "name" : "Francis Beauchamp",
             "type" : "M. Ing"
