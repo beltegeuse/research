@@ -16,7 +16,7 @@
 						src="{{ get_url(path="/publication/" ~ pub.extra.image_preview) }}" />
 				</div>
 				<div class="col-10">
-					<a href="{{ pub.permalink }}">{{ pub.title | title }}</a>
+					<a href="{{ pub.permalink }}">{{ pub.title }}</a>
 					<div class="pub-author" itemprop="text">
 						{% if pub.extra.join_first %}
 							{% for a in pub.extra.authors | map(attribute="name") | slice(end=2) %}

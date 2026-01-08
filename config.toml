@@ -79,5 +79,9 @@ websites = [
 	{ name = "Corentin Salaun", url = "https://iribis.github.io/" },
 	{ name = "Ege Ciklabakkal", url = "https://cs.uwaterloo.ca/~meciklab/" },
 	{ name = "Ishaan Shah", url = "https://ishaanshah.github.io/"},
-	{ name = "P. J. Narayanan", url ="https://faculty.iiit.ac.in/~pjn/"}
+	{ name = "P. J. Narayanan", url ="https://faculty.iiit.ac.in/~pjn/"},
+	{ name = "Wylliam Cantin Charawi", url = "https://wylliamcantincharawi.dev/" },
+	{ name = "Christian Desrosiers", url = "https://www.etsmtl.ca/en/study-at-ets/professors/cdesrosiers" },
+	{ name = "Diego Thomas", url = "https://diegothomas.github.io/DigitalHumans-lab/index.html" },
+	{ name = "Jane Wu", url = "https://janehwu.github.io/" }
 ]

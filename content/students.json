@@ -1,18 +1,28 @@
 {
     "students" : [
         {
+            "name" : "Wylliam Cantin Charawi",
+            "type" : "Ph.D.",
+            "cosupervised" : ["Christian Desrosiers"]
+        },
+        {
             "name" : "Justin Benoist",
             "type" : "Ph.D."
         },
         {
-            "name" : "Euan Huges",
+            "name" : "Iprahim Tutuncu",
             "type" : "M.Sc.",
             "cosupervised" : ["Eric Paquette"]
         },
         {
-            "name" : "Wylliam Cantin Charawi",
+            "name" : "Nathanyël Vinet-Mongeau",
             "type" : "M.Sc.",
-            "cosupervised" : ["Chrstian Desrosiers"]
+            "cosupervised" : ["Eric Paquette"]
+        },
+        {
+            "name" : "Euan Hughes",
+            "type" : "M.Sc.",
+            "cosupervised" : ["Eric Paquette"]
         },
         {
             "name" : "Terry Chen",
