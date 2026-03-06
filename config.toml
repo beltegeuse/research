@@ -83,5 +83,6 @@ websites = [
 	{ name = "Wylliam Cantin Charawi", url = "https://wylliamcantincharawi.dev/" },
 	{ name = "Christian Desrosiers", url = "https://www.etsmtl.ca/en/study-at-ets/professors/cdesrosiers" },
 	{ name = "Diego Thomas", url = "https://diegothomas.github.io/DigitalHumans-lab/index.html" },
-	{ name = "Jane Wu", url = "https://janehwu.github.io/" }
+	{ name = "Jane Wu", url = "https://janehwu.github.io/" },
+	{ name = "Justin Benoist", url = "https://justinbenoist.github.io/" },
 ]
