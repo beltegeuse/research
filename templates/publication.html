@@ -1,5 +1,4 @@
 {% extends "index.html" %}
-{% import "macros.html" as macros %}
 
 {% block content %}
 <section id="publications">
@@ -9,15 +8,15 @@
 				<span class="pub-authors">
 					<p>
 					{% if page.extra.join_first %}
-						{% for author in page.extra.authors | slice(end=2) %}
-							{{macros::one_author_with_link(author=author, websites=config.extra.websites) | trim | safe }}*, {{ author.institution }} <br/>
+						{% for author in page.extra.authors[:2] %}
+							{{ <macros.one_author_with_link author={author} websites={config.extra.websites} /> }}*, {{ author.institution }} <br/>
 						{% endfor %}
-						{% for author in page.extra.authors | slice(start=2) %}
-							{{macros::one_author_with_link(author=author, websites=config.extra.websites) | trim | safe }}, {{ author.institution }} <br/>
+						{% for author in page.extra.authors[2:] %}
+							{{ <macros.one_author_with_link author={author} websites={config.extra.websites} /> }}, {{ author.institution }} <br/>
 						{% endfor %}
 					{% else %}
 						{% for author in page.extra.authors %}
-							{{macros::one_author_with_link(author=author, websites=config.extra.websites) | trim | safe }}, {{ author.institution }} <br/>
+							{{ <macros.one_author_with_link author={author} websites={config.extra.websites} /> }}, {{ author.institution }} <br/>
 						{% endfor %}
 					{% endif %}
 					In {{ page.extra.publication | markdown(inline=true) | safe }} <br />
@@ -128,7 +127,7 @@
 					{{ page.content | markdown | safe }}
 					
 					<h3>Cite</h3>
-					{{ macros::authors_with_link(authors=page.extra.authors, websites=config.extra.websites, final=" and ")}}. <b>{{ page.title | title }}</b>, {{ page.extra.publication | markdown(inline=true) | safe }}
+					{{ <macros.authors_with_link authors={page.extra.authors} websites={config.extra.websites} final=" and " /> }}. <b>{{ page.title | title }}</b>, {{ page.extra.publication | markdown(inline=true) | safe }}
 					
 					{% if page.extra.bibtex %}
 					<div>

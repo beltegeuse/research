@@ -1,5 +1,4 @@
 {% extends "index.html" %}
-{% import "macros.html" as macros %}
 
 {% block content %}
 <section id="publications">
@@ -19,12 +18,12 @@
 					<a href="{{ pub.permalink }}">{{ pub.title }}</a>
 					<div class="pub-author" itemprop="text">
 						{% if pub.extra.join_first %}
-							{% for a in pub.extra.authors | map(attribute="name") | slice(end=2) %}
+							{% for a in [x.name for x in pub.extra.authors][:2] %}
 								{{ a  | replace(from="Adrien Gruson", to="**Adrien Gruson**") | markdown(inline=true) | safe }}*,
 							{% endfor %}
-							{{ pub.extra.authors | map(attribute="name") | slice(start=2) | join(sep=", ") | replace(from="Adrien Gruson", to="**Adrien Gruson**") | markdown(inline=true) | safe }}
+							{{ [x.name for x in pub.extra.authors][2:] | join(sep=", ") | replace(from="Adrien Gruson", to="**Adrien Gruson**") | markdown(inline=true) | safe }}
 						{% else %}
-							{{ pub.extra.authors | map(attribute="name") | join(sep=", ") | replace(from="Adrien Gruson", to="**Adrien Gruson**") | markdown(inline=true) | safe }}
+							{{ [x.name for x in pub.extra.authors] | join(sep=", ") | replace(from="Adrien Gruson", to="**Adrien Gruson**") | markdown(inline=true) | safe }}
 						{% endif %}
 						<br/>
 					</div>
@@ -37,7 +36,7 @@
 					
 					{% if pub.extra.download %}
 					<ul class="fa-ul pub-links">
-						{% set project_entry = pub.extra.download | filter(attribute="type", value="project") | first %}
+						{% set project_entry = [d for d in pub.extra.download if d.type == "project"] | first %}
 						{% if project_entry %}
 							<!-- If we have project type, we only show this type -->
 							<li class="fa-li">

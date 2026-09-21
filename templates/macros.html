@@ -1,21 +1,22 @@
-{% macro one_author_with_link(author, websites) %}
-    {% set website = websites | filter(attribute="name", value=author.name) | first %}
-    {% if website %}
-        {{ "[" ~ author.name ~ "](" ~ website.url ~ ")" | markdown(inline=true) | safe }}
-    {% else %}
-        {{ author.name }}
-    {% endif %}
-{% endmacro one_author %}
+{% component macros.one_author_with_link(author, websites) -%}
+    {%- set website = [w for w in websites if w.name == author.name] | first -%}
+    {%- if website -%}
+        {%- set link = "[" ~ author.name ~ "](" ~ website.url ~ ")" -%}
+        {{- link | markdown(inline=true) | safe -}}
+    {%- else -%}
+        {{- author.name -}}
+    {%- endif -%}
+{%- endcomponent macros.one_author_with_link %}
 
-{% macro authors_with_link(authors, websites, final='') %}
-    {% set nb_authors = authors | length %}
-    {% if nb_authors == 0 %}
-    {% elif nb_authors == 1 %}
-        {{ macros::one_author_with_link(author=authors | last , websites=websites) | safe }}
-    {% else %}
-        {% for a in authors | slice(end=nb_authors - 1) %}
-            {{ macros::one_author_with_link(author=a, websites=websites) | trim | safe }}{{ ", " }} 
-        {% endfor %}
-        {{ final }}{{ macros::one_author_with_link(author=authors | last , websites=websites) | trim | safe }}
-    {% endif %}
-{% endmacro authors_with_link %}
+{% component macros.authors_with_link(authors, websites, final = "") -%}
+    {%- set nb_authors = authors | length -%}
+    {%- if nb_authors == 0 -%}
+    {%- elif nb_authors == 1 -%}
+        {{- <macros.one_author_with_link author={authors | last} websites={websites} /> -}}
+    {%- else -%}
+        {%- for a in authors[:-1] -%}
+            {{- <macros.one_author_with_link author={a} websites={websites} /> -}}{{ ", " }}
+        {%- endfor -%}
+        {{- final }}{{ <macros.one_author_with_link author={authors | last} websites={websites} /> -}}
+    {%- endif -%}
+{%- endcomponent macros.authors_with_link %}

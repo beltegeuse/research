@@ -218,19 +218,19 @@
 							{% for pub in publications.pages %}
 								{% set curr_date = pub.date | date(format="%s") | int %}
 								{% if curr_date + 2*31556926 > time_now %}
-									{% set authors = pub.extra.authors | map(attribute="name") %}
-									{% set_global conflicts = conflicts | concat(with=authors) %}
+									{% set authors = [a.name for a in pub.extra.authors] %}
+									{% set_global conflicts = [...conflicts, ...authors] %}
 								{% endif %}
 							{% endfor %}
 
 							{# Remove duplicate authors and sort the list #}
-							{% set conflicts_unique = conflicts | sort | unique | safe %}
+							{% set conflicts_unique = conflicts | sort | unique %}
 
 							{# Remove the website authors #}
 							{% set_global conflicts = [] %}
 							{% for a in conflicts_unique %}
 								{% if a != "Adrien Gruson" %}
-									{% set_global conflicts = conflicts | concat(with=a) %}
+									{% set_global conflicts = [...conflicts, a] %}
 								{% endif %}
 							{% endfor %}
 							
