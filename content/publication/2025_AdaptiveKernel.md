@@ -17,6 +17,8 @@ short_description = "Adaptive kernel prediction for gradient-domain rendering"
 
 download = [
     { type = "project", url = "https://mattjosse.github.io/articles/ank/" },
+    { type = "paper", url = "https://data.adrien-gruson.com/research/2025_AdaptiveKernel_Josse.pdf" },
+    { type = "doi", url = "https://doi.org/10.1145/3757377.3763920" },
     { type = "code", url = "https://github.com/MattJosse/adaptive-neural-kernel"},
 ]
 
@@ -30,7 +32,7 @@ bibtex = """@inproceedings{Josse:2025:ANK,
     journal = {ACM SIGGRAPH Asia 2025 Conference Proceedings},
     year = {2025},
     month = dec,
-    doi = {10.1145/3680528.3687566}
+    doi = {10.1145/3757377.3763920}
 }
 """
 

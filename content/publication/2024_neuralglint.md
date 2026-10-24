@@ -19,6 +19,7 @@ short_description = "Appearance filtering and analytical lighting integration of
 download = [
     { type = "project", url = "https://ishaanshah.xyz/neural_glint/" },
     { type = "paper", url = "https://data.adrien-gruson.com/research/2024_NeuralGlint_Shah.pdf"},
+    { type = "doi", url = "https://doi.org/10.1111/cgf.15157" },
     { type = "code", url = "https://github.com/ishaanshah/neural_glint"},
 ]
 
