@@ -36,69 +36,51 @@
 					
 					{% if pub.extra.download %}
 					<ul class="fa-ul pub-links">
-						{% set project_entry = [d for d in pub.extra.download if d.type == "project"] | first %}
-						{% if project_entry %}
-							<!-- If we have project type, we only show this type -->
-							<li class="fa-li">
-								<i class="fas fa-globe-americas">
-								</i>
-								<a href="{{ project_entry.url }}">
-									Project page
-								</a>
-							</li>
-						{% else %}
-							{% for entry in pub.extra.download %}
-								{% if entry.type == 'paper' %}
-								<li class="fa-li">
-									<i class="fas fa-file-pdf">
-									</i>
-									<a href="{{ entry.url }}">
-										Paper
-									</a>
-								</li>
-								{% elif entry.type == 'doi' %}
-								<li class="fa-li">
-									<i class="fas fa-atlas">
-									</i>
-									<a href="{{ entry.url }}">
-										Publisher's version
-									</a>
-								</li>
-								{% elif entry.type == 'code' %}
-								<li class="fa-li">
-									<i class="fab fa-github">
-									</i>
-									<a href="{{ entry.url }}">
-										Code
-									</a>
-								</li>
-								{% elif entry.type == 'poster' %}
-								<li class="fa-li">
-									<i class="fas fa-portrait">
-									</i>
-									<a href="{{ entry.url }}">
-										Poster
-									</a>
-								</li>
-								{% elif entry.type == 'slides' %}
-								<li class="fa-li">
-									<i class="far fa-file-powerpoint"></i>
-									<a href="{{ entry.url }}">
-										Slides
-									</a>
-								</li>
-								{% endif %}
-							{% endfor %}
-
-							{% set groups = pub.extra.download | group_by(attribute="type") %}
-							{% if groups.additional %}
-							<li class="fa-li">
-								<i class="fas fa-ellipsis-h"></i>
-								<a href="{{ pub.permalink }}">
-									More
-								</a>
-							</li>
-							{% endif %}
+						<!-- Fixed order: project page, publisher, paper, code, then "More" for everything else -->
+						{% set groups = pub.extra.download | group_by(attribute="type") %}
+						{% if groups.project %}
+						<li class="fa-li">
+							<i class="fas fa-globe-americas">
+							</i>
+							<a href="{{ groups.project[0].url }}">
+								Project page
+							</a>
+						</li>
+						{% endif %}
+						{% if groups.doi %}
+						<li class="fa-li">
+							<i class="fas fa-atlas">
+							</i>
+							<a href="{{ groups.doi[0].url }}">
+								Publisher's version
+							</a>
+						</li>
+						{% endif %}
+						{% if groups.paper %}
+						<li class="fa-li">
+							<i class="fas fa-file-pdf">
+							</i>
+							<a href="{{ groups.paper[0].url }}">
+								Paper
+							</a>
+						</li>
+						{% endif %}
+						{% if groups.code %}
+						<li class="fa-li">
+							<i class="fab fa-github">
+							</i>
+							<a href="{{ groups.code[0].url }}">
+								Code
+							</a>
+						</li>
+						{% endif %}
+						{% if groups.poster or groups.slides or groups.video or groups.additional %}
+						<li class="fa-li">
+							<i class="fas fa-ellipsis-h"></i>
+							<a href="{{ pub.permalink }}">
+								More
+							</a>
+						</li>
 						{% endif %}
 					</ul>
 					{% endif %}

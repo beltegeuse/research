@@ -50,18 +50,18 @@
 					{% if dls.doi or dls.paper or dls.poster %}
 					<h4>Publication</h4>
 					<ul class="fa-ul">
+						{% if dls.doi %}
+						<li><span class="fa-li"><i class="fas fa-atlas"></i></span>
+							<a href="{{ dls.doi[0].url }}">Publisher's official version</a> – external link, may require a subscription
+						</li>
+						{% endif %}
 						{% if dls.paper %}
 						<li>
 							<span class="fa-li">
 								<i class="fas fa-file-pdf"></i>
 							</span>
-							<a href={{ dls.paper[0].url }}>Paper (author's version), PDF</a> 
+							<a href={{ dls.paper[0].url }}>Paper (author's version), PDF</a>
 							{% if dls.paper[0].desc %} – {{ dls.paper[0].desc }} {% endif %}
-						</li>
-						{% endif %}
-						{% if dls.doi %}
-						<li><span class="fa-li"><i class="fas fa-atlas"></i></span>
-							<a href="{{ dls.doi[0].url }}">Publisher's official version</a> – external link, may require a subscription
 						</li>
 						{% endif %}
 						{% if dls.poster %}

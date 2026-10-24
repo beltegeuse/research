@@ -44,7 +44,7 @@ One file per paper, named `<year>_<ShortName>.md`. Rendered by `templates/public
 
 Recognized `download` types: `project`, `paper`, `doi`, `code`, `poster`, `slides`, `video`, `additional`. Only the **first** entry of each type is rendered (except `additional`, which loops). Template behaviour to keep in mind:
 
-- If a `project` entry exists, the list page shows **only** "Project page" and hides every other link — so a paper with a self-hosted project site does not need the rest duplicated here.
+- The list page always shows links in a fixed order, regardless of their order in `download`: Project page, Publisher's version (`doi`), Paper, Code, then a single "More" link to the paper's page if any `poster`, `slides`, `video` or `additional` entry exists.
 - `additional` entries **must** have a `desc`; it is used as the link text. Anything else ignores `desc` except `paper` and `code`, where it is appended after the link.
 
 Where each URL points:
